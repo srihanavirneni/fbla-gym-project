@@ -29,9 +29,9 @@ const Offers = () => {
                             <img src={basketballCourt} />
                             <h2 className="black">It's huge!</h2>
                             <p>
-                                With the ability to seat 3,900 people, the gym
-                                spans <b>200 ft x 180 ft</b>, totalling to{' '}
-                                <b>23,400 sq ft</b>!
+                                With the ability to <b>seat 3,900 people</b>,
+                                the gym spans <b>200 ft x 180 ft</b>, totalling
+                                to <b>23,400 sq ft</b>!
                             </p>
                         </li>
                         <li>
