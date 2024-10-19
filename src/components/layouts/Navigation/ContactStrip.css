@@ -56,3 +56,9 @@
     width: 20px;
     height: 20px;
 }
+
+@media only screen and (max-width: 800px) {
+    .contact-strip > .contact-strip__media {
+        display: none;
+    }
+}

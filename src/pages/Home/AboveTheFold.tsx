@@ -43,6 +43,11 @@ const AboveTheFold = () => {
                         Get Directions
                     </Link>
                 </Button>
+                <Button asChild variant={'link'}>
+                    <Link to="/">
+                        See Current Status
+                    </Link>
+                </Button>
             </div>
         </div>
     );
