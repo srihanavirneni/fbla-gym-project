@@ -32,6 +32,10 @@
     padding-bottom: 0.1rem;
 }
 
+.above-the-fold__main-info > a {
+    margin-top: 1rem;
+}
+
 .above-the-fold__text-field {
     margin-top: 2rem;
     display: flex;
@@ -43,4 +47,10 @@
 .text-field__date-picker {
     margin-right: 1rem;
     width: 22rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    .above-the-fold__main-info {
+        width: 100%;
+    }
 }

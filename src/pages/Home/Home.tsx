@@ -1,11 +1,13 @@
 import AboveTheFold from './AboveTheFold';
+import Offers from './Offers';
+
 import './Home.css';
 
 const Home = () => {
     return (
         <div>
             <AboveTheFold />
-            <h1>HOME</h1>
+            <Offers />
         </div>
     );
 };
