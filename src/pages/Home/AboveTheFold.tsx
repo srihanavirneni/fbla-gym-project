@@ -38,6 +38,7 @@ const AboveTheFold = () => {
                         </Link>
                     </Button>
                 </div>
+                <p style={{ color: 'white' }}>This is commit 1</p>
             </div>
         </div>
     );
