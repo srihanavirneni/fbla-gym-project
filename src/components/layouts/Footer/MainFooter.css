@@ -1,0 +1,121 @@
+.main-footer {
+    background: var(--color-complementary);
+    width: 100%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.main-footer__content-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: auto;
+    height: 100%;
+    width: 60%;
+}
+
+.main-footer__general-info {
+    width: 20rem;
+    margin: auto;
+    margin-right: 15rem;
+}
+
+.main-footer__general-info img {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 2rem;
+}
+
+.main-footer__general-info h3 {
+    font-family: 'Gotham-Black', system-ui;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.main-footer__general-info p {
+    color: white;
+}
+
+.main-footer__technical-info {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-right: 5rem;
+    width: 10rem;
+}
+
+.main-footer__technical-info li {
+    margin-bottom: 2rem;
+    list-style: none;
+}
+
+.main-footer__technical-info h5 {
+    color: rgb(232, 232, 232);
+    list-style: none;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.main-footer__technical-info p {
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+}
+
+.main-footer__technical-info__media-list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.main-footer__technical-info__media-list svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 7px;
+}
+
+.main-footer__navigation {
+    margin: auto;
+}
+
+.main-footer__navigation ul {
+    list-style: none;
+}
+
+.main-footer__navigation li {
+    margin-bottom: 1.5rem;
+}
+
+.main-footer__navigation li a {
+    font-weight: 300;
+    text-decoration: none;
+    color: white;
+}
+
+@media only screen and (max-width: 1000px) {
+    .main-footer__content-list {
+        flex-direction: column;
+    }
+
+    .main-footer__technical-info {
+        width: 100%;
+    }
+
+    .main-footer__technical-info > ul {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .main-footer__technical-info > ul > li {
+        margin-left: auto;
+        margin-right: 3rem;
+    }
+
+    .main-footer__navigation {
+        display: none;
+    }
+}

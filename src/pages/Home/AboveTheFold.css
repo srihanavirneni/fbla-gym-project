@@ -1,0 +1,46 @@
+.above-the-fold {
+    display: flex;
+    background-color: var(--color-complementary);
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+}
+
+.above-the-fold__main-info {
+    width: 35%;
+    text-align: center;
+}
+
+.above-the-fold__main-info > h1,
+.above-the-fold__main-info > h2,
+.above-the-fold__main-info > h3 {
+    color: white;
+}
+
+.above-the-fold__main-info > h1 {
+    margin-bottom: 2rem;
+}
+
+.above-the-fold__main-info > h2 {
+    margin-bottom: 10px;
+}
+
+.above-the-fold__main-info a {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+}
+
+.above-the-fold__text-field {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-field__date-picker {
+    margin-right: 1rem;
+    width: 22rem;
+}
