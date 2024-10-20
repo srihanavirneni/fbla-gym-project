@@ -1,0 +1,43 @@
+.home__about-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 7rem;
+}
+
+.about-info__visual div > img {
+    width: 30rem;
+    margin-bottom: 1rem;
+}
+
+.about-info__visual {
+    margin-right: 7rem;
+}
+
+.about-info__content {
+    width: 50%;
+}
+
+.about-info__content h1 {
+    margin-bottom: 2rem;
+}
+
+.about-info__content img {
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 2rem;
+}
+
+.about-info__content-slogan {
+    margin-top: 2rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    .about-info__visual {
+        display: none;
+    }
+
+    .about-info__content {
+        width: 100%;
+    }
+}
