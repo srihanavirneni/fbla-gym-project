@@ -2,7 +2,7 @@
     display: flex;
     background-color: var(--color-complementary);
     background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
-        url('../../assets/images/placeholder.png');
+        url('../../assets/images/gymphoto0.png');
     background-position: center top;
     align-items: center;
     justify-content: center;
