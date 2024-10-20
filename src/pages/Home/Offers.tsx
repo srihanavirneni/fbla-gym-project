@@ -5,6 +5,7 @@ import placeholder from '../../assets/images/placeholder.png';
 import artExhibit from '../../assets/images/artexhibit.jpeg';
 import basketballGame from '../../assets/images/basketballgame.png';
 import fblameeting from '../../assets/images/fblameeting.png';
+import concert from '../../assets/images/concert.png';
 
 import basketballCourt from '../../assets/icons/basketballCourt.png';
 import './Offers.css';
@@ -64,8 +65,9 @@ const Offers = () => {
                         <li>
                             <CaseStudy
                                 className="case-studies__concert"
+                                image={concert}
                                 alt="concert"
-                                description="Concert held by Midwxst"
+                                description="Band Concert"
                             />
                             <CaseStudy
                                 className="case-studies__art-exhibit"
