@@ -9,16 +9,24 @@ const NavLinks = (props: any) => {
         return (
             <React.Fragment>
                 <li>
-                    <NavLink to="/" className="medium">Home</NavLink>
+                    <NavLink to="/" className="medium">
+                        Home
+                    </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/about" className="medium">About Us</NavLink>
+                    <NavLink to="/about" className="medium">
+                        About Us
+                    </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/calendar" className="medium">Calendar</NavLink>
+                    <NavLink to="/events" className="medium">
+                        Events
+                    </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/updates" className="medium">Updates</NavLink>
+                    <NavLink to="/status" className="medium">
+                        Status
+                    </NavLink>
                 </li>
             </React.Fragment>
         );
@@ -29,10 +37,14 @@ const NavLinks = (props: any) => {
             <ul>
                 <MainList />
                 <li>
-                    <NavLink to="/contact" className="bold">Contact Us</NavLink>
+                    <NavLink to="/contact" className="bold">
+                        Contact Us
+                    </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/participate" className="bold">Get Involved</NavLink>
+                    <NavLink to="/events" className="bold">
+                        Host an Event
+                    </NavLink>
                 </li>
             </ul>
         );
@@ -51,7 +63,7 @@ const NavLinks = (props: any) => {
                 </div>
                 <div className="nav-links__cta">
                     <Button asChild>
-                        <NavLink to="/booking">Reserve A Date</NavLink>
+                        <NavLink to="/events">Host an Event</NavLink>
                     </Button>
                 </div>
             </ul>

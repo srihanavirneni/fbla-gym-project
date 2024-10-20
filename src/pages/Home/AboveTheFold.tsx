@@ -25,7 +25,10 @@ const AboveTheFold = () => {
                 <h3 className="medium">
                     At {import.meta.env.VITE_SHORT_SCHOOL_NAME}, our gymnasium
                     is available for sports events, cultural gatherings, and
-                    more. Book now to reserve your space!
+                    more.
+                    <br />
+                    <br />
+                    <b>Book now to reserve your space, all for free!</b>
                 </h3>
                 <div className="above-the-fold__text-field">
                     <DatePicker
