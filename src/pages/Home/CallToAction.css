@@ -1,0 +1,8 @@
+.home__cta {
+    background-color: var(--color-secondary);
+    padding: 5rem;
+}
+
+.home__cta > h1 {
+    margin-bottom: 1rem;
+}

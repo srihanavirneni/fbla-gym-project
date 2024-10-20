@@ -1,0 +1,34 @@
+.about-page__gym-carousel {
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-page__gym-carousel > div {
+    width: 50%;
+}
+
+.gym-carousel__item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gym-carousel__item-content img {
+    margin-bottom: 2rem;
+    width: 35rem;
+}
+
+@media only screen and (max-width: 1200px) {
+    .about-page__gym-carousel > div {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .gym-carousel__item-content img {
+        width: 100%;
+    }
+}

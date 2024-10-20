@@ -2,6 +2,7 @@ import AboveTheFold from './AboveTheFold';
 import Offers from './Offers';
 import AboutInfo from './AboutInfo';
 import Testimonials from './Testimonials';
+import CallToAction from './CallToAction';
 
 import './Home.css';
 
@@ -12,6 +13,7 @@ const Home = () => {
             <Offers />
             <AboutInfo />
             <Testimonials />
+            <CallToAction />
         </div>
     );
 };
