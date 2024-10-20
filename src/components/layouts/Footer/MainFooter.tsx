@@ -2,7 +2,7 @@ import React from 'react';
 
 import NavLinks from '../Navigation/NavLinks';
 
-import logo from '../../../assets/icons/whitelogo.png';
+import hsLogo from '../../../assets/images/hslogo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons/faEnvelope';
 import {
@@ -19,7 +19,7 @@ const MainFooter = () => {
             <footer className="main-footer">
                 <ul className="main-footer__content-list">
                     <li className="main-footer__general-info">
-                        <img src={logo} alt="logo" />
+                        <img src={hsLogo} alt="logo" />
                         <h3 className="black">
                             {import.meta.env.VITE_SCHOOL_NAME}
                         </h3>

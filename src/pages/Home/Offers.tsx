@@ -2,6 +2,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBurger, faGuitar } from '@fortawesome/free-solid-svg-icons';
 
 import placeholder from '../../assets/images/placeholder.png';
+import artExhibit from '../../assets/images/artexhibit.jpeg';
+import basketballGame from '../../assets/images/basketballgame.png';
+import fblameeting from '../../assets/images/fblameeting.png';
+
 import basketballCourt from '../../assets/icons/basketballCourt.png';
 import './Offers.css';
 
@@ -65,6 +69,7 @@ const Offers = () => {
                             />
                             <CaseStudy
                                 className="case-studies__art-exhibit"
+                                image={artExhibit}
                                 alt="art-exhibit"
                                 description="Art exhibit!"
                             />
@@ -72,11 +77,13 @@ const Offers = () => {
                         <li>
                             <CaseStudy
                                 className="case-studies__sporting-event"
+                                image={basketballGame}
                                 alt="sporting event"
                                 description="Basketball game against East Virginia"
                             />
                             <CaseStudy
                                 className="case-studies__community-gathering"
+                                image={fblameeting}
                                 alt="community gathering"
                                 description="High School FBLA Club Meeting"
                             />

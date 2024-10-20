@@ -23,9 +23,8 @@
 }
 
 .about-info__content img {
-    width: 5rem;
-    height: 5rem;
-    margin-bottom: 2rem;
+    width: 10rem;
+    margin-bottom: 1rem;
 }
 
 .about-info__content-slogan {

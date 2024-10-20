@@ -1,4 +1,7 @@
 import placeholder from '../../assets/images/placeholder.png';
+import garbaNight from '../../assets/images/garbanight.png';
+import hsLogo from '../../assets/images/hslogo.png'
+
 import './AboutInfo.css';
 
 const CaseStudy = (props: any) => {
@@ -14,11 +17,15 @@ const AboutInfo = () => {
     return (
         <div className="home__about-info">
             <div className="about-info__visual">
-                <CaseStudy alt="gymnasium" description="Gymnasium during Garba Night" />
+                <CaseStudy
+                    image={garbaNight}
+                    alt="gymnasium"
+                    description="Gymnasium during Garba Night!"
+                />
             </div>
             <div className="about-info__content">
-                <img src={placeholder} alt="school image" />
-                <h1 className='black'>Who are we?</h1>
+                <img src={hsLogo} alt="school image" />
+                <h1 className="black">Who are we?</h1>
                 <p>
                     We are a dynamic community based in West Virginia High
                     School that is dedicated to providing an outstanding space

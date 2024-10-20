@@ -34,19 +34,22 @@ const AboveTheFold = () => {
                     />
                     <Button asChild variant={'accent'}>
                         <Link to="/" className="bold">
-                            Search For Times
+                            Search For Reservation
                         </Link>
                     </Button>
                 </div>
+                <Button asChild variant={'link'}>
+                    <Link to="/" className="bold">
+                        Book Your Tickets
+                    </Link>
+                </Button>
                 <Button asChild variant={'link'}>
                     <Link to="/" className="bold">
                         Get Directions
                     </Link>
                 </Button>
                 <Button asChild variant={'link'}>
-                    <Link to="/">
-                        See Current Status
-                    </Link>
+                    <Link to="/">See Current Status</Link>
                 </Button>
             </div>
         </div>
