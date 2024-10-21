@@ -8,6 +8,8 @@ import About from './pages/About/About';
 import Status from './pages/Status/Status';
 import Events from './pages/Events/Events';
 
+import CreateEvent from './pages/CreateEvent/CreateEvent';
+
 import './App.css';
 
 const App = () => {
@@ -17,9 +19,11 @@ const App = () => {
             <main className="app-content">
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/status" element={<Status />} />
-                    <Route path="/events" element={<Events />} />
+                    <Route path="about" element={<About />} />
+                    <Route path="status" element={<Status />} />
+                    <Route path="events" element={<Events />} />
+
+                    <Route path="events/create" element={<CreateEvent />} />
 
                     <Route path="*" element={<Navigate to="/" />} />
                 </Routes>

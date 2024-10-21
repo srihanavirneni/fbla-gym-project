@@ -42,7 +42,7 @@ const NavLinks = (props: any) => {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/events" className="bold">
+                    <NavLink to="/events/create" className="bold">
                         Host an Event
                     </NavLink>
                 </li>
@@ -51,23 +51,25 @@ const NavLinks = (props: any) => {
     }
 
     return (
-        <ul className="nav-links">
-            <ul className="nav-links__centered">
-                <MainList />
+        <>
+            <ul className="nav-links">
+                <ul className="nav-links__centered">
+                    <MainList />
+                </ul>
+                <ul className="nav-links__right">
+                    <div className="nav-links__cta">
+                        <Button asChild>
+                            <NavLink to="/contact">Contact Us</NavLink>
+                        </Button>
+                    </div>
+                    <div className="nav-links__cta">
+                        <Button asChild>
+                            <NavLink to="/events/create">Host an Event</NavLink>
+                        </Button>
+                    </div>
+                </ul>
             </ul>
-            <ul className="nav-links__right">
-                <div className="nav-links__cta">
-                    <Button asChild>
-                        <NavLink to="/contact">Contact Us</NavLink>
-                    </Button>
-                </div>
-                <div className="nav-links__cta">
-                    <Button asChild>
-                        <NavLink to="/events">Host an Event</NavLink>
-                    </Button>
-                </div>
-            </ul>
-        </ul>
+        </>
     );
 };
 

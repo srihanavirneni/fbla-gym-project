@@ -73,10 +73,12 @@ const Events = () => {
     ];
 
     return (
-        <div className="events-page">
-            <EventsHeader />
-            <EventsList items={ITEMS} />
-        </div>
+        <>
+            <div className="events-page">
+                <EventsHeader />
+                <EventsList items={ITEMS} />
+            </div>
+        </>
     );
 };
 

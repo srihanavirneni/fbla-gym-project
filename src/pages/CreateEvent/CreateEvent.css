@@ -1,0 +1,14 @@
+.create-event__header {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 3rem;
+    text-align: center;
+}
+
+.create-event__header > h1 {
+    margin-bottom: 1rem;
+}
+
+.create-event__header > p:last-child {
+    margin-top: 0.5rem;
+}
