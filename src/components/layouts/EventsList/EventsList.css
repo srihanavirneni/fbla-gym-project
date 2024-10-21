@@ -1,0 +1,13 @@
+.events-list__fail {
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.events-list__fail > h1 {
+    margin-bottom: 1rem;
+}
+
+.events-list__fail > p {
+    margin-bottom: 2rem;
+}
