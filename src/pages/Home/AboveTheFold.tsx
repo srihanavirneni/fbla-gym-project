@@ -8,7 +8,7 @@ import './AboveTheFold.css';
 const AboveTheFold = () => {
     const minDateSelection = new Date(); // min date as today
     const maxDateSelection = new Date();
-    maxDateSelection.setDate(maxDateSelection.getDate() + 80); // 80 days after today
+    maxDateSelection.setDate(maxDateSelection.getDate() + 120); // 120 days after today
 
     const disabledDays = [
         {

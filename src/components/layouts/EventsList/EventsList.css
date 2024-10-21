@@ -11,3 +11,35 @@
 .events-list__fail > p {
     margin-bottom: 2rem;
 }
+
+.events-list__search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+    margin-inline: auto;
+    color: black;
+    width: 50%;
+}
+
+.events-list__search-bar > input {
+    padding: 0 1rem;
+    width: 100%;
+    color: black;
+}
+
+.search-bar__combo-box {
+    color: black;
+    margin-right: 1.5rem;
+}
+
+.search-bar__combo-box-content input {
+    color: black;
+    padding: 0 0.5rem;
+}
+
+@media only screen and (max-width: 850px) {
+    .events-list__search-bar {
+        width: 86.5%;
+    }
+}

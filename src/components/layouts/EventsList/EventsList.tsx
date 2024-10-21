@@ -1,40 +1,113 @@
+import * as React from 'react';
+
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { Link } from 'react-router-dom';
 
+import Combobox from '@/components/interface/Combobox';
 import EventItem from './EventItem';
 
 import './EventsList.css';
 
+const EmptyList = () => {
+    return (
+        <div className="events-list__fail">
+            <h1 className="black">No events at the moment!</h1>
+            <p>Why not host one?</p>
+            <Button asChild variant={'accent'} size={'sm'}>
+                <Link to="/">Host an Event</Link>
+            </Button>
+        </div>
+    );
+};
+
 const EventsList = (props: any) => {
     if (props.items.length === 0) {
-        return (
-            <div className="events-list__fail">
-                <h1 className="black">No events at the moment!</h1>
-                <p>Why not host one?</p>
-                <Button asChild variant={'accent'} size={'sm'}>
-                    <Link to="/">Host an Event</Link>
-                </Button>
-            </div>
-        );
+        return <EmptyList />;
     }
+
+    const [events, _] = React.useState(props.items);
+    const [query, setQuery] = React.useState('');
+    const [comboboxQuery, setComboboxQuery] = React.useState('');
+
+    const filteredEvents = React.useMemo(() => {
+        const searchQuery = query.toLowerCase();
+        const comboQuery = comboboxQuery.toLowerCase();
+
+        const filteredComboQuery =
+            comboQuery === ''
+                ? events
+                : events.filter((event: any) => {
+                      return event.type.toLowerCase().includes(comboQuery);
+                  });
+
+        return filteredComboQuery.filter((event: any) => {
+            return event.name.toLowerCase().includes(searchQuery);
+        });
+    }, [events, query, comboboxQuery]);
+
     return (
-        <ul className="events-list">
-            {props.items.map((event: any) => (
-                <EventItem
-                    key={event.id}
-                    id={event.id}
-                    name={event.name}
-                    date={event.date}
-                    type={event.type}
-                    location={event.location}
-                    ticketCost={event.ticketCost}
-                    description={event.description}
-                    eventOrganizers={event.eventOrganizers}
-                    specialNotes={event.specialNotes}
-                    socialMedia={event.socialMedia}
+        <div>
+            <div className="events-list__search-bar">
+                <Combobox
+                    labelPlaceholder="Select category"
+                    placeholder="Search categories"
+                    className="search-bar__combo-box"
+                    onChange={(v: any) => {
+                        setComboboxQuery(v);
+                    }}
+                    items={[
+                        {
+                            value: 'sports',
+                            label: 'Sports',
+                        },
+                        {
+                            value: 'social',
+                            label: 'Social',
+                        },
+                        {
+                            value: 'theater',
+                            label: 'Theater',
+                        },
+                        {
+                            value: 'academic',
+                            label: 'Academic',
+                        },
+                        {
+                            value: 'music',
+                            label: 'Music',
+                        },
+                    ]}
                 />
-            ))}
-        </ul>
+                <Input
+                    placeholder="Search For Events"
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
+                    type="search"
+                />
+            </div>
+            <ul className="events-list">
+                {filteredEvents.length ? (
+                    filteredEvents.map((event: any) => (
+                        <EventItem
+                            key={event.id}
+                            id={event.id}
+                            name={event.name}
+                            date={event.date}
+                            type={event.type}
+                            location={event.location}
+                            ticketCost={event.ticketCost}
+                            description={event.description}
+                            eventOrganizers={event.eventOrganizers}
+                            specialNotes={event.specialNotes}
+                            socialMedia={event.socialMedia}
+                        />
+                    ))
+                ) : (
+                    <EmptyList />
+                )}
+            </ul>
+        </div>
     );
 };
 
