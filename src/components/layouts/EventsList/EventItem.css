@@ -44,3 +44,14 @@
         width: 100%;
     }
 }
+
+@media only screen and (max-width: 500px) {
+    .item-content__actions {
+        flex-direction: column;
+    }
+
+    .item-content__actions > a {
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+}

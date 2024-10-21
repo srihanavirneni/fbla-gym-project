@@ -27,6 +27,16 @@
 
 @media only screen and (max-width: 850px) {
     .events-header {
-        padding: 5rem;
+        padding: 5rem 2rem;
+        text-align: center;
+    }
+
+    .events-header__button-content {
+        align-content: center;
+        justify-content: center;
+    }
+
+    .events-header__button-content > a:last-child {
+        margin-right: 0;
     }
 }
