@@ -36,13 +36,13 @@ const AboveTheFold = () => {
                         disabledDays={disabledDays}
                     />
                     <Button asChild variant={'accent'}>
-                        <Link to="/" className="bold">
+                        <Link to="/events/create" className="bold">
                             Search For Reservation
                         </Link>
                     </Button>
                 </div>
                 <Button asChild variant={'link'}>
-                    <Link to="/" className="bold">
+                    <Link to="/events" className="bold">
                         Book Your Tickets
                     </Link>
                 </Button>
@@ -52,7 +52,7 @@ const AboveTheFold = () => {
                     </Link>
                 </Button>
                 <Button asChild variant={'link'}>
-                    <Link to="/">See Current Status</Link>
+                    <Link to="/status">See Current Status</Link>
                 </Button>
             </div>
         </div>

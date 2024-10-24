@@ -1,0 +1,22 @@
+.contact-header {
+    background-color: var(--color-accent);
+    text-align: center;
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-header__main-info {
+    width: 50%;
+}
+
+.contact-header h1 {
+    margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .contact-header__main-info {
+        width: 80%;
+    }
+}

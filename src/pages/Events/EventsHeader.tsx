@@ -17,7 +17,7 @@ const EventsHeader = () => {
             </p>
             <div className="events-header__button-content">
                 <Button asChild size={'sm'} variant={'accent'}>
-                    <Link to="/" className="bold">
+                    <Link to="/events/create" className="bold">
                         Host an Event
                     </Link>
                 </Button>
