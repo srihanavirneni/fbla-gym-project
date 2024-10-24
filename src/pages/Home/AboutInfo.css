@@ -42,6 +42,9 @@
 }
 
 @media only screen and (max-width: 800px) {
+    .about-info__content {
+        text-align: center;
+    }
     .home__about-info {
         padding: 3rem;
     }

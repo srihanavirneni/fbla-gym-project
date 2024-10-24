@@ -36,7 +36,7 @@ const Contact = () => {
 
                     <hr />
 
-                    <ul className="contact-strip__media">
+                    <ul className="contact-content__media">
                         <li>
                             <a
                                 target="_blank"
