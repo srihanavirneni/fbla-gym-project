@@ -5,6 +5,7 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from '@/components/ui/carousel';
+import Map from '@/components/interface/Map';
 
 import AboutInfo from '../Home/AboutInfo';
 import AboutHeader from './AboutHeader';
@@ -55,9 +56,15 @@ const About = () => {
     return (
         <div className="about-page">
             <AboutHeader />
-            <AboutInfo />
 
-            <div className="about__map-visual">map visual</div>
+            <div className="about__map-visual">
+                <Map
+                    className="about-map-visual__map"
+                    center={[34.10579607887825, -84.14017624823752]}
+                    markerPosition={[34.10638455314906, -84.13900138938705]}
+                    zoom={50}
+                />
+            </div>
             <div className="about-page__map-directory">
                 <div className="about__map-directions">
                     <h2 className="black">Special Directions</h2>
@@ -108,6 +115,8 @@ const About = () => {
                     </Carousel>
                 </div>
             </div>
+
+            <AboutInfo />
         </div>
     );
 };
