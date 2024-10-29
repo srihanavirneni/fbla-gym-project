@@ -1,0 +1,47 @@
+.status-page__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.status-page__info-card {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    border-radius: 6px;
+    overflow: hidden;
+    width: 50%;
+}
+
+.info-card__description > p {
+    margin-top: 0.5rem;
+}
+
+.status-description__badge {
+    display: flex;
+}
+
+.status-description__badge > p {
+    margin-right: 0.5rem;
+}
+
+.info-card__main-info ul > li {
+    margin-bottom: 1rem;
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.info-card__main-info ul > hr {
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+@media only screen and (max-width: 850px) {
+    .status-page__info-card {
+        margin: 0 1.5rem;
+        width: 100%;
+    }
+}

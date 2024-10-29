@@ -1,0 +1,23 @@
+.status-header {
+    background-color: var(--color-complementary);
+    color: white;
+    text-align: center;
+    padding: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.status-header__main-info {
+    width: 50%;
+}
+
+.status-header h1 {
+    margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .status-header__main-info {
+        width: 80%;
+    }
+}
