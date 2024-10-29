@@ -55,11 +55,42 @@ const About = () => {
     return (
         <div className="about-page">
             <AboutHeader />
-            <div className="about-page__gym-carousel">
-                <Carousel className="w-full">
-                    <CarouselContent>
-                        {Array.from({ length: carouselContent.length }).map(
-                            (_, index) => (
+            <AboutInfo />
+
+            <div className="about__map-visual">map visual</div>
+            <div className="about-page__map-directory">
+                <div className="about__map-directions">
+                    <h2 className="black">Special Directions</h2>
+                    <p>
+                        After arriving to the destination, please follow the
+                        directions below to enter the facility.
+                    </p>
+                    <h4>{import.meta.env.VITE_ADDRESS}</h4>
+                    <hr />
+                    <ul>
+                        <li>
+                            <b>1. </b>
+                            Enter through the main office
+                        </li>
+                        <li>
+                            <b>2. </b>
+                            Check in through the box office to verify your
+                            tickets. If you are hosting an event, talk to the
+                            gymnasium counselors.
+                        </li>
+                        <li>
+                            <b>3. </b>
+                            Enter the gym and take a seat at your respective
+                            spot.
+                        </li>
+                    </ul>
+                </div>
+                <div className="about-page__gym-carousel">
+                    <Carousel className="w-full">
+                        <CarouselContent>
+                            {Array.from({
+                                length: carouselContent.length,
+                            }).map((_, index) => (
                                 <CarouselItem key={index}>
                                     <ImageHolder
                                         className="gym-carousel__item-content"
@@ -70,14 +101,13 @@ const About = () => {
                                         }
                                     />
                                 </CarouselItem>
-                            )
-                        )}
-                    </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
-                </Carousel>
+                            ))}
+                        </CarouselContent>
+                        <CarouselPrevious />
+                        <CarouselNext />
+                    </Carousel>
+                </div>
             </div>
-            <AboutInfo />
         </div>
     );
 };

@@ -15,7 +15,7 @@ const NavLinks = (props: any) => {
                 </li>
                 <li>
                     <NavLink to="/about" className="medium">
-                        About Us
+                        About
                     </NavLink>
                 </li>
                 <li>

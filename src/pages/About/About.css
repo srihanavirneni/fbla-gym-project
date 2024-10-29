@@ -1,14 +1,3 @@
-.about-page__gym-carousel {
-    padding: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-page__gym-carousel > div {
-    width: 50%;
-}
-
 .gym-carousel__item-content {
     display: flex;
     flex-direction: column;
@@ -21,8 +10,72 @@
     width: 35rem;
 }
 
+.about-page__gym-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-page__gym-carousel > div {
+    width: 100%;
+}
+
+.about-page__map-directory {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+}
+
+.about-page__map-directory > div {
+    width: 40%;
+}
+
+.about__map-directions {
+    margin-right: 6.5rem;
+}
+
+.about__map-directions h2 {
+    margin-bottom: 0.5rem;
+}
+
+.about__map-directions h4 {
+    margin: 1rem 0;
+    width: 70%;
+}
+
+.about__map-directions hr {
+    margin: 2rem 0;
+}
+
+.about__map-directions ul {
+    list-style: none;
+    text-decoration: none;
+}
+
+.about__map-directions ul > li {
+    margin-bottom: 1rem;
+}
+
 @media only screen and (max-width: 1200px) {
     .about-page__gym-carousel > div {
+        width: 100%;
+    }
+
+    .about-page__map-directory {
+        flex-direction: column;
+        text-align: center;
+        padding: 5rem;
+    }
+
+    .about-page__map-directory > div {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .about__map-directions h4 {
         width: 100%;
     }
 }
