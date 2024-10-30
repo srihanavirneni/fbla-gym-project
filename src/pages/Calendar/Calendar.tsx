@@ -27,7 +27,7 @@ const Calendar = () => {
             endTime: new Date('1970-01-01T15:00:00'),
         },
         {
-            date: addDays(new Date(), 0),
+            date: addDays(new Date(), 10),
             title: 'Annual Science Fair',
             location: 'Main Gymnasium',
             startTime: new Date('1970-01-01T17:00:00'),
