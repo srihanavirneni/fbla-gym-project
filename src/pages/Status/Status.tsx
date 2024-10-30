@@ -40,24 +40,24 @@ const Updates = () => {
                         <ul>
                             <li>
                                 <h4>Main Facility</h4>
-                                <Badge>Available</Badge>
+                                <Badge className='status-badge__available'>Available</Badge>
                             </li>
                             <li>
                                 <h4>Stadium</h4>
-                                <Badge>Available</Badge>
+                                <Badge className='status-badge__available'>Available</Badge>
                             </li>
                             <li>
                                 <h4>Auditorium</h4>
-                                <Badge>Available</Badge>
+                                <Badge className='status-badge__available'>Available</Badge>
                             </li>
                             <hr />
                             <li>
                                 <h4>Sound</h4>
-                                <Badge>Available</Badge>
+                                <Badge className='status-badge__available'>Available</Badge>
                             </li>
                             <li>
                                 <h4>Lighting</h4>
-                                <Badge>Available</Badge>
+                                <Badge className='status-badge__available'>Available</Badge>
                             </li>
                         </ul>
                     </CardContent>
