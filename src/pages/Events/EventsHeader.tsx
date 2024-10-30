@@ -16,14 +16,14 @@ const EventsHeader = () => {
                 proposed event before it is final!
             </p>
             <div className="events-header__button-content">
-                <Button asChild size={'sm'} variant={'accent'}>
+                <Button asChild size={'sm'}>
                     <Link to="/events/create" className="bold">
                         Host an Event
                     </Link>
                 </Button>
-                <Button asChild size={'sm'}>
-                    <Link to="/" className="bold">
-                        Purchase a Ticket
+                <Button asChild size={'sm'} variant={"secondary"}>
+                    <Link to="/status" className="bold">
+                        Check Status
                     </Link>
                 </Button>
             </div>

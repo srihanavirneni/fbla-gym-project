@@ -1,3 +1,5 @@
+import { subDays, addDays } from 'date-fns';
+
 import EventCalendar from '@/components/layouts/EventCalendar/EventCalendar';
 import './CreateEvent.css';
 
@@ -16,7 +18,45 @@ const CreateEvent = () => {
                     your event.
                 </p>
             </div>
-            <EventCalendar />
+            <div className='create-event__main-content'>
+                <div className="create-event__calendar-container">
+                    <EventCalendar
+                        events={[
+                            {
+                                date: subDays(new Date(), 6),
+                                title: 'Homecoming Football Game',
+                                location: 'Stadium',
+                                startTime: new Date('1970-01-01T14:00:00'),
+                                endTime: new Date('1970-01-01T15:00:00'),
+                            },
+                            {
+                                date: subDays(new Date(), 1),
+                                title: 'Winter Dance',
+                                location: 'Main Gymnasium',
+                                startTime: new Date('1970-01-01T14:00:00'),
+                                endTime: new Date('1970-01-01T15:00:00'),
+                            },
+                            {
+                                date: addDays(new Date(), 0),
+                                title: 'School Play: Romeo & Juliet',
+                                location: 'Auditorium',
+                                startTime: new Date('1970-01-01T14:00:00'),
+                                endTime: new Date('1970-01-01T15:00:00'),
+                            },
+                            {
+                                date: addDays(new Date(), 0),
+                                title: 'Annual Science Fair',
+                                location: 'Main Gymnasium',
+                                startTime: new Date('1970-01-01T17:00:00'),
+                                endTime: new Date('1970-01-01T19:00:00'),
+                            },
+                        ]}
+                    />
+                </div>
+                <div className="create-event__main-form">
+                    <h3>HEY</h3>
+                </div>
+            </div>
         </div>
     );
 };

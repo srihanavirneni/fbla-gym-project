@@ -6,6 +6,7 @@
     background-size: cover;
     color: white;
     padding: 5rem 10rem;
+    text-align: center;
 }
 
 .events-header > h1 {
@@ -19,24 +20,19 @@
 .events-header__button-content {
     display: flex;
     margin-top: 3rem;
+    align-content: center;
+    justify-content: center;
 }
 
 .events-header__button-content > a {
     margin-right: 1.25rem;
 }
+.events-header__button-content > a:last-child {
+    margin-right: 0;
+}
 
 @media only screen and (max-width: 850px) {
     .events-header {
         padding: 5rem 2rem;
-        text-align: center;
-    }
-
-    .events-header__button-content {
-        align-content: center;
-        justify-content: center;
-    }
-
-    .events-header__button-content > a:last-child {
-        margin-right: 0;
     }
 }

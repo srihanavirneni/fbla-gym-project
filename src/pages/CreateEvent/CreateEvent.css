@@ -12,3 +12,14 @@
 .create-event__header > p:last-child {
     margin-top: 0.5rem;
 }
+
+.create-event__main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-event__main-form {
+    padding: 3rem;
+}
