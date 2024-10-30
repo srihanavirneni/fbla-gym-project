@@ -1,0 +1,20 @@
+.calendar-page__header {
+    background-color: var(--color-complementary);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.calendar-page__header > h1 {
+    margin-bottom: 1rem;
+}
+
+.calendar-page__header > p:last-child {
+    margin-top: 0.5rem;
+}
+
+.calendar-page__main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

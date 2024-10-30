@@ -8,6 +8,7 @@ import About from './pages/About/About';
 import Status from './pages/Status/Status';
 import Events from './pages/Events/Events';
 import Contact from './pages/Contact/Contact';
+import Calendar from './pages/Calendar/Calendar';
 
 import CreateEvent from './pages/CreateEvent/CreateEvent';
 
@@ -24,6 +25,7 @@ const App = () => {
                     <Route path="status" element={<Status />} />
                     <Route path="events" element={<Events />} />
                     <Route path="contact" element={<Contact />} />
+                    <Route path="calendar" element={<Calendar />} />
 
                     <Route path="events/create" element={<CreateEvent />} />
 

@@ -19,6 +19,11 @@ const NavLinks = (props: any) => {
                     </NavLink>
                 </li>
                 <li>
+                    <NavLink to="/calendar" className="medium">
+                        Calendar
+                    </NavLink>
+                </li>
+                <li>
                     <NavLink to="/events" className="medium">
                         Events
                     </NavLink>

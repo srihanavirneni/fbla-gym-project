@@ -3,7 +3,12 @@
     flex-direction: column;
     justify-content: center;
     padding: 5rem;
-    width: 100rem;
+    width: 70rem;
+}
+
+.event-calendar__day-container {
+    border: 0.15rem solid black;
+    width: 8rem;
 }
 
 .event-calendar__event-list {
@@ -43,11 +48,6 @@
     margin: 0;
 }
 
-.event-calendar__day-container {
-    border: 0.15rem solid black;
-    width: 12rem;
-}
-
 .event-calendar__header {
     display: flex;
     flex-direction: row;
@@ -65,7 +65,7 @@
 
 @media only screen and (max-width: 800px) {
     .event-calendar {
-        margin-left: 75rem;
+        margin-left: 45rem;
     }
 
     .event-calendar__header {
