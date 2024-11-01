@@ -7,7 +7,6 @@ const CallToAction = () => {
             <p>
                 Don't miss an opportunity and <b>Reserve a Date today!</b>
             </p>
-            <p>(temporary placeholder)</p>
         </div>
     );
 };

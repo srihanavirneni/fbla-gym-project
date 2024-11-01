@@ -1,10 +1,11 @@
 .contact-header {
-    background-color: var(--color-accent);
+    background-color: var(--color-complementary);
     text-align: center;
     padding: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 .contact-header__main-info {

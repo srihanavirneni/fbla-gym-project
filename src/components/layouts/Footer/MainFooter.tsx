@@ -24,7 +24,7 @@ const MainFooter = () => {
                             {import.meta.env.VITE_SCHOOL_NAME}
                         </h3>
                         <p className="medium">
-                            As home of the Wildcats, we offer plenty of services
+                            As home of the Longhorns, we offer plenty of services
                             for our community - whether that be for community
                             events, or for club meetings, our Gymnasium is the
                             perfect fit!

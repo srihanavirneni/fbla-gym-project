@@ -63,12 +63,12 @@ const NavLinks = (props: any) => {
                 </ul>
                 <ul className="nav-links__right">
                     <div className="nav-links__cta">
-                        <Button asChild>
+                        <Button asChild variant={"accent"}>
                             <NavLink to="/contact">Contact Us</NavLink>
                         </Button>
                     </div>
                     <div className="nav-links__cta">
-                        <Button asChild>
+                        <Button asChild variant={"accent"}>
                             <NavLink to="/events/create">Host an Event</NavLink>
                         </Button>
                     </div>

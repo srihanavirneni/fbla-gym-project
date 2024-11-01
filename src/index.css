@@ -15,9 +15,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    --color-primary: #148eff;
+    --color-primary: #7C1728;
     --color-secondary: #f2f2f2;
-    --color-accent: #7de1c3;
+    --color-accent: #000000;
     --color-complementary: #222222;
     --color-main: #ffffff;
 
@@ -122,9 +122,10 @@ button:focus-visible {
         --secondary-foreground: 0 0% 9%;
         --muted: 0 0% 96.1%;
         --muted-foreground: 0 0% 45.1%;
-        --alternate-accent: 162 63% 69%; /* 7de1c3 */
+        --alternate-accent: 350, 69%, 29%; /* 7C1728 */
+        --alternate-accent-shaded: 350, 69%, 18%;
         --accent: 0 0% 96.1%;
-        --accent-foreground: 0 0% 9%;
+        --accent-foreground: 0 0% 96.1%;
         --destructive: 0 84.2% 60.2%;
         --destructive-foreground: 0 0% 98%;
         --border: 0 0% 89.8%;

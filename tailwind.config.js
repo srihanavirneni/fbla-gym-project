@@ -40,6 +40,9 @@ export default {
     				DEFAULT: 'hsl(var(--alternate-accent))',
     				foreground: 'hsl(var(--accent-foreground))'
     			},
+				alternateaccent_shaded: {
+					DEFAULT: 'hsl(var(--alternate-accent-shaded))',
+				},
     			destructive: {
     				DEFAULT: 'hsl(var(--destructive))',
     				foreground: 'hsl(var(--destructive-foreground))'
