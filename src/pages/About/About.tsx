@@ -116,7 +116,7 @@ const About = () => {
                 </div>
             </div>
 
-            <AboutInfo />
+            <AboutInfo showDeepInfo />
         </div>
     );
 };
