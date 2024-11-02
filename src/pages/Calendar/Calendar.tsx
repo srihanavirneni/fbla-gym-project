@@ -1,40 +1,9 @@
-import { subDays, addDays } from 'date-fns';
-
 import EventCalendar from '@/components/layouts/EventCalendar/EventCalendar';
+
+import { EVENT_DATA } from '@/context/event-list';
 import './Calendar.css';
 
 const Calendar = () => {
-    const EVENTS = [
-        {
-            date: subDays(new Date(), 6),
-            title: 'Homecoming Football Game',
-            location: 'Stadium',
-            startTime: new Date('1970-01-01T14:00:00'),
-            endTime: new Date('1970-01-01T15:00:00'),
-        },
-        {
-            date: subDays(new Date(), 1),
-            title: 'Winter Dance',
-            location: 'Main Gymnasium',
-            startTime: new Date('1970-01-01T14:00:00'),
-            endTime: new Date('1970-01-01T15:00:00'),
-        },
-        {
-            date: addDays(new Date(), 0),
-            title: 'School Play: Romeo & Juliet',
-            location: 'Auditorium',
-            startTime: new Date('1970-01-01T14:00:00'),
-            endTime: new Date('1970-01-01T15:00:00'),
-        },
-        {
-            date: addDays(new Date(), 10),
-            title: 'Annual Science Fair',
-            location: 'Main Gymnasium',
-            startTime: new Date('1970-01-01T17:00:00'),
-            endTime: new Date('1970-01-01T19:00:00'),
-        },
-    ];
-
     return (
         <div className="calendar-page">
             <div className="calendar-page__header">
@@ -49,7 +18,7 @@ const Calendar = () => {
                 </p>
             </div>
             <div className="calendar-page__main-content pt-5 pb-5">
-                <EventCalendar events={EVENTS} />
+                <EventCalendar events={EVENT_DATA} />
             </div>
         </div>
     );

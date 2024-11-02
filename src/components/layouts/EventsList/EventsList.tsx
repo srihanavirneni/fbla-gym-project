@@ -15,7 +15,7 @@ const EmptyList = () => {
             <h1 className="black">No events at the moment!</h1>
             <p>Why not host one?</p>
             <Button asChild variant={'accent'} size={'sm'}>
-                <Link to="/">Host an Event</Link>
+                <Link to="/events/create">Host an Event</Link>
             </Button>
         </div>
     );

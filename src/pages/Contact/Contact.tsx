@@ -27,7 +27,7 @@ const Contact = () => {
 
                     <li>
                         <h2>E-mail</h2>
-                        <h4>wvhsgymnasiumdept@gmail.com</h4>
+                        <h4>lhsgymnasiumdept@gmail.com</h4>
                         <p>
                             Feel free to email us with inquiries about bookings,
                             events, or any questions you may have!

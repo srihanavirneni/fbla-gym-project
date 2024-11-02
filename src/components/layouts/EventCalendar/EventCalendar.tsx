@@ -23,7 +23,7 @@ const WEEKDAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 interface Event {
     date: Date;
-    title: string;
+    name: string;
     location: string;
     startTime: Date;
     endTime: Date;
@@ -137,9 +137,9 @@ const EventCalendar = ({ events }: EventCalendarProps) => {
                                 <ul className="event-calendar__event-list">
                                     {todaysEvents.map((event) => {
                                         return (
-                                            <li key={event.title}>
+                                            <li key={event.name}>
                                                 <div>
-                                                    <h4>{event.title}</h4>
+                                                    <h4>{event.name}</h4>
                                                     <p>{event.location}</p>
                                                     <p>
                                                         {formatTime(
