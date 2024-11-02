@@ -77,6 +77,10 @@ const EventsList = (props: any) => {
                             value: 'music',
                             label: 'Music',
                         },
+                        {
+                            value: 'arts',
+                            label: 'Arts',
+                        },
                     ]}
                 />
                 <Input
@@ -94,6 +98,8 @@ const EventsList = (props: any) => {
                             id={event.id}
                             name={event.name}
                             date={event.date}
+                            startTime={event.startTime}
+                            endTime={event.endTime}
                             type={event.type}
                             location={event.location}
                             ticketCost={event.ticketCost}

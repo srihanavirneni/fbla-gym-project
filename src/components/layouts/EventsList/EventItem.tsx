@@ -1,3 +1,11 @@
+import {
+    format,
+    setHours,
+    setMinutes,
+    setSeconds,
+    setMilliseconds,
+} from 'date-fns';
+
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -13,6 +21,16 @@ import {
 import './EventItem.css';
 
 const EventItem = (props: any) => {
+    const formatTime = (time: Date) => {
+        let dateForTime = new Date(0);
+        dateForTime = setHours(dateForTime, time.getHours());
+        dateForTime = setMinutes(dateForTime, time.getMinutes());
+        dateForTime = setSeconds(dateForTime, 0);
+        dateForTime = setMilliseconds(dateForTime, 0);
+
+        return format(dateForTime, 'h:mm a');
+    };
+
     return (
         <li className="event-item">
             <Card className="event-item__content">
@@ -24,7 +42,9 @@ const EventItem = (props: any) => {
                             <Badge>{props.type}</Badge>
                             <p className="bold">
                                 {props.date.toLocaleDateString()}{' '}
-                                {props.date.toLocaleTimeString()}
+                                {formatTime(props.startTime) +
+                                    ' - ' +
+                                    formatTime(props.endTime)}
                             </p>
                         </div>
                         <p className="bold">Location: {props.location}</p>
