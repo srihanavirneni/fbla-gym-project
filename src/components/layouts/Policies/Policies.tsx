@@ -19,13 +19,33 @@ const Policies = (props: any) => {
                     <hr />
                     <h3 className="black">Amenities: </h3>
                     <p>
-                        The gym is equipped with a full-size basketball
-                        court, volleyball nets, a scoreboard, and adjustable
-                        hoops, allowing for various sports and activities. The
-                        facility also includes lockers, restrooms, and a
-                        hydration station, ensuring a comfortable and functional
-                        space for community members.
+                        The gym is equipped with a full-size basketball court,
+                        volleyball nets, a scoreboard, and adjustable hoops,
+                        allowing for various sports and activities. The facility
+                        also includes lockers, restrooms, and a hydration
+                        station, ensuring a comfortable and functional space for
+                        community members.
                     </p>
+                    <br />
+                    <ul>
+                        <li>
+                            Concessions: A full-service concession stand is
+                            located near the main entrance, offering snacks,
+                            drinks, and hot food. Available items include: Hot
+                            dogs, nachos, popcorn, candy Soda, water, and sports
+                            drinks Gluten-free and vegetarian options are
+                            available
+                        </li>
+                        <li>
+                            Restrooms: Restrooms are located on both sides of
+                            the gym near the entrances. All restrooms are ADA
+                            accessible.
+                        </li>
+                        <li>
+                            Wi-Fi: Free Wi-Fi is available in the gym for all
+                            attendees. Connect to "BYOT"!
+                        </li>
+                    </ul>
                 </div>
             )}
         </div>
