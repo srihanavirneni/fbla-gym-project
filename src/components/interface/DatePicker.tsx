@@ -17,6 +17,12 @@ import './DatePicker.css';
 
 const DatePicker = (props: any) => {
     const [date, setDate] = React.useState<Date>();
+    const changeDate = (newDate: any) => {
+        setDate(newDate);
+        if (props.onChange) {
+            props.onChange(newDate);
+        }
+    };
 
     return (
         <Popover>
@@ -24,7 +30,7 @@ const DatePicker = (props: any) => {
                 <Button
                     variant={'outline'}
                     className={cn(
-                        'w-[280px] justify-start text-left font-normal',
+                        'w-full justify-start text-left font-normal',
                         !date && 'text-muted-foreground',
                         'date-picker__button',
                         props.className
@@ -42,7 +48,7 @@ const DatePicker = (props: any) => {
                 <Calendar
                     mode="single"
                     selected={date}
-                    onSelect={setDate}
+                    onSelect={changeDate}
                     disabledDays={props.disabledDays}
                     initialFocus
                 />
