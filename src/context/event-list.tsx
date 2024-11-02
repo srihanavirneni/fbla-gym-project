@@ -1,3 +1,78 @@
+export const BREAKS = [
+    {
+        startDate: new Date(2024, 7, 1),
+        endDate: new Date(2024, 7, 1),
+        name: 'First Day Of School',
+        type: 'Break',
+    },
+    {
+        startDate: new Date(2024, 8, 2),
+        endDate: new Date(2024, 8, 2),
+        name: 'Labor Day',
+        type: 'Holiday',
+    },
+    {
+        startDate: new Date(2024, 8, 22),
+        endDate: new Date(2024, 8, 28),
+        name: 'Fall Break',
+        type: 'Break',
+    },
+    {
+        startDate: new Date(2024, 9, 21),
+        endDate: new Date(2024, 9, 21),
+        name: 'Professional Dev. (Student Holiday)',
+        type: 'Holiday',
+    },
+    {
+        startDate: new Date(2024, 10, 5),
+        endDate: new Date(2024, 10, 5),
+        name: 'Election Day',
+        type: 'Holiday',
+    },
+    {
+        startDate: new Date(2024, 8, 25),
+        endDate: new Date(2024, 8, 26),
+        name: 'Hurricane Helene Warning',
+        type: 'Disaster',
+    },
+    {
+        startDate: new Date(2024, 9, 8),
+        endDate: new Date(2024, 9, 10),
+        name: 'Hurricane Milton Warning',
+        type: 'Disaster',
+    },
+    {
+        startDate: new Date(2024, 10, 24),
+        endDate: new Date(2024, 10, 30),
+        name: 'Thanksgiving Break',
+        type: 'Break',
+    },
+    {
+        startDate: new Date(2024, 11, 21),
+        endDate: new Date(2025, 0, 5),
+        name: 'Winter Break',
+        type: 'Break',
+    },
+    {
+        startDate: new Date(2025, 0, 20),
+        endDate: new Date(2025, 0, 20),
+        name: 'Martin Luther King Jr. Day',
+        type: 'Holiday',
+    },
+    {
+        startDate: new Date(2025, 0, 20),
+        endDate: new Date(2025, 0, 20),
+        name: 'Martin Luther King Jr. Day',
+        type: 'Holiday',
+    },
+    {
+        startDate: new Date(2025, 2, 30),
+        endDate: new Date(2025, 3, 6),
+        name: 'Spring Break',
+        type: 'Break',
+    },
+];
+
 export const EVENT_DATA = [
     {
         id: 'e1',
@@ -91,7 +166,7 @@ export const EVENT_DATA = [
     {
         id: 'e7',
         name: 'Parent-Teacher Night Conference',
-        date: new Date(2024, 10, 5),
+        date: new Date(2024, 10, 4),
         startTime: new Date('1970-01-01T18:00:00'),
         endTime: new Date('1970-01-01T19:30:00'),
         type: 'Social',

@@ -13,6 +13,8 @@ import {
     startOfMonth,
 } from 'date-fns';
 
+import { BREAKS } from '@/context/event-list';
+
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import clsx from 'clsx';
@@ -67,6 +69,17 @@ const EventCalendar = ({ events }: EventCalendarProps) => {
         return format(dateForTime, 'h:mm a');
     };
 
+    const isDateInRange = (date: Date) => {
+        let selectedBreak;
+        BREAKS.forEach((breakPeriod) => {
+            if (date >= breakPeriod.startDate && date <= breakPeriod.endDate) {
+                selectedBreak = breakPeriod;
+            }
+        });
+
+        return selectedBreak;
+    };
+
     const navigate = (direction: number) => {
         setFocusDate(addMonths(focusDate, direction));
     };
@@ -114,11 +127,14 @@ const EventCalendar = ({ events }: EventCalendarProps) => {
                     const dateKey = format(day, 'yyyy-MM-dd');
                     const todaysEvents = eventsByDate[dateKey] || [];
 
+                    const breakPeriod: any = isDateInRange(day);
+                    const breakType = breakPeriod ? breakPeriod.type : '';
+
                     return (
                         <div
                             key={index}
                             className={clsx(
-                                'event-calendar__day-container rounded-md p-2',
+                                `event-calendar__day-container rounded-md p-2 day-status__${breakType}`,
                                 {
                                     'event-calendar__empty-day':
                                         todaysEvents.length <= 0,
@@ -133,6 +149,7 @@ const EventCalendar = ({ events }: EventCalendarProps) => {
                             >
                                 {format(day, 'd')}
                             </div>
+                            {breakPeriod && <p className='day-status__text bold'>{breakPeriod.name}</p>}
                             {todaysEvents.length > 0 && (
                                 <ul className="event-calendar__event-list">
                                     {todaysEvents.map((event) => {

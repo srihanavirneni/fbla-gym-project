@@ -63,6 +63,21 @@
     margin-right: 0;
 }
 
+.day-status__text {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.day-status__Break {
+    background-color: rgba(255, 98, 98, 0.761);
+}
+.day-status__Holiday {
+    background-color: rgba(255, 231, 98, 0.761);
+}
+.day-status__Disaster {
+    background-color: rgba(98, 174, 255, 0.761);
+}
+
 @media only screen and (max-width: 800px) {
     .event-calendar__header {
         justify-content: left;
