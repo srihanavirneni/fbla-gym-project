@@ -1,7 +1,10 @@
 import { MapContainer, TileLayer, Marker } from 'react-leaflet';
+import L from 'leaflet';
 
 import 'leaflet/dist/leaflet.css';
 import './Map.css';
+
+L.Icon.Default.imagePath = '';
 
 const Map = (props: any) => {
     return (

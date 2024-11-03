@@ -72,7 +72,7 @@
 
 .case-studies__art-exhibit img {
     height: 20rem;
-    width: 20rem;
+    width: 25rem;
 }
 
 .case-studies__sporting-event img {
@@ -132,5 +132,25 @@
 
     .case-studies__community-gathering img {
         width: 60%;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    .case-studies__concert img {
+        width: 100%;
+    }
+
+    .case-studies__art-exhibit img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .case-studies__sporting-event img {
+        width: 100%;
+    }
+
+    .case-studies__community-gathering img {
+        width: 100%;
     }
 }
