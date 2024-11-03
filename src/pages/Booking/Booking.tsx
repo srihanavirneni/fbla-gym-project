@@ -75,12 +75,12 @@ const Booking = () => {
                 <img src={stadium} alt="stadium" />
                 <h1 className="black">Pick A Seat</h1>
                 <p className="medium">
-                    Seats for the Stadium range from 100 to 300; ticket prices
+                    Seats for the Stadium range from 100 to 400; ticket prices
                     are flat no matter where you sit.
                 </p>
                 <div className="seat-list__seat-input">
                     <p>Type Seat Number</p>
-                    <Input placeholder="Number from 100 to 300" type="number" />
+                    <Input placeholder="Number from 100 to 400" type="number" />
                 </div>
             </div>
             <hr />
