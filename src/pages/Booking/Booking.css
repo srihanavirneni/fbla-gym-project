@@ -138,4 +138,21 @@
     .booking-page__seat-list {
         padding: 2rem;
     }
+
+    .credit-card-page {
+        flex-direction: column;
+    }
+
+    .credit-card-page__info {
+        margin-right: 0;
+    }
+
+    .order-details__policies {
+        display: none;
+    }
+
+    .credit-card-page__order-details {
+        width: 100%;
+        margin-top: 3rem;
+    }
 }

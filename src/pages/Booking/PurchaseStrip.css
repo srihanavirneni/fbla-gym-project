@@ -19,3 +19,13 @@
 .purchase-strip__total > p {
     margin-right: 2rem;
 }
+
+@media only screen and (max-width: 1000px) {
+    .ticket-purchase-strip {
+        flex-direction: column;
+    }
+
+    .purchase-strip__total {
+        margin-top: 2rem;
+    }
+}
