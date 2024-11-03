@@ -1,0 +1,141 @@
+.booking-page__error {
+    text-align: center;
+    padding: 5rem 20%;
+}
+
+.booking-page__error-card,
+.credit-card-page__info-card {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.credit-card-page__info-card {
+    max-width: 50rem;
+}
+
+.booking-page__header {
+    text-align: center;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 2.5rem;
+}
+
+.booking-page__header h1 {
+    margin-bottom: 1rem;
+}
+
+.booking-page__header p {
+    margin-bottom: 0.25rem;
+}
+
+.booking-page__seat-list {
+    text-align: center;
+    padding: 5rem;
+}
+
+.booking-page__seat-list img {
+    width: 30rem;
+}
+
+.booking-page__seat-list h1 {
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.seat-list__seat-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+
+.seat-list__seat-input > p {
+    margin-bottom: 1rem;
+}
+
+.seat-list__seat-input > input {
+    width: 20rem;
+}
+
+.booking-page > hr {
+    width: 50%;
+    margin: auto;
+}
+
+.credit-card-page {
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.credit-card-page__info {
+    margin-right: 5rem;
+}
+
+.credit-card-page__order-details {
+    width: 40%;
+    margin-top: 1rem;
+}
+
+.credit-card-page__order-details > h2,
+.credit-card-page__order-details > hr {
+    margin-bottom: 1rem;
+}
+
+.credit-card-page__order-details > .order-details__pricing {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.credit-card-page__order-details > .order-details__pricing-final {
+    display: flex;
+    justify-content: right;
+}
+
+.credit-card-page__order-details > .order-details__pricing-final > p:first-child {
+    margin-right: 0.75rem;
+}
+
+.credit-info-card__text-field {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.credit-info-card__text-field > input {
+    width: 90%;
+    margin-top: 0.5rem;
+}
+
+.order-details__policies {
+    width: 100%;
+    padding: 0;
+    margin-top: 3rem;
+}
+
+.credit-info-card__radio-group-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.credit-info-card__radio-group-item svg {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    .booking-page__seat-list img {
+        width: 100%;
+    }
+
+    .booking-page__seat-list {
+        padding: 2rem;
+    }
+}

@@ -12,7 +12,6 @@ import AboutHeader from './AboutHeader';
 
 import placeholder from '../../assets/images/placeholder.png';
 
-import gym0 from '../../assets/images/gymphoto0.png';
 import gym1 from '../../assets/images/gymphoto1.png';
 import gym2 from '../../assets/images/gymphoto2.png';
 import gym3 from '../../assets/images/gymphoto3.png';
@@ -32,24 +31,20 @@ const ImageHolder = (props: any) => {
 const About = () => {
     const carouselContent = [
         {
-            image: gym0,
+            image: gym1,
             description: 'gym picture 1',
         },
         {
-            image: gym1,
+            image: gym2,
             description: 'gym picture 2',
         },
         {
-            image: gym2,
+            image: gym3,
             description: 'gym picture 3',
         },
         {
-            image: gym3,
-            description: 'gym picture 4',
-        },
-        {
             image: gym4,
-            description: 'gym picture 5',
+            description: 'gym picture 4',
         },
     ];
 

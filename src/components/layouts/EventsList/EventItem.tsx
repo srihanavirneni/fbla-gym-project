@@ -68,7 +68,10 @@ const EventItem = (props: any) => {
                         </Link>
                     </Button>
                     <Button asChild variant="accent" size="sm">
-                        <Link to="/" className="bold">
+                        <Link
+                            to={`/events/payment/${props.id}`}
+                            className="bold"
+                        >
                             {props.ticketCost === 0
                                 ? 'Get Ticket for FREE'
                                 : `Buy Ticket for $${props.ticketCost}.00`}

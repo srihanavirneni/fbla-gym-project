@@ -73,6 +73,7 @@ export const BREAKS = [
     },
 ];
 
+export const CONVENIENCE_FEE = 2;
 export const EVENT_DATA = [
     {
         id: 'e1',

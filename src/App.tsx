@@ -11,6 +11,7 @@ import Contact from './pages/Contact/Contact';
 import Calendar from './pages/Calendar/Calendar';
 
 import CreateEvent from './pages/CreateEvent/CreateEvent';
+import Booking from './pages/Booking/Booking';
 
 import './App.css';
 
@@ -28,6 +29,7 @@ const App = () => {
                     <Route path="calendar" element={<Calendar />} />
 
                     <Route path="events/create" element={<CreateEvent />} />
+                    <Route path="events/payment/:id" element={<Booking />} />
 
                     <Route path="*" element={<Navigate to="/" />} />
                 </Routes>

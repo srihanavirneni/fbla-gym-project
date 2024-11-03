@@ -1,0 +1,21 @@
+.ticket-purchase-strip {
+    background-color: var(--color-secondary);
+    padding: 3rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.purchase-strip__total {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.purchase-strip__total > p {
+    margin-right: 2rem;
+}
