@@ -1,6 +1,5 @@
 import { Checkbox } from '@/components/ui/checkbox';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
 
 import './PurchaseStrip.css';
 
