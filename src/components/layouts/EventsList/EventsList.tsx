@@ -81,6 +81,26 @@ const EventsList = (props: any) => {
                             value: 'arts',
                             label: 'Arts',
                         },
+                        {
+                            value: 'community service',
+                            label: 'Community Service',
+                        },
+                        {
+                            value: 'entertainment',
+                            label: 'Entertainment',
+                        },
+                        {
+                            value: 'market',
+                            label: 'Market',
+                        },
+                        {
+                            value: 'technology',
+                            label: 'Technology',
+                        },
+                        {
+                            value: 'festival',
+                            label: 'Festival',
+                        },
                     ]}
                 />
                 <Input
