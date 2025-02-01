@@ -15,7 +15,7 @@ const ContactStrip = () => {
             <ul className="contact-strip__location">
                 <li>
                     <img src={pin} alt="location" />
-                    <p className='bold'>{import.meta.env.VITE_ADDRESS}</p>
+                    <p className='bold'>{import.meta.env.VITE_FULL_ADDRESS}</p>
                 </li>
             </ul>
             <ul className="contact-strip__media">

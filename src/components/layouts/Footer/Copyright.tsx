@@ -3,7 +3,7 @@ import './Copyright.css'
 const Copyright = () => {
   return (
     <div className='footer-copyright'>
-        <p>© LHS Copyright 2025</p>
+        <p>© 2025 Lambert High Schoool Gymnasium</p>
         <p>Privacy Policy</p>
     </div>
   )

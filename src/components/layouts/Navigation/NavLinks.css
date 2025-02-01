@@ -17,12 +17,12 @@
 }
 
 .nav-links__footer a {
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     color: white;
 }
 
 .nav-links__footer a:hover {
-    color: var(--color-primary);
+    color: var(--color-primary__light);
 }
 
 .main-navigation__drawer-links > .nav-links {
