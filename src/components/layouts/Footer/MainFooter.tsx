@@ -50,7 +50,7 @@ const MainFooter = () => {
                                         target="_blank"
                                         className="medium"
                                     >
-                                        {import.meta.env.VITE_INSTAGRAM}
+                                        @{import.meta.env.VITE_INSTAGRAM}
                                     </a>
                                 </li>
                                 <li>
@@ -60,7 +60,7 @@ const MainFooter = () => {
                                         target="_blank"
                                         className="medium"
                                     >
-                                        {import.meta.env.VITE_FACEBOOK}
+                                        @{import.meta.env.VITE_FACEBOOK}
                                     </a>
                                 </li>
                                 <li>
@@ -70,7 +70,7 @@ const MainFooter = () => {
                                         target="_blank"
                                         className="medium"
                                     >
-                                        {import.meta.env.VITE_TWITTER}
+                                        @{import.meta.env.VITE_TWITTER}
                                     </a>
                                 </li>
                             </ul>

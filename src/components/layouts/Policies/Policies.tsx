@@ -7,7 +7,7 @@ const Policies = (props: any) => {
             <p>
                 The school gymnasium is available for community use during
                 non-school hours, from 5:00 PM to 9:00 PM on weekdays and 9:00
-                AM to 7:00 PM on weekends. Users are expected to follow all
+                AM to 7:00 PM on weekends. Visitors are expected to follow all
                 posted guidelines, which include wearing proper athletic attire,
                 maintaining cleanliness, and respecting the facility and
                 equipment. A responsible adult must supervise any minors under
@@ -31,10 +31,10 @@ const Policies = (props: any) => {
                         <li>
                             Concessions: A full-service concession stand is
                             located near the main entrance, offering snacks,
-                            drinks, and hot food. Available items include: Hot
-                            dogs, nachos, popcorn, candy Soda, water, and sports
-                            drinks Gluten-free and vegetarian options are
-                            available
+                            drinks, and hot food. Available items include: hot
+                            dogs, nachos, popcorn, candy, soda, water, and sports
+                            drinks. Gluten-free and vegetarian options are
+                            available.
                         </li>
                         <li>
                             Restrooms: Restrooms are located on both sides of

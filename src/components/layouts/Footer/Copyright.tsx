@@ -1,12 +1,17 @@
-import './Copyright.css'
+import './Copyright.css';
 
 const Copyright = () => {
-  return (
-    <div className='footer-copyright'>
-        <p>© 2025 Lambert High Schoool Gymnasium</p>
-        <p>Privacy Policy</p>
-    </div>
-  )
-}
+    return (
+        <div className="footer-copyright">
+            <div>
+                <p>© 2025 Lambert High Schoool Gymnasium</p>
+            </div>
+            <div className='footer-copyright__quick-info'>
+                <p>Privacy Policy</p>
+                <p>Privacy</p>
+            </div>
+        </div>
+    );
+};
 
-export default Copyright
+export default Copyright;

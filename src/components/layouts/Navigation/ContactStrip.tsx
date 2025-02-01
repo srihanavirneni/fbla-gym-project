@@ -29,7 +29,7 @@ const ContactStrip = () => {
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://facebook.com/"
+                        href={`https://facebook.com/${import.meta.env.VITE_FACEBOOK}`}
                     >
                         <FontAwesomeIcon icon={faFacebook} color="white" />
                     </a>
@@ -38,7 +38,7 @@ const ContactStrip = () => {
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://X.com/"
+                        href={`https://X.com/${import.meta.env.VITE_TWITTER}`}
                     >
                         <FontAwesomeIcon icon={faXTwitter} color="white" />
                     </a>
@@ -47,7 +47,7 @@ const ContactStrip = () => {
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://www.instagram.com/"
+                        href={`https://www.instagram.com/${import.meta.env.VITE_INSTAGRAM}`}
                     >
                         <FontAwesomeIcon icon={faInstagram} color="white" />
                     </a>
@@ -56,7 +56,7 @@ const ContactStrip = () => {
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://www.gmail.com/"
+                        href={`mailto:${import.meta.env.VITE_EMAIL}`}
                     >
                         <FontAwesomeIcon icon={faEnvelope} color="white" />
                     </a>

@@ -12,7 +12,6 @@ import { Link } from 'react-router-dom';
 import {
     Card,
     CardContent,
-    CardDescription,
     CardFooter,
     CardHeader,
     CardTitle,
@@ -31,24 +30,49 @@ const EventItem = (props: any) => {
         return format(dateForTime, 'h:mm a');
     };
 
+    const months = [
+        'JAN',
+        'FEB',
+        'MAR',
+        'APR',
+        'MAY',
+        'JUN',
+        'JUL',
+        'AUG',
+        'SEP',
+        'OCT',
+        'NOV',
+        'DEC',
+    ];
+    const getMonthName = (time: Date) => {
+        const monthIndex = time.getMonth();
+        return months[monthIndex];
+    };
+
     return (
         <li className="event-item">
             <Card className="event-item__content">
                 <CardHeader>
-                    <CardTitle className="bold">{props.name}</CardTitle>
-                    <CardDescription>
-                        {' '}
-                        <div className="item-content__info">
-                            <Badge>{props.type}</Badge>
-                            <p className="bold">
-                                {props.date.toLocaleDateString()}{' '}
-                                {formatTime(props.startTime) +
-                                    ' - ' +
-                                    formatTime(props.endTime)}
-                            </p>
+                    <CardTitle className="event-item__content-title">
+                        <div className="event-item__content-date">
+                            <h3 className="medium">
+                                {getMonthName(props.date)}
+                            </h3>
+                            <h1 className="bold">{props.date.getDate()}</h1>
                         </div>
-                        <p className="bold">Location: {props.location}</p>
-                    </CardDescription>
+                        <div className="event-item__content-sub-info">
+                            <h1 className="bold">{props.name}</h1>
+                            <div className="item-content__info">
+                                <Badge>{props.type}</Badge>
+                                <p className="bold">
+                                    {formatTime(props.startTime) +
+                                        ' - ' +
+                                        formatTime(props.endTime)}
+                                </p>
+                            </div>
+                            <p className="bold">Location: {props.location}</p>
+                        </div>
+                    </CardTitle>
                 </CardHeader>
                 <CardContent className="item-content__main-info">
                     <p>{props.description}</p>

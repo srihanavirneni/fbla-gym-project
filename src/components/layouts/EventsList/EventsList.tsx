@@ -34,21 +34,27 @@ const EventsList = (props: any) => {
         const searchQuery = query.toLowerCase();
         const comboQuery = comboboxQuery.toLowerCase();
 
-        const filteredComboQuery =
+        let filteredComboQuery =
             comboQuery === ''
                 ? events
                 : events.filter((event: any) => {
                       return event.type.toLowerCase().includes(comboQuery);
                   });
 
-        return filteredComboQuery.filter((event: any) => {
-            return event.name.toLowerCase().includes(searchQuery);
+        filteredComboQuery = filteredComboQuery.filter((event: any) => {
+            return (
+                event.name.toLowerCase().includes(searchQuery) &&
+                event.date >= new Date()
+            );
         });
+
+        filteredComboQuery.sort((a: any, b: any) => a.date - b.date);
+        return filteredComboQuery;
     }, [events, query, comboboxQuery]);
 
     return (
         <div>
-            <div  className="events-list__search-bar">
+            <div className="events-list__search-bar">
                 <Combobox
                     labelPlaceholder="Select category"
                     placeholder="Search categories"
