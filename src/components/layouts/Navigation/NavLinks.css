@@ -138,10 +138,27 @@
 }
 
 .nav-links__cta a {
+    background-color: var(--color-secondary);
+    color: black;
+    border: 1px solid black;
+    border-radius: 100px;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
     padding-top: 0.15rem;
     padding-bottom: 0.15rem;
+}
+
+.nav-links__cta a:hover {
+    background-color: rgb(223, 223, 223);
+}
+
+.nav-links__cta-primary a {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.nav-links__cta-primary a:hover {
+    background-color: var(--color-primary__shaded);
 }
 
 @media screen and (max-width: 1000px) {

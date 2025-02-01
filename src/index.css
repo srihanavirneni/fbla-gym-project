@@ -16,6 +16,7 @@
     -moz-osx-font-smoothing: grayscale;
 
     --color-primary: #7C1728;
+    --color-primary__shaded: #64121f;
     --color-secondary: #f2f2f2;
     --color-accent: #000000;
     --color-complementary: #222222;

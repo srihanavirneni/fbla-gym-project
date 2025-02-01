@@ -67,7 +67,7 @@ const NavLinks = (props: any) => {
                             <NavLink to="/contact">Contact Us</NavLink>
                         </Button>
                     </div>
-                    <div className="nav-links__cta">
+                    <div className="nav-links__cta nav-links__cta-primary">
                         <Button asChild variant={"accent"}>
                             <NavLink to="/events/create">Host an Event</NavLink>
                         </Button>
