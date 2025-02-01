@@ -32,19 +32,19 @@ const About = () => {
     const carouselContent = [
         {
             image: gym1,
-            description: 'gym picture 1',
+            description: 'Gym picture 1',
         },
         {
             image: gym2,
-            description: 'gym picture 2',
+            description: 'Gym picture 2',
         },
         {
             image: gym3,
-            description: 'gym picture 3',
+            description: 'Gym picture 3',
         },
         {
             image: gym4,
-            description: 'gym picture 4',
+            description: 'Gym picture 4',
         },
     ];
 

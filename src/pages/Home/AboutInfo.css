@@ -5,6 +5,8 @@
     padding: 7rem;
     padding-bottom: 5rem;
     padding-top: 0;
+    background-color: rgb(250, 250, 250);
+    padding-top: 5rem;
 }
 
 .about-info__visual div > img {

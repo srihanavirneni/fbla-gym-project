@@ -6,14 +6,12 @@ import {
     format,
     getDay,
     isToday,
-    setHours,
-    setMilliseconds,
-    setMinutes,
-    setSeconds,
     startOfMonth,
 } from 'date-fns';
 
 import { BREAKS } from '@/context/event-list';
+
+import CalendarItem from './CalendarItem';
 
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -24,6 +22,7 @@ import './EventCalendar.css';
 const WEEKDAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 interface Event {
+    id: string,
     date: Date;
     name: string;
     location: string;
@@ -58,16 +57,6 @@ const EventCalendar = ({ events }: EventCalendarProps) => {
             return acc;
         }, {});
     }, [events]);
-
-    const formatTime = (time: Date) => {
-        let dateForTime = new Date(0);
-        dateForTime = setHours(dateForTime, time.getHours());
-        dateForTime = setMinutes(dateForTime, time.getMinutes());
-        dateForTime = setSeconds(dateForTime, 0);
-        dateForTime = setMilliseconds(dateForTime, 0);
-
-        return format(dateForTime, 'h:mm a');
-    };
 
     const isDateInRange = (date: Date) => {
         let selectedBreak;
@@ -149,26 +138,22 @@ const EventCalendar = ({ events }: EventCalendarProps) => {
                             >
                                 {format(day, 'd')}
                             </div>
-                            {breakPeriod && <p className='day-status__text bold'>{breakPeriod.name}</p>}
+                            {breakPeriod && (
+                                <p className="day-status__text bold">
+                                    {breakPeriod.name}
+                                </p>
+                            )}
                             {todaysEvents.length > 0 && (
                                 <ul className="event-calendar__event-list">
                                     {todaysEvents.map((event) => {
                                         return (
-                                            <li key={event.name}>
-                                                <div>
-                                                    <h4>{event.name}</h4>
-                                                    <p>{event.location}</p>
-                                                    <p>
-                                                        {formatTime(
-                                                            event.startTime
-                                                        ) +
-                                                            ' - ' +
-                                                            formatTime(
-                                                                event.endTime
-                                                            )}
-                                                    </p>
-                                                </div>
-                                            </li>
+                                            <CalendarItem
+                                                id={event.id}
+                                                name={event.name}
+                                                location={event.location}
+                                                startTime={event.startTime}
+                                                endTime={event.endTime}
+                                            />
                                         );
                                     })}
                                 </ul>

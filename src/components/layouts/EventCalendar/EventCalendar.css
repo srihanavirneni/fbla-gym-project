@@ -17,22 +17,7 @@
     text-decoration: none;
 }
 
-.event-calendar__event-list li {
-    margin-bottom: 0.5rem;
-}
-.event-calendar__event-list li:last-child {
-    margin-bottom: 0;
-}
 
-.event-calendar__event-list li > div {
-    background-color: rgb(240, 240, 240);
-    padding: 1rem;
-    border-radius: 5px;
-}
-
-.event-calendar__event-list li > div > h4 {
-    margin-bottom: 0.5rem;
-}
 
 .event-calendar__empty-day {
     height: 10rem;
