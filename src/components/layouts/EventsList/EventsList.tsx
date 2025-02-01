@@ -48,7 +48,7 @@ const EventsList = (props: any) => {
 
     return (
         <div>
-            <div className="events-list__search-bar">
+            <div  className="events-list__search-bar">
                 <Combobox
                     labelPlaceholder="Select category"
                     placeholder="Search categories"
