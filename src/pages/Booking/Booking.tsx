@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { EVENT_DATA, CONVENIENCE_FEE } from '@/context/event-list';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -18,6 +18,8 @@ import {
     CardHeader,
     CardTitle,
 } from '@/components/ui/card';
+
+import BookingError from './BookingError';
 
 import PurchaseStrip from './PurchaseStrip';
 import Policies from '@/components/layouts/Policies/Policies';
@@ -106,13 +108,14 @@ const Booking = () => {
                         <CardContent>
                             <h3>Contact Information</h3>
                             <p>
-                                You will receive a QR Code upon purchase. It
-                                will be emailed to you (if provided) and also
-                                sent to your phone (if provided). It is
-                                mandatory to show your QR Code.
+                                You will receive a <b>bar code</b> upon
+                                purchase. It will be emailed to you (if
+                                provided) and also sent to your phone (if
+                                provided). It is mandatory to show your bar code
+                                in the check-in area.
                             </p>
                             <div className="credit-info-card__text-field">
-                                <p>Email</p>
+                                <p>E-mail</p>
                                 <Input
                                     placeholder="name@example.com"
                                     type="email"
@@ -232,23 +235,7 @@ const Booking = () => {
             <PurchaseStrip total={eventData['ticketCost'] + CONVENIENCE_FEE} />
         </div>
     ) : (
-        <div className="booking-page__error">
-            <Card className="booking-page__error-card">
-                <CardHeader>
-                    <CardTitle>
-                        <h3>Ticket not found!</h3>
-                    </CardTitle>
-                    <CardDescription>
-                        Looks like you entered a wacky URL or did something bad!
-                    </CardDescription>
-                </CardHeader>
-                <CardContent>
-                    <Button asChild size={'sm'} variant={'accent'}>
-                        <Link to="/events">Go Back</Link>
-                    </Button>
-                </CardContent>
-            </Card>
-        </div>
+        <BookingError />
     );
 };
 

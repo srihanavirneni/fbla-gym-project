@@ -1,17 +1,8 @@
-.booking-page__error {
-    text-align: center;
-    padding: 5rem 20%;
-}
-
-.booking-page__error-card,
 .credit-card-page__info-card {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
     border-radius: 6px;
     overflow: hidden;
     padding: 2rem;
-}
-
-.credit-card-page__info-card {
     max-width: 50rem;
 }
 
@@ -97,7 +88,9 @@
     justify-content: right;
 }
 
-.credit-card-page__order-details > .order-details__pricing-final > p:first-child {
+.credit-card-page__order-details
+    > .order-details__pricing-final
+    > p:first-child {
     margin-right: 0.75rem;
 }
 
