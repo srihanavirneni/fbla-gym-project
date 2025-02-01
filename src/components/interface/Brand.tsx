@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import hslogo from '../../assets/images/hslogo.png';
 import './Brand.css';
 
-const Brand = () => {
+const Brand = (props: any) => {
     return (
-        <div className="brand">
+        <div className={`brand ${props.mobile && 'brand-mobile'}`}>
             <img className="logo" src={hslogo} alt="Logo" />
             <h2>
                 <Link to="/">
