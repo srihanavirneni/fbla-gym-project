@@ -4,6 +4,7 @@
     flex-direction: row;
     align-items: center;
     padding: 0;
+    margin-top: 0.5rem;
 }
 
 .main-navigation__drawer-links > .nav-links {
@@ -21,7 +22,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -35%);
 }
 
 .main-navigation__nav-links .nav-links__right {
@@ -34,15 +35,21 @@
 
 .nav-links li {
     display: inline-block;
-    padding: 0 20px;
+    padding: 0 0.4rem;
 }
 
-.nav-links li > a:hover,
+.nav-links li > a {
+    padding: 0.75rem;
+}
+
+.nav-links li > a:hover {
+    background-color: var(--color-main__shaded);
+    border-radius: 5px;
+}
 .nav-links li > a.active {
     background-color: var(--color-primary);
     color: white;
     border-radius: 5px;
-    padding: 0.75rem;
 }
 
 .nav-links li a,
@@ -50,7 +57,7 @@
 .nav-links .heading {
     transition: all 0.3s ease 0s;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 400;
     color: black;
 }

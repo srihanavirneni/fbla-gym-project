@@ -1,0 +1,37 @@
+.brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    transition: all 0.3s ease;
+    padding: 0 0.65rem;
+}
+
+.brand:hover { 
+    background-color: var(--color-main__shaded);
+}
+
+.brand a {
+    text-decoration: none;
+}
+
+.brand li {
+    list-style: none;
+    color: black;
+}
+
+.brand__sub-title {
+    font-size: 12px;
+    padding-bottom: 2px;
+}
+
+.brand__main-title {
+    font-size: 16px;
+}
+
+.brand img {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-right: 0.5rem;
+}

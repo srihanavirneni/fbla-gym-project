@@ -20,9 +20,10 @@
     --color-accent: #000000;
     --color-complementary: #222222;
     --color-main: #ffffff;
+    --color-main__shaded: #ecebeb;
 
-    --navigation-height: 50px;
-    --contact-strip-height: 15px;
+    --navigation-height: 30px;
+    --contact-strip-height: 5px;
 }
 
 * {

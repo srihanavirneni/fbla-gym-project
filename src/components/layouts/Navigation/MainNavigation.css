@@ -16,40 +16,7 @@
     background-color: white;
 }
 
-.brand {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-left: 2.5rem;
-}
 
-.brand h2 {
-    font-size: 17px;
-}
-
-.brand a {
-    text-decoration: none;
-}
-
-.brand li {
-    list-style: none;
-    color: black;
-}
-
-.brand__sub-title {
-    font-size: 13px;
-    padding-bottom: 2px;
-}
-
-.brand__main-title {
-    font-size: 20px;
-}
-
-.brand img {
-    width: 5rem;
-    height: 5rem;
-    margin-right: 0.75rem;
-}
 
 .main-navigation__menu-btn {
     width: 3rem;

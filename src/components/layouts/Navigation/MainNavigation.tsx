@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+
+import Brand from '@/components/interface/Brand.tsx';
 
 import NavLinks from './NavLinks.tsx';
 import SideDrawer from './SideDrawer.tsx';
@@ -7,7 +8,6 @@ import Backdrop from '../../interface/Backdrop.tsx';
 import ContactStrip from './ContactStrip.tsx';
 
 import menu from '../../../assets/icons/menu.png';
-import hslogo from '../../../assets/images/hslogo.png';
 import './MainNavigation.css';
 
 const MainNavigation = () => {
@@ -32,21 +32,7 @@ const MainNavigation = () => {
 
             <ContactStrip />
             <header className="main-header">
-                <div className="brand">
-                    <img className="logo" src={hslogo} alt="Logo" />
-                    <h2>
-                        <Link to="/">
-                            <ul>
-                                <li className="brand__sub-title medium">
-                                    {import.meta.env.VITE_SCHOOL_NAME}
-                                </li>
-                                <li className="brand__main-title bold">
-                                    Gymnasium
-                                </li>
-                            </ul>
-                        </Link>
-                    </h2>
-                </div>
+                <Brand />
                 <nav className="main-navigation__nav-links">
                     <NavLinks />
                 </nav>
