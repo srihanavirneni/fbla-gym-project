@@ -44,6 +44,16 @@
     display: flex;
     flex-direction: column;
     align-items: start;
+    width: 100%;
+}
+
+.main-navigation__drawer-links > .nav-links .nav-links__cta {
+    width: 100%;
+}
+
+.main-navigation__drawer-links > .nav-links .nav-links__cta a {
+    width: 100%;
+    height: 2.5rem;
 }
 
 .main-navigation__nav-links .nav-links__centered {
@@ -134,7 +144,28 @@
     background-color: var(--color-primary__shaded);
 }
 
+.nav-links__phone {
+    margin-right: 1rem;
+    display: none;
+}
+
+.nav-links__phone a {
+    background-color: transparent;
+    color: black;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
+}
+.nav-links__phone a:hover {
+    background-color: var(--color-main__shaded);
+}
+
 @media screen and (max-width: 1000px) {
+    .nav-links__phone {
+        display: block;
+    }
+
     .nav-links > li {
         margin-bottom: 1.5rem;
         border-color: var(--color-primary);

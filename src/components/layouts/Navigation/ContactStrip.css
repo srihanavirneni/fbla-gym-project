@@ -12,7 +12,8 @@
     height: calc(var(--contact-strip-height) + 2rem);
 }
 
-.contact-strip li p {
+.contact-strip li p,
+.contact-strip li a {
     color: white;
     font-size: 12.5px;
 }
@@ -35,6 +36,11 @@
 .contact-strip__location li {
     display: flex;
     flex-direction: row;
+}
+
+.contact-strip__location li > a {
+    color: white;
+    text-decoration: none;
 }
 
 .contact-strip__location img {

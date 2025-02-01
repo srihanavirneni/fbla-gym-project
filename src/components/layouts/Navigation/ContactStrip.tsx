@@ -15,7 +15,13 @@ const ContactStrip = () => {
             <ul className="contact-strip__location">
                 <li>
                     <img src={pin} alt="location" />
-                    <p className='bold'>{import.meta.env.VITE_FULL_ADDRESS}</p>
+                    <a
+                        href="https://www.google.com/maps/place/Lambert+High+School/@34.1062096,-84.1389193,17z/data=!3m1!4b1!4m6!3m5!1s0x88f59a2bc0b1a8f1:0x963c015b7e5af3f2!8m2!3d34.1062096!4d-84.1389193!16s%2Fm%2F047rdgx?entry=ttu&g_ep=EgoyMDI1MDEyOS4xIKXMDSoASAFQAw%3D%3D"
+                        target="_blank"
+                        className="bold"
+                    >
+                        {import.meta.env.VITE_FULL_ADDRESS}
+                    </a>
                 </li>
             </ul>
             <ul className="contact-strip__media">
