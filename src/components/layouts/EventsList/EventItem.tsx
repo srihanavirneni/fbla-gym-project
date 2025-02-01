@@ -1,3 +1,4 @@
+import { google } from 'calendar-link';
 import {
     format,
     setHours,
@@ -49,6 +50,23 @@ const EventItem = (props: any) => {
         return months[monthIndex];
     };
 
+    const combineDates = (date1: Date, date2: Date) => {
+        const year = date1.getFullYear();
+        const month = date1.getMonth();
+        const day = date1.getDate();
+        const hours = date2.getHours();
+        const minutes = date2.getMinutes();
+        const seconds = date2.getSeconds();
+        return new Date(year, month, day, hours, minutes, seconds);
+    };
+
+    const addToCalendarURL = google({
+        title: props.name,
+        description: props.description,
+        start: combineDates(props.date, props.startTime),
+        end: combineDates(props.date, props.endTime),
+    });
+
     return (
         <li className="event-item">
             <Card className="event-item__content">
@@ -87,9 +105,13 @@ const EventItem = (props: any) => {
                 </CardContent>
                 <CardFooter className="item-content__actions">
                     <Button asChild variant="secondary" size="sm">
-                        <Link to="/" className="bold">
+                        <a
+                            href={addToCalendarURL}
+                            target="_blank"
+                            className="bold"
+                        >
                             Add To Calendar
-                        </Link>
+                        </a>
                     </Button>
                     <Button asChild variant="accent" size="sm">
                         <Link

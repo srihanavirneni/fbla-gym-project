@@ -30,6 +30,7 @@
         "@schedule-x/current-time": "^2.4.1",
         "@schedule-x/react": "^2.4.1",
         "@schedule-x/theme-default": "^2.4.1",
+        "calendar-link": "^2.8.0",
         "class-variance-authority": "^0.7.0",
         "clsx": "^2.1.1",
         "cmdk": "^1.0.0",

@@ -6,9 +6,8 @@ const Copyright = () => {
             <div>
                 <p>© 2025 Lambert High Schoool Gymnasium</p>
             </div>
-            <div className='footer-copyright__quick-info'>
+            <div>
                 <p>Privacy Policy</p>
-                <p>Privacy</p>
             </div>
         </div>
     );
