@@ -57,3 +57,9 @@
         width: 100%;
     }
 }
+
+@media only screen and (max-width: 1200px) {
+    .above-the-fold__main-info {
+        width: 75%;
+    }
+}

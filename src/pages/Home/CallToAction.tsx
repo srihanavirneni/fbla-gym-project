@@ -1,5 +1,5 @@
-import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 import './CallToAction.css';
 
@@ -8,11 +8,21 @@ const CallToAction = () => {
         <div className="home__cta">
             <h1 className="black">What are you waiting for?</h1>
             <p>
-                Don't miss an opportunity and <b>Reserve a Date today!</b>
+                Book a reservation at our gymnasium or register for an event
+                today!
             </p>
-            <Button asChild variant={'accent'} size={'sm'}>
-                <Link to="/events/create">Host an Event</Link>
-            </Button>
+            <div className="cta__btn-list">
+                <Button asChild variant={'accent'}>
+                    <Link to="/contact" className="bold">
+                        Contact Us
+                    </Link>
+                </Button>
+                <Button asChild variant={'accent'}>
+                    <Link to="/events/create" className="bold">
+                        Host an Event
+                    </Link>
+                </Button>
+            </div>
         </div>
     );
 };

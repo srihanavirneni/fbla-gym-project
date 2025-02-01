@@ -58,9 +58,9 @@
     margin-left: 0.75rem;
 }
 
-.contact-strip__media img {
-    width: 20px;
-    height: 20px;
+.contact-strip__media svg {
+    width: 1rem;
+    height: 1rem;
 }
 
 @media only screen and (max-width: 800px) {
