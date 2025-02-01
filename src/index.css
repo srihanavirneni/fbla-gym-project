@@ -128,7 +128,7 @@ button:focus-visible {
         --alternate-accent: 350, 69%, 29%; /* 7C1728 */
         --alternate-accent-shaded: 350, 69%, 18%;
         --accent: 0 0% 96.1%;
-        --accent-foreground: 0 0% 96.1%;
+        --accent-foreground: 0 0% 0%;
         --destructive: 0 84.2% 60.2%;
         --destructive-foreground: 0 0% 98%;
         --border: 0 0% 89.8%;

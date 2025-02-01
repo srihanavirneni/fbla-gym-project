@@ -24,66 +24,71 @@ const Combobox = (props: any) => {
     const [value, setValue] = React.useState('');
 
     return (
-        <Popover open={open} onOpenChange={setOpen}>
-            <PopoverTrigger asChild className={`${props.className}`}>
-                <Button
-                    variant="outline"
-                    role="combobox"
-                    aria-expanded={open}
-                    className="justify-between"
+        <div className={`combobox ${props.className}`}>
+            <Popover open={open} onOpenChange={setOpen}>
+                <PopoverTrigger asChild className={`${props.className}`}>
+                    <Button
+                        variant="outline"
+                        role="combobox"
+                        aria-expanded={open}
+                        className="justify-between"
+                    >
+                        {value
+                            ? props.items.find(
+                                  (item: any) => item.value === value
+                              )?.label
+                            : props.labelPlaceholder}
+                        <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                    </Button>
+                </PopoverTrigger>
+                <PopoverContent
+                    className={`w-[200px] p-0 ${props.className}-content`}
                 >
-                    {value
-                        ? props.items.find((item: any) => item.value === value)
-                              ?.label
-                        : props.labelPlaceholder}
-                    <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
-                </Button>
-            </PopoverTrigger>
-            <PopoverContent
-                className={`w-[200px] p-0 ${props.className}-content`}
-            >
-                <Command>
-                    <CommandInput
-                        placeholder={props.placeholder || 'Search for Items'}
-                    />
-                    <CommandList>
-                        <CommandEmpty>No items found.</CommandEmpty>
-                        <CommandGroup>
-                            {props.items.map((item: any) => (
-                                <CommandItem
-                                    key={item.value}
-                                    value={item.value}
-                                    onSelect={(currentValue) => {
-                                        setValue(
-                                            currentValue === value
-                                                ? ''
-                                                : currentValue
-                                        );
-                                        setOpen(false);
-                                        props.onChange &&
-                                            props.onChange(
+                    <Command>
+                        <CommandInput
+                            placeholder={
+                                props.placeholder || 'Search for Items'
+                            }
+                        />
+                        <CommandList>
+                            <CommandEmpty>No items found.</CommandEmpty>
+                            <CommandGroup>
+                                {props.items.map((item: any) => (
+                                    <CommandItem
+                                        key={item.value}
+                                        value={item.value}
+                                        onSelect={(currentValue) => {
+                                            setValue(
                                                 currentValue === value
                                                     ? ''
                                                     : currentValue
                                             );
-                                    }}
-                                >
-                                    <Check
-                                        className={cn(
-                                            'mr-2 h-4 w-4',
-                                            value === item.value
-                                                ? 'opacity-100'
-                                                : 'opacity-0'
-                                        )}
-                                    />
-                                    {item.label}
-                                </CommandItem>
-                            ))}
-                        </CommandGroup>
-                    </CommandList>
-                </Command>
-            </PopoverContent>
-        </Popover>
+                                            setOpen(false);
+                                            props.onChange &&
+                                                props.onChange(
+                                                    currentValue === value
+                                                        ? ''
+                                                        : currentValue
+                                                );
+                                        }}
+                                    >
+                                        <Check
+                                            className={cn(
+                                                'mr-2 h-4 w-4',
+                                                value === item.value
+                                                    ? 'opacity-100'
+                                                    : 'opacity-0'
+                                            )}
+                                        />
+                                        {item.label}
+                                    </CommandItem>
+                                ))}
+                            </CommandGroup>
+                        </CommandList>
+                    </Command>
+                </PopoverContent>
+            </Popover>
+        </div>
     );
 };
 

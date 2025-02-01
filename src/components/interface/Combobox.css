@@ -1,0 +1,11 @@
+.combobox p {
+    color: black;
+}
+
+.combobox p:hover {
+    color: black;
+}
+
+.data-\[selected\=true\]\:text-accent-foreground[data-selected="true"] {
+    color: black;
+}
