@@ -39,7 +39,7 @@ const NavLinks = (props: any) => {
 
     if (props.footer) {
         return (
-            <ul>
+            <ul className='nav-links__footer'>
                 <MainList />
                 <li>
                     <NavLink to="/contact" className="bold">
