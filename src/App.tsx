@@ -1,5 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 
+import ScrollToTop from './components/function/ScrollToTop';
+
 import MainNavigation from './components/layouts/Navigation/MainNavigation';
 import MainFooter from './components/layouts/Footer/MainFooter';
 
@@ -18,6 +20,7 @@ import './App.css';
 const App = () => {
     return (
         <div>
+            <ScrollToTop />
             <MainNavigation />
             <main className="app-content">
                 <Routes>
