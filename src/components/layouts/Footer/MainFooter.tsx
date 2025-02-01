@@ -46,7 +46,9 @@ const MainFooter = () => {
                                 <li>
                                     <FontAwesomeIcon icon={faInstagram} />
                                     <a
-                                        href="https://www.instagram.com/"
+                                        href={`https://www.instagram.com/${
+                                            import.meta.env.VITE_INSTAGRAM
+                                        }`}
                                         target="_blank"
                                         className="medium"
                                     >
@@ -56,7 +58,9 @@ const MainFooter = () => {
                                 <li>
                                     <FontAwesomeIcon icon={faFacebook} />
                                     <a
-                                        href="https://www.facebook.com/"
+                                        href={`https://www.facebook.com/${
+                                            import.meta.env.VITE_FACEBOOK
+                                        }`}
                                         target="_blank"
                                         className="medium"
                                     >
@@ -66,7 +70,9 @@ const MainFooter = () => {
                                 <li>
                                     <FontAwesomeIcon icon={faXTwitter} />
                                     <a
-                                        href="https://www.x.com/"
+                                        href={`https://www.x.com/${
+                                            import.meta.env.VITE_TWITTER
+                                        }`}
                                         target="_blank"
                                         className="medium"
                                     >
@@ -92,7 +98,9 @@ const MainFooter = () => {
                                 <li>
                                     <FontAwesomeIcon icon={faEnvelope} />
                                     <a
-                                        href="https://www.gmail.com/"
+                                        href={`mailto:${
+                                            import.meta.env.VITE_EMAIL
+                                        }`}
                                         target="_blank"
                                         className="medium"
                                     >

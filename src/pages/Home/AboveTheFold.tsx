@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
@@ -6,6 +8,8 @@ import DatePicker from '@/components/interface/DatePicker';
 import './AboveTheFold.css';
 
 const AboveTheFold = () => {
+    const [presetDate, setPresetDate] = useState<Date>(new Date());
+
     const minDateSelection = new Date(); // min date as today
     const maxDateSelection = new Date();
     maxDateSelection.setDate(maxDateSelection.getDate() + 120); // 120 days after today
@@ -34,9 +38,13 @@ const AboveTheFold = () => {
                     <DatePicker
                         className="text-field__date-picker"
                         disabledDays={disabledDays}
+                        onChange={setPresetDate}
                     />
                     <Button asChild variant={'accent'}>
-                        <Link to="/events/create" className="bold">
+                        <Link
+                            to={`/events/create/${presetDate.toString()}`}
+                            className="bold"
+                        >
                             Book Reservation
                         </Link>
                     </Button>

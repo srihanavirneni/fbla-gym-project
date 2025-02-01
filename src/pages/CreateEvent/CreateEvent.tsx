@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { addDays, subDays } from 'date-fns';
@@ -42,6 +43,9 @@ const formSchema = z.object({
 });
 
 const CreateEvent = () => {
+    const params = useParams();
+    const presetDate = params.date;
+
     const [submitted, setSubmitted] = useState(false);
 
     const minDateSelection = new Date(); // min date as today
@@ -221,6 +225,7 @@ const CreateEvent = () => {
                                                         disabledDays={
                                                             disabledDays
                                                         }
+                                                        initialDate={presetDate}
                                                         {...field}
                                                     />
                                                 </FormControl>

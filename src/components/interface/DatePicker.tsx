@@ -16,7 +16,7 @@ import {
 import './DatePicker.css';
 
 const DatePicker = (props: any) => {
-    const [date, setDate] = React.useState<Date>();
+    const [date, setDate] = React.useState<Date>(props.initialDate);
     const changeDate = (newDate: any) => {
         setDate(newDate);
         if (props.onChange) {
