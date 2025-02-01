@@ -1,6 +1,7 @@
 import React from 'react';
 
 import NavLinks from '../Navigation/NavLinks';
+import Copyright from './Copyright';
 
 import hsLogo from '../../../assets/images/hslogo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -96,6 +97,7 @@ const MainFooter = () => {
                     </li>
                 </ul>
             </footer>
+            <Copyright />
         </React.Fragment>
     );
 };
