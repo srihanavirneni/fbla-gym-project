@@ -28,6 +28,7 @@ const Booking = () => {
     const [row, setRow] = useState('A');
     const [quantity, setQuantity] = useState(1);
 
+    console.log(section, row, quantity);
     const [recommendedSeatsList, setRecommendedSeatsList] = useState<String[]>(
         []
     );
