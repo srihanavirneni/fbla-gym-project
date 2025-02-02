@@ -1,0 +1,140 @@
+.payment-info {
+    width: 100%;
+    list-style: none;
+    margin-top: 1.75rem;
+}
+
+.payment-info > li {
+    margin-bottom: 1rem;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.payment-info li > button {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    height: 3rem;
+    color: black;
+}
+
+.payment-info li > button > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.payment-info li > button > div > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.payment-info li > button > div > svg,
+.payment-info li > button a svg,
+.payment-info li > button > svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.15rem;
+}
+
+.payment-info__credit-card button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.credit-card-open {
+    border-end-end-radius: 0px;
+    border-end-start-radius: 0px;
+}
+
+.payment-info__credit-card button ul > li {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 0.1rem 0.5rem;
+    border-radius: 2px;
+}
+
+.payment-info__credit-card-modal {
+    background-color: rgb(230, 230, 230);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-top: none;
+    width: 99.65%;
+    height: 100%;
+    padding: 1rem 0;
+    border-radius: 3px;
+}
+
+.payment-info__credit-card-modal > div {
+    padding: 0 1rem;
+}
+
+.payment-info__credit-card-modal input {
+    width: calc(100% - 2rem);
+    height: 1.5rem;
+}
+
+.modal__credit-card-input-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.modal__credit-card-input-container div {
+    width: 50%;
+}
+
+.payment-info__credit-card-modal > div > div {
+    margin-bottom: 1rem;
+}
+
+.payment-info__credit-card-modal > div > div:last-child {
+    margin-bottom: 0;
+}
+
+.google-pay button {
+    background-color: #2e2e2e;
+}
+
+.google-pay button:hover {
+    background-color: #000000;
+}
+
+.google-pay button > p {
+    color: white;
+}
+
+.google-pay button {
+    padding: 1.5rem 0;
+}
+
+.paypal-pay button {
+    background-color: #ffcc00;
+}
+
+.paypal-pay button:hover {
+    background-color: #ffb300;
+}
+
+.paypal-pay img {
+    width: 5rem;
+    padding: 1.5rem 0;
+}
+
+.select-country button {
+    width: 100%;
+    color: black;
+}
+
+.transaction-pay-btn {
+    width: 100%;
+}
+
+.transaction-pay-btn > a > button {
+    color: black;
+    width: 100%;
+    padding: 1.5rem 0;
+}

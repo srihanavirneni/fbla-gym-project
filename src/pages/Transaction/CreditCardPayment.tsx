@@ -1,9 +1,6 @@
 import { Button } from '@/components/ui/button';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Link, useParams } from 'react-router-dom';
-
 import {
     Card,
     CardContent,
@@ -13,19 +10,14 @@ import {
 } from '@/components/ui/card';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faCcAmazonPay,
-    faCcApplePay,
-    faCcPaypal,
-    faGooglePay,
-} from '@fortawesome/free-brands-svg-icons';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+
+import PaymentInfo from './PaymentInfo';
 
 import './CreditCardPayment.css';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 const CreditCardPayment = () => {
     const params = useParams();
-
     const currentId = params.id;
 
     return (
@@ -79,62 +71,9 @@ const CreditCardPayment = () => {
                             />
                         </div>
                         <hr className="mt-7 mb-7" />
-                        <h3 className="mb-3">Payment Information</h3>
-                        <RadioGroup defaultValue="apple-pay">
-                            <div className="flex items-center space-x-2 mb-5">
-                                <Button
-                                    className="border-none"
-                                    variant={'accent'}
-                                >
-                                    Add Card
-                                </Button>
-                            </div>
-                            <div className="flex items-center space-x-2">
-                                <RadioGroupItem
-                                    value="apple-pay"
-                                    id="apple-pay"
-                                />
-                                <Label htmlFor="apple-pay">
-                                    <div className="credit-info-card__radio-group-item ">
-                                        <FontAwesomeIcon icon={faCcApplePay} />
-                                        <p>Apple Pay</p>
-                                    </div>
-                                </Label>
-                            </div>
-                            <div className="flex items-center space-x-2">
-                                <RadioGroupItem
-                                    value="google-pay"
-                                    id="google-pay"
-                                />
-                                <Label htmlFor="google-pay">
-                                    <div className="credit-info-card__radio-group-item ">
-                                        <FontAwesomeIcon icon={faGooglePay} />
-                                        <p>Google Pay</p>
-                                    </div>
-                                </Label>
-                            </div>
-                            <div className="flex items-center space-x-2">
-                                <RadioGroupItem value="pay-pal" id="pay-pal" />
-                                <Label htmlFor="pay-pal">
-                                    <div className="credit-info-card__radio-group-item ">
-                                        <FontAwesomeIcon icon={faCcPaypal} />
-                                        <p>PayPal</p>
-                                    </div>
-                                </Label>
-                            </div>
-                            <div className="flex items-center space-x-2">
-                                <RadioGroupItem
-                                    value="amazon-pay"
-                                    id="amazon-pay"
-                                />
-                                <Label htmlFor="amazon-pay">
-                                    <div className="credit-info-card__radio-group-item ">
-                                        <FontAwesomeIcon icon={faCcAmazonPay} />
-                                        <p>Amazon Pay</p>
-                                    </div>
-                                </Label>
-                            </div>
-                        </RadioGroup>
+                        <h3 className="mb-1">Payment Information</h3>
+                        <p className='mb-3 text-sm'>All transactions are secured and encrypted.</p>
+                        <PaymentInfo />
                     </CardContent>
                 </Card>
             </div>

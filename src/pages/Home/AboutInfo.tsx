@@ -30,41 +30,41 @@ const AboutInfo = (props: any) => {
                     {props.showDeepInfo ? (
                         <div>
                             <p>
-                                At Lambert High School, we are a vibrant and
-                                forward-thinking community committed to
-                                providing an exceptional environment for
-                                athletics, performances, and large-scale events.
-                                Our state-of-the-art gymnasium is not merely a
-                                facility for sports—it serves as the heart of
-                                our campus, where students, families, and
-                                community members come together to share
-                                experiences and celebrate achievements. With its
-                                modern amenities and adaptable design, the
-                                gymnasium accommodates a variety of needs,
-                                transforming seamlessly from a premier sports
-                                venue to a stage for performances, concerts, and
-                                ceremonies. For students and families, it’s a
-                                place of celebration and milestones, including
-                                graduation ceremonies that mark the beginning of
-                                new chapters. For the community at large, it is
-                                a versatile space where we unite around shared
-                                goals and values, fostering a spirit of
-                                connection and inclusivity.
-                            </p>
-                            <br />
-                            <p>
-                                Our gymnasium stands as a symbol of Lambert High
-                                School’s dedication to excellence, community,
-                                and versatility. Whether hosting regional
-                                athletic tournaments, student showcases, charity
-                                events, or civic gatherings, this space offers a
-                                welcoming environment that adapts to the needs
-                                of each event. It is designed to elevate
-                                experiences, create lasting memories, and
-                                provide a setting that brings people together
-                                for a shared purpose. At Lambert, we believe in
-                                the power of a well-designed, inclusive space to
-                                inspire, engage, and build a stronger community.
+                                At Lambert High School, we are a dynamic and
+                                future-focused community dedicated to fostering
+                                excellence in athletics, performances, and
+                                large-scale events. Our state-of-the-art
+                                gymnasium is more than just a sports facility—it
+                                is the heartbeat of our campus, a premier
+                                gathering space where students, families, and
+                                the broader community unite to celebrate
+                                achievements and milestones. Engineered with
+                                cutting-edge amenities and a versatile, adaptive
+                                design, this venue seamlessly transforms from an
+                                elite athletic arena into a stage for
+                                electrifying performances, prestigious
+                                ceremonies, and unforgettable events.
+                                <br />
+                                <br />
+                                For students and families, it represents a place
+                                of triumph and tradition—home to championship
+                                games, groundbreaking performances, and
+                                graduation ceremonies that signify new
+                                beginnings. For the community, it serves as a
+                                hub of connection and engagement, reinforcing
+                                our shared values and collective spirit. Whether
+                                hosting high-stakes regional tournaments,
+                                inspiring student showcases, impactful charity
+                                events, or vital civic gatherings, our gymnasium
+                                elevates every experience.
+                                <br />
+                                <br />A true symbol of Lambert High School’s
+                                commitment to excellence, inclusivity, and
+                                innovation, this space is designed to inspire,
+                                unite, and leave a lasting legacy. At Lambert,
+                                we believe that a world-class environment
+                                fosters greatness, strengthens bonds, and
+                                ignites the potential within us all.
                             </p>
                         </div>
                     ) : (
