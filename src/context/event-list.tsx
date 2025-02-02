@@ -96,7 +96,7 @@ export const EVENT_DATA = [
         eventOrganizers: 'LHS Athletics Department',
         specialNotes: 'Parking Lot A and B, masks encouraged',
         socialMedia: 'Facebook, Twitter',
-        takenSeats: [ '1A23', '1A24', '1A25', '3B13', '3B14' ],
+        takenSeats: ['1A23', '1A24', '1A25', '3B13', '3B14'],
     },
     {
         id: 'e2',
@@ -111,7 +111,7 @@ export const EVENT_DATA = [
         eventOrganizers: 'LHS Student Council',
         specialNotes: 'Formal attire required, no re-entry policy',
         socialMedia: 'Instagram, Snapchat',
-        takenSeats: [ '3F14', '3F15', '2H3', '2H19', '1A14', '1A21' ]
+        takenSeats: ['3F14', '3F15', '2H3', '2H19', '1A14', '1A21'],
     },
     {
         id: 'e3',
@@ -127,7 +127,7 @@ export const EVENT_DATA = [
         eventOrganizers: 'State Drama Council',
         specialNotes: 'Limited seating, early booking is advised',
         socialMedia: 'Facebook, Instagram',
-        takenSeats: []
+        takenSeats: ['1A14', '1A21', '1A22', '1A23', '1A24', '1A25', '3B13', '3B14'],
     },
     {
         id: 'e4',
@@ -144,7 +144,7 @@ export const EVENT_DATA = [
         specialNotes:
             'Parking in Lot A only! Drivers who park in Lot B will automatically be escorted out.',
         socialMedia: 'Facebook, Twitter',
-        takenSeats: []
+        takenSeats: ['1A14', '1A21', '1A22', '1A23', '1A24', '1A25', '3B13', '3B14'],
     },
     {
         id: 'e5',
@@ -159,7 +159,7 @@ export const EVENT_DATA = [
         eventOrganizers: 'LHS Music Department',
         specialNotes: 'Donations for charity are accepted.',
         socialMedia: 'Facebook, Twitter',
-        takenSeats: []
+        takenSeats: ['4A14', '4A15', '4A16', '4A17', '4A18', '4A19', '4A20', '4A21'],
     },
     {
         id: 'e6',
@@ -175,7 +175,7 @@ export const EVENT_DATA = [
         eventOrganizers: 'Art Club',
         specialNotes: 'Open to the public',
         socialMedia: 'Facebook, Twitter',
-        takenSeats: []
+        takenSeats: ['1A14', '1A21', '1A22', '1A23', '1A24', '1A25', '3B13', '3B14'],
     },
     {
         id: 'e7',
@@ -190,7 +190,7 @@ export const EVENT_DATA = [
         eventOrganizers: 'LHS Counseling Team',
         specialNotes: '',
         socialMedia: 'Facebook, Twitter',
-        takenSeats: []
+        takenSeats: ['4A14', '4A15', '4A16', '4A17', '4A18', '4A19', '4A20', '4A21'],
     },
     {
         id: 'e8',
@@ -207,7 +207,7 @@ export const EVENT_DATA = [
         specialNotes:
             'People who do not pay the ticket fee are restricted to certain parts of the exhibit.',
         socialMedia: 'Facebook, Twitter',
-        takenSeats: []
+        takenSeats: ['2C15', '2C16', '2C17', '3E22', '3E23', '4F10', '4F11'],
     },
     {
         id: 'e9',
@@ -223,7 +223,7 @@ export const EVENT_DATA = [
         eventOrganizers: 'LHS Counseling Team',
         specialNotes: 'Blankets and chairs will NOT be provided!',
         socialMedia: 'Facebook, Twitter',
-        takenSeats: []
+        takenSeats: ['1B10', '1B11', '1B12', '2D20', '2D21', '3G05', '3G06'],
     },
     {
         id: 'e10',
@@ -238,7 +238,7 @@ export const EVENT_DATA = [
         ticketCost: 5,
         eventOrganizers: 'Student Council',
         socialMedia: 'Instagram, Facebook',
-        takenSeats: []
+        takenSeats: ['1H01', '1H02', '2A15', '2A16', '3C08', '4E30'],
     },
     {
         id: 'e11',
@@ -253,7 +253,7 @@ export const EVENT_DATA = [
         ticketCost: 0,
         eventOrganizers: 'Chess Club',
         socialMedia: 'Instagram',
-        takenSeats: []
+        takenSeats: ['1D10', '1D11', '2F20', '3B25', '4H15', '4H16'],
     },
     {
         id: 'e12',
@@ -269,7 +269,7 @@ export const EVENT_DATA = [
         specialNotes:
             'Some parts of the seats will not be available for the time being (may change)',
         socialMedia: 'Facebook, Twitter',
-        takenSeats: []
+        takenSeats: [],
     },
     {
         id: 'e13',
@@ -285,7 +285,7 @@ export const EVENT_DATA = [
         specialNotes:
             'People who sign up for this event will only be able to watch the kids practice.',
         socialMedia: 'Twitter',
-        takenSeats: []
+        takenSeats: [],
     },
     {
         id: 'e14',
@@ -299,7 +299,7 @@ export const EVENT_DATA = [
         ticketCost: 12,
         eventOrganizers: 'Athletics Department',
         socialMedia: 'Twitter',
-        takenSeats: []
+        takenSeats: [],
     },
     {
         id: 'e15',
@@ -314,7 +314,7 @@ export const EVENT_DATA = [
         ticketCost: 10,
         eventOrganizers: 'Athletics Department',
         socialMedia: 'Facebook',
-        takenSeats: []
+        takenSeats: [],
     },
     {
         id: 'e16',
@@ -329,7 +329,7 @@ export const EVENT_DATA = [
         ticketCost: 10,
         eventOrganizers: 'Athletics Department',
         socialMedia: 'Facebook',
-        takenSeats: []
+        takenSeats: [],
     },
     {
         id: 'e17',
@@ -343,7 +343,7 @@ export const EVENT_DATA = [
         ticketCost: 15,
         eventOrganizers: 'Athletics Department',
         socialMedia: 'Instagram',
-        takenSeats: []
+        takenSeats: [],
     },
     {
         id: 'e18',
@@ -357,7 +357,7 @@ export const EVENT_DATA = [
         ticketCost: 0,
         eventOrganizers: 'Science Club',
         socialMedia: 'Twitter',
-        takenSeats: []
+        takenSeats: [],
     },
     {
         id: 'e19',
@@ -371,7 +371,7 @@ export const EVENT_DATA = [
         ticketCost: 12,
         eventOrganizers: 'Drama Club',
         socialMedia: 'Facebook',
-        takenSeats: []
+        takenSeats: [],
     },
     {
         id: 'e20',
@@ -385,7 +385,7 @@ export const EVENT_DATA = [
         ticketCost: 20,
         eventOrganizers: 'Community Outreach',
         socialMedia: 'Instagram',
-        takenSeats: []
+        takenSeats: [],
     },
     {
         id: 'e21',
@@ -399,7 +399,7 @@ export const EVENT_DATA = [
         ticketCost: 5,
         eventOrganizers: 'Art Department',
         socialMedia: 'Twitter',
-        takenSeats: []
+        takenSeats: [],
     },
     {
         id: 'e22',
@@ -414,11 +414,11 @@ export const EVENT_DATA = [
         ticketCost: 0,
         eventOrganizers: 'Career Services',
         socialMedia: 'LinkedIn',
-        takenSeats: []
+        takenSeats: [],
     },
     {
         id: 'e23',
-        name: 'Valentine’s Day Dance',
+        name: "Valentine's Day Dance",
         date: new Date(2025, 1, 14),
         startTime: new Date('1970-01-01T19:00:00'),
         endTime: new Date('1970-01-01T23:00:00'),
@@ -428,7 +428,7 @@ export const EVENT_DATA = [
         ticketCost: 10,
         eventOrganizers: 'Student Council',
         socialMedia: 'Instagram',
-        takenSeats: []
+        takenSeats: [],
     },
     {
         id: 'e24',
@@ -443,7 +443,7 @@ export const EVENT_DATA = [
         ticketCost: 0,
         eventOrganizers: 'Diversity Club',
         socialMedia: 'Facebook',
-        takenSeats: []
+        takenSeats: [],
     },
     {
         id: 'e25',
@@ -457,7 +457,7 @@ export const EVENT_DATA = [
         ticketCost: 0,
         eventOrganizers: 'Debate Team',
         socialMedia: 'Twitter',
-        takenSeats: []
+        takenSeats: [],
     },
     {
         id: 'e26',
@@ -471,11 +471,11 @@ export const EVENT_DATA = [
         ticketCost: 0,
         eventOrganizers: 'Environmental Club',
         socialMedia: 'Instagram',
-        takenSeats: []
+        takenSeats: [],
     },
     {
         id: 'e27',
-        name: 'St. Patrick’s Day Festival',
+        name: "St. Patrick's Day Festival",
         date: new Date(2025, 2, 17),
         startTime: new Date('1970-01-01T12:00:00'),
         endTime: new Date('1970-01-01T20:00:00'),
@@ -485,7 +485,7 @@ export const EVENT_DATA = [
         ticketCost: 5,
         eventOrganizers: 'Cultural Committee',
         socialMedia: 'Facebook',
-        takenSeats: []
+        takenSeats: [],
     },
     {
         id: 'e28',
@@ -499,7 +499,7 @@ export const EVENT_DATA = [
         ticketCost: 8,
         eventOrganizers: 'Tech Club',
         socialMedia: 'LinkedIn',
-        takenSeats: []
+        takenSeats: [],
     },
     {
         id: 'e29',
@@ -513,7 +513,7 @@ export const EVENT_DATA = [
         ticketCost: 5,
         eventOrganizers: 'Literature Club',
         socialMedia: 'Twitter',
-        takenSeats: []
+        takenSeats: [],
     },
     {
         id: 'e30',
@@ -527,11 +527,11 @@ export const EVENT_DATA = [
         ticketCost: 0,
         eventOrganizers: 'Environmental Club',
         socialMedia: 'Instagram',
-        takenSeats: []
+        takenSeats: [],
     },
     {
         id: 'e31',
-        name: 'April Fool’s Comedy Night',
+        name: "April Fool's Comedy Night",
         date: new Date(2025, 3, 1),
         startTime: new Date('1970-01-01T19:00:00'),
         endTime: new Date('1970-01-01T21:30:00'),
@@ -541,7 +541,7 @@ export const EVENT_DATA = [
         ticketCost: 7,
         eventOrganizers: 'Drama Club',
         socialMedia: 'Facebook',
-        takenSeats: []
+        takenSeats: [],
     },
     {
         id: 'e32',
@@ -556,6 +556,6 @@ export const EVENT_DATA = [
         ticketCost: 0,
         eventOrganizers: 'Local Business Association',
         socialMedia: 'Instagram',
-        takenSeats: []
+        takenSeats: ['1A05', '1B15', '2C25', '3D10', '4E20', '4F30'],
     },
 ];

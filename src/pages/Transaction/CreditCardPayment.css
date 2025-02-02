@@ -3,6 +3,7 @@
     border-radius: 6px;
     overflow: hidden;
     padding: 2rem;
+    width: 40rem;
 }
 
 .credit-card-page {
@@ -39,4 +40,10 @@
     width: 2rem;
     height: 2rem;
     margin-right: 0.5rem;
+}
+
+.transaction__back-button {
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 1rem;
+    width: 2rem;
 }

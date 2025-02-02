@@ -1,13 +1,17 @@
+import { useState } from 'react';
+
 import { Checkbox } from '@/components/ui/checkbox';
 import { Button } from '@/components/ui/button';
 
 import './PurchaseStrip.css';
 
 const PurchaseStrip = (props: any) => {
+    const [isChecked, setIsChecked] = useState(false);
+
     return (
         <div className="ticket-purchase-strip">
             <div className="items-top flex space-x-2">
-                <Checkbox id="terms1" />
+                <Checkbox id="terms1" checked={isChecked} onCheckedChange={() => setIsChecked(!isChecked)}/>
                 <div className="grid gap-1.5 leading-none">
                     <label
                         htmlFor="terms1"
@@ -22,9 +26,10 @@ const PurchaseStrip = (props: any) => {
             </div>
             <div className="purchase-strip__total">
                 <p>
-                    Total: <b>{props.total <= 0 ? "FREE" : "$" + props.total}</b>
+                    Total:{' '}
+                    <b>{props.total <= 0 ? 'FREE' : '$' + props.total}</b>
                 </p>
-                <Button className='border-none' variant={'accent'}>
+                <Button className="border-none" disabled={!isChecked} variant={'accent'}>
                     Purchase {/* LEADS TO PURCHASE */}
                 </Button>
             </div>

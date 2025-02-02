@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
+import { Link, useParams } from 'react-router-dom';
 
 import {
     Card,
@@ -20,13 +21,27 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 import './CreditCardPayment.css';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 const CreditCardPayment = () => {
+    const params = useParams();
+
+    const currentId = params.id;
+
     return (
         <div className="credit-card-page">
             <div className="credit-card-page__info">
                 <Card className="credit-card-page__info-card">
                     <CardHeader>
+                        <Button
+                            asChild
+                            className="border-none transaction__back-button"
+                            variant={'accent'}
+                        >
+                            <Link to={`/events/payment/${currentId}`}>
+                                <FontAwesomeIcon icon={faArrowLeft} />
+                            </Link>
+                        </Button>
                         <CardTitle className="black">Purchase Ticket</CardTitle>
                         <CardDescription>
                             <p className="mt-2">

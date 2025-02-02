@@ -10,8 +10,8 @@ import Combobox from '@/components/interface/Combobox';
 import { Button } from '@/components/ui/button';
 
 import SeatChip from './SeatChip';
-import OrderDetails from './OrderDetails';
-import CreditCardPayment from './CreditCardPayment';
+import OrderDetails from '../Transaction/OrderDetails';
+import CreditCardPayment from '../Transaction/CreditCardPayment';
 import BookingError from './BookingError';
 import BookingHeader from './BookingHeader';
 
@@ -222,7 +222,9 @@ const Booking = () => {
                         </div>
                     </div>
                     <Button asChild variant={'accent'}>
-                        <Link to={`/events/payment/${currentId}/transaction`}>Continue</Link>
+                        <Link to={`/events/payment/${currentId}/transaction`}>
+                            Continue
+                        </Link>
                     </Button>
                 </div>
             </div>
