@@ -16,7 +16,7 @@ import PaymentInfo from './PaymentInfo';
 
 import './CreditCardPayment.css';
 
-const CreditCardPayment = () => {
+const CreditCardPayment = (props: any) => {
     const params = useParams();
     const currentId = params.id;
 
@@ -56,10 +56,19 @@ const CreditCardPayment = () => {
                             your bar code in the check-in area.
                         </p>
                         <div className="credit-info-card__text-field">
+                            <p>Full Name</p>
+                            <Input
+                                placeholder="John Doe"
+                                type="text"
+                                onChange={(e) => props.setName(e.target.value)}
+                            />
+                        </div>
+                        <div className="credit-info-card__text-field">
                             <p>E-mail</p>
                             <Input
                                 placeholder="name@example.com"
                                 type="email"
+                                onChange={(e) => props.setEmail(e.target.value)}
                             />
                         </div>
                         <div className="credit-info-card__text-field">
@@ -72,7 +81,9 @@ const CreditCardPayment = () => {
                         </div>
                         <hr className="mt-7 mb-7" />
                         <h3 className="mb-1">Payment Information</h3>
-                        <p className='mb-3 text-sm'>All transactions are secured and encrypted.</p>
+                        <p className="mb-3 text-sm">
+                            All transactions are secured and encrypted.
+                        </p>
                         <PaymentInfo />
                     </CardContent>
                 </Card>

@@ -25,3 +25,12 @@
 .seat-chip button:hover {
     color: rgb(255, 98, 98);
 }
+
+.seat-chip--display p {
+    margin-left: 0;
+}
+
+.seat-chip--display {
+    width: 2.75rem;
+    padding: 0.25rem;
+}

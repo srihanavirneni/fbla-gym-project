@@ -5,10 +5,12 @@ import './SeatChip.css';
 
 const SeatChip = (props: any) => {
     return (
-        <div className="seat-chip bold">
-            <button>
-                <FontAwesomeIcon icon={faX} />
-            </button>
+        <div className={`seat-chip bold ${props.display && 'seat-chip--display'}`}>
+            {!props.display && (
+                <button>
+                    <FontAwesomeIcon icon={faX} />
+                </button>
+            )}
             <p>{props.seat}</p>
         </div>
     );

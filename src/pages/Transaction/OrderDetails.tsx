@@ -1,20 +1,27 @@
 import { CONVENIENCE_FEE } from '@/context/event-list';
 import Policies from '@/components/layouts/Policies/Policies';
 
+import SeatChip from '../Booking/SeatChip';
+
 import './OrderDetails.css';
 
 const OrderDetails = (props: any) => {
     return (
         <div className="credit-card-page__order-details">
             <h2>Order Details</h2>
-            <div className="order-details__pricing">
-                <p className="medium">Seat X Ticket</p>
-                <p className="bold">
-                    {props['ticketCost'] <= 0
-                        ? 'FREE'
-                        : '$' + props['ticketCost']}
-                </p>
-            </div>
+            {props['seats'].map((seat: any) => (
+                <div className="order-details__pricing">
+                    <div className="flex flex-row items-center">
+                        <p className="medium mr-3">Seat </p>
+                        <SeatChip display seat={seat}></SeatChip>
+                    </div>
+                    <p className="bold">
+                        {props['ticketCost'] <= 0
+                            ? 'FREE'
+                            : '$' + props['ticketCost']}
+                    </p>
+                </div>
+            ))}
             {props['ticketCost'] > 0 && (
                 <div className="order-details__pricing">
                     <p className="medium">Convenience Fee</p>
@@ -27,7 +34,7 @@ const OrderDetails = (props: any) => {
                 <p className="black">
                     {props['ticketCost'] <= 0
                         ? 'FREE'
-                        : '$' + (props['ticketCost'] + CONVENIENCE_FEE)}
+                        : '$' + ((props['ticketCost'] * props['seats'].length) + CONVENIENCE_FEE)}
                 </p>
             </div>
             <Policies className={'order-details__policies'} showAmenities />

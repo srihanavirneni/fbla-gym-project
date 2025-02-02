@@ -1,17 +1,11 @@
 import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import {
-    EVENT_DATA,
-    SEATS_PER_ROW,
-    CONVENIENCE_FEE,
-} from '@/context/event-list';
+import { EVENT_DATA } from '@/context/event-list';
 
 import Combobox from '@/components/interface/Combobox';
 import { Button } from '@/components/ui/button';
 
 import SeatChip from './SeatChip';
-import OrderDetails from '../Transaction/OrderDetails';
-import CreditCardPayment from '../Transaction/CreditCardPayment';
 import BookingError from './BookingError';
 import BookingHeader from './BookingHeader';
 
@@ -54,17 +48,6 @@ const Booking = () => {
         }
 
         setRecommendedSeatsList(['1A32', '1A33']);
-
-        // const suggestionCount = getRandomInt(4, 10);
-        // let recommenedSeats : number[] = [];
-
-        // for (let i = 0; i < suggestionCount; i++) {
-        //     for (let j = 0; j < quantity; j++) {
-
-        //     }
-        // }
-
-        // setRecommendedSeatsList(recommenedSeats);
     };
 
     return eventData ? (
@@ -221,8 +204,15 @@ const Booking = () => {
                             })}
                         </div>
                     </div>
-                    <Button asChild variant={'accent'}>
-                        <Link to={`/events/payment/${currentId}/transaction`}>
+                    <Button
+                        variant={'accent'}
+                        disabled={recommendedSeatsList.length === 0}
+                        asChild={recommendedSeatsList.length !== 0}
+                    >
+                        <Link
+                            to={`/events/payment/${currentId}/transaction/${recommendedSeatsList.join('b')}`}
+                            className="text-white"
+                        >
                             Continue
                         </Link>
                     </Button>
