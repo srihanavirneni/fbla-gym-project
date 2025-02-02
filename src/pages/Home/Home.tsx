@@ -3,6 +3,7 @@ import Offers from './Offers';
 import AboutInfo from './AboutInfo';
 import Testimonials from './Testimonials';
 import CallToAction from './CallToAction';
+import FAQ from './FAQ';
 
 import './Home.css';
 
@@ -13,6 +14,7 @@ const Home = () => {
             <Offers />
             <AboutInfo />
             <Testimonials />
+            <FAQ />
             <CallToAction />
         </div>
     );

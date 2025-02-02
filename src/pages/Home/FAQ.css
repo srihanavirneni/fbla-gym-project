@@ -1,0 +1,30 @@
+.home-faq {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    padding: 5rem 2rem;
+    background-color: rgb(250, 250, 250);
+}
+
+.faq-info {
+    width: 30rem;
+    margin-right: 5rem;
+}
+
+.faq-info h1 {
+    margin-bottom: 0.5rem;
+}
+
+.faq-list {
+    width: 30rem;
+}
+
+.faq-list button {
+    background: transparent;
+    color: black;
+    text-decoration: none;
+    border: none;
+    width: 100%;
+    font-size: 1rem;
+}
