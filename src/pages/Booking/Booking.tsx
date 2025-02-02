@@ -8,8 +8,8 @@ import { Button } from '@/components/ui/button';
 import SeatChip from './SeatChip';
 import BookingError from './BookingError';
 import BookingHeader from './BookingHeader';
+import SeatMap from '@/components/layouts/SeatMap/SeatMap';
 
-import stadium from '@/assets/images/stadium.png';
 import './Booking.css';
 
 const Booking = () => {
@@ -31,12 +31,6 @@ const Booking = () => {
     const [recommendedSeatsList, setRecommendedSeatsList] = useState<String[]>(
         []
     );
-
-    function getRandomInt(min: number, max: number) {
-        const minCeiled = Math.ceil(min);
-        const maxFloored = Math.floor(max);
-        return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
-    }
 
     const setQuery = (queryName: String, value: any) => {
         if (queryName == 'section') {
@@ -65,7 +59,7 @@ const Booking = () => {
                         Seats for the Stadium range from 100 to 400; ticket
                         prices are flat no matter where you sit.
                     </p>
-                    <img src={stadium} alt="stadium" />
+                    <SeatMap />
                 </div>
                 <div className="booking-page__ticket-selection">
                     <div className="seat-list__seat-input">

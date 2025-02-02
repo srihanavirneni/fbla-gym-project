@@ -87,7 +87,7 @@ const Transaction = () => {
                 date: parseDate(),
                 time: parseTime(),
                 location: eventData['location'],
-                quantity: 1,
+                quantity: currentSeatsArray.length,
                 seats: parseSeats(),
             },
             import.meta.env.VITE_EMAILJS_PUBLIC_KEY
