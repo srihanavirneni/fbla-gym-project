@@ -1,0 +1,14 @@
+.booking-page__header {
+    text-align: center;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 2.5rem;
+}
+
+.booking-page__header h1 {
+    margin-bottom: 1rem;
+}
+
+.booking-page__header p {
+    margin-bottom: 0.25rem;
+}

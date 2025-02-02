@@ -11,6 +11,7 @@ import Status from './pages/Status/Status';
 import Events from './pages/Events/Events';
 import Contact from './pages/Contact/Contact';
 import Calendar from './pages/Calendar/Calendar';
+import Transaction from './pages/Transaction/Transaction';
 
 import CreateEvent from './pages/CreateEvent/CreateEvent';
 import Booking from './pages/Booking/Booking';
@@ -32,8 +33,15 @@ const App = () => {
                     <Route path="calendar" element={<Calendar />} />
 
                     <Route path="events/create" element={<CreateEvent />} />
-                    <Route path="events/create/:date" element={<CreateEvent />} />
+                    <Route
+                        path="events/create/:date"
+                        element={<CreateEvent />}
+                    />
                     <Route path="events/payment/:id" element={<Booking />} />
+                    <Route
+                        path="events/payment/:id/transaction"
+                        element={<Transaction />}
+                    />
 
                     <Route path="*" element={<Navigate to="/" />} />
                 </Routes>

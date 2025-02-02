@@ -1,36 +1,19 @@
-import { useParams } from 'react-router-dom';
-import { EVENT_DATA, CONVENIENCE_FEE } from '@/context/event-list';
+import { useState } from 'react';
+import { useParams, Link } from 'react-router-dom';
+import {
+    EVENT_DATA,
+    SEATS_PER_ROW,
+    CONVENIENCE_FEE,
+} from '@/context/event-list';
+
+import Combobox from '@/components/interface/Combobox';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { Label } from '@/components/ui/label';
-import {
-    format,
-    setHours,
-    setMinutes,
-    setSeconds,
-    setMilliseconds,
-} from 'date-fns';
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
-} from '@/components/ui/card';
 
+import SeatChip from './SeatChip';
+import OrderDetails from './OrderDetails';
+import CreditCardPayment from './CreditCardPayment';
 import BookingError from './BookingError';
-
-import PurchaseStrip from './PurchaseStrip';
-import Policies from '@/components/layouts/Policies/Policies';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faCcAmazonPay,
-    faCcApplePay,
-    faCcPaypal,
-    faGooglePay,
-} from '@fortawesome/free-brands-svg-icons';
+import BookingHeader from './BookingHeader';
 
 import stadium from '@/assets/images/stadium.png';
 import './Booking.css';
@@ -47,192 +30,202 @@ const Booking = () => {
         }
     });
 
-    const formatTime = (time: Date) => {
-        let dateForTime = new Date(0);
-        dateForTime = setHours(dateForTime, time.getHours());
-        dateForTime = setMinutes(dateForTime, time.getMinutes());
-        dateForTime = setSeconds(dateForTime, 0);
-        dateForTime = setMilliseconds(dateForTime, 0);
+    const [section, setSection] = useState(1);
+    const [row, setRow] = useState('A');
+    const [quantity, setQuantity] = useState(1);
 
-        return format(dateForTime, 'h:mm a');
+    const [recommendedSeatsList, setRecommendedSeatsList] = useState<String[]>(
+        []
+    );
+
+    function getRandomInt(min: number, max: number) {
+        const minCeiled = Math.ceil(min);
+        const maxFloored = Math.floor(max);
+        return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
+    }
+
+    const setQuery = (queryName: String, value: any) => {
+        if (queryName == 'section') {
+            setSection(value);
+        } else if (queryName == 'row') {
+            setRow(value);
+        } else if (queryName == 'quantity') {
+            setQuantity(value);
+        }
+
+        setRecommendedSeatsList(['1A32', '1A33']);
+
+        // const suggestionCount = getRandomInt(4, 10);
+        // let recommenedSeats : number[] = [];
+
+        // for (let i = 0; i < suggestionCount; i++) {
+        //     for (let j = 0; j < quantity; j++) {
+
+        //     }
+        // }
+
+        // setRecommendedSeatsList(recommenedSeats);
     };
 
     return eventData ? (
         <div className="booking-page">
-            <div className="booking-page__header">
-                <h1 className="black">
-                    Booking Ticket for {eventData['name']}
-                </h1>
-                <p>{eventData['description']}</p>
-                <p>
-                    Timings from{' '}
-                    <b>
-                        {formatTime(eventData['startTime']) +
-                            ' - ' +
-                            formatTime(eventData['endTime'])}
-                    </b>
-                </p>
-            </div>
-            <div className="booking-page__seat-list">
-                <img src={stadium} alt="stadium" />
-                <h1 className="black">Pick A Seat</h1>
-                <p className="medium">
-                    Seats for the Stadium range from 100 to 400; ticket prices
-                    are flat no matter where you sit.
-                </p>
-                <div className="seat-list__seat-input">
-                    <p>Type Seat Number</p>
-                    <Input placeholder="Number from 100 to 400" type="number" />
+            <BookingHeader
+                name={eventData['name']}
+                description={eventData['description']}
+                startTime={eventData['startTime']}
+                endTime={eventData['endTime']}
+            />
+            <div className="booking-page__content">
+                <div className="booking-page__seat-list">
+                    <h1 className="black">Pick A Seat</h1>
+                    <p className="medium mb-10">
+                        Seats for the Stadium range from 100 to 400; ticket
+                        prices are flat no matter where you sit.
+                    </p>
+                    <img src={stadium} alt="stadium" />
                 </div>
-            </div>
-            <hr />
-            <div className="credit-card-page">
-                <div className="credit-card-page__info">
-                    <Card className="credit-card-page__info-card">
-                        <CardHeader>
-                            <CardTitle className="black">
-                                Purchase Ticket
-                            </CardTitle>
-                            <CardDescription>
-                                <p className="mt-2">
-                                    Fill out the following information to
-                                    complete your transaction.
-                                </p>
-                                <p className="bold mt-1">
-                                    DISCLAIMER: Your session will expire if you
-                                    do not pay within 20 minutes.
-                                </p>
-                                <hr className="mt-5" />
-                            </CardDescription>
-                        </CardHeader>
-                        <CardContent>
-                            <h3>Contact Information</h3>
-                            <p>
-                                You will receive a <b>bar code</b> upon
-                                purchase. It will be emailed to you (if
-                                provided) and also sent to your phone (if
-                                provided). It is mandatory to show your bar code
-                                in the check-in area.
-                            </p>
-                            <div className="credit-info-card__text-field">
-                                <p>E-mail</p>
-                                <Input
-                                    placeholder="name@example.com"
-                                    type="email"
-                                />
-                            </div>
-                            <div className="credit-info-card__text-field">
-                                <p>Phone Number</p>
-                                <Input
-                                    placeholder="XXX-XXX-XXXX"
-                                    type="tel"
-                                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                                />
-                            </div>
-                            <hr className="mt-7 mb-7" />
-                            <h3 className="mb-3">Payment Information</h3>
-                            <RadioGroup defaultValue="apple-pay">
-                                <div className="flex items-center space-x-2 mb-5">
-                                    <Button
-                                        className="border-none"
-                                        variant={'accent'}
-                                    >
-                                        Add Card
-                                    </Button>
-                                </div>
-                                <div className="flex items-center space-x-2">
-                                    <RadioGroupItem
-                                        value="apple-pay"
-                                        id="apple-pay"
-                                    />
-                                    <Label htmlFor="apple-pay">
-                                        <div className="credit-info-card__radio-group-item ">
-                                            <FontAwesomeIcon
-                                                icon={faCcApplePay}
-                                            />
-                                            <p>Apple Pay</p>
-                                        </div>
-                                    </Label>
-                                </div>
-                                <div className="flex items-center space-x-2">
-                                    <RadioGroupItem
-                                        value="google-pay"
-                                        id="google-pay"
-                                    />
-                                    <Label htmlFor="google-pay">
-                                        <div className="credit-info-card__radio-group-item ">
-                                            <FontAwesomeIcon
-                                                icon={faGooglePay}
-                                            />
-                                            <p>Google Pay</p>
-                                        </div>
-                                    </Label>
-                                </div>
-                                <div className="flex items-center space-x-2">
-                                    <RadioGroupItem
-                                        value="pay-pal"
-                                        id="pay-pal"
-                                    />
-                                    <Label htmlFor="pay-pal">
-                                        <div className="credit-info-card__radio-group-item ">
-                                            <FontAwesomeIcon
-                                                icon={faCcPaypal}
-                                            />
-                                            <p>PayPal</p>
-                                        </div>
-                                    </Label>
-                                </div>
-                                <div className="flex items-center space-x-2">
-                                    <RadioGroupItem
-                                        value="amazon-pay"
-                                        id="amazon-pay"
-                                    />
-                                    <Label htmlFor="amazon-pay">
-                                        <div className="credit-info-card__radio-group-item ">
-                                            <FontAwesomeIcon
-                                                icon={faCcAmazonPay}
-                                            />
-                                            <p>Amazon Pay</p>
-                                        </div>
-                                    </Label>
-                                </div>
-                            </RadioGroup>
-                        </CardContent>
-                    </Card>
-                </div>
-                <div className="credit-card-page__order-details">
-                    <h2>Order Details</h2>
-                    <div className="order-details__pricing">
-                        <p className="medium">Seat X Ticket</p>
-                        <p className="bold">
-                            {eventData['ticketCost'] <= 0
-                                ? 'FREE'
-                                : '$' + eventData['ticketCost']}
+                <div className="booking-page__ticket-selection">
+                    <div className="seat-list__seat-input">
+                        <h3>Section</h3>
+                        <p className="mt-1 mb-4 text-sm">
+                            There are a total of 4 sections surrounding the
+                            basketball court.
                         </p>
+                        <Combobox
+                            labelPlaceholder="Select Section"
+                            placeholder="Search Section"
+                            className="search-bar__combo-box seat-input__combo-box"
+                            onChange={(v: any) => {
+                                setQuery('section', v);
+                            }}
+                            items={[
+                                {
+                                    value: '1',
+                                    label: 'Section 1: Freshmen',
+                                },
+                                {
+                                    value: '2',
+                                    label: 'Section 2: Sophomore',
+                                },
+                                {
+                                    value: '3',
+                                    label: 'Section 3: Junior',
+                                },
+                                {
+                                    value: '4',
+                                    label: 'Section 4: Senior',
+                                },
+                            ]}
+                        />
                     </div>
-                    {eventData['ticketCost'] > 0 && (
-                        <div className="order-details__pricing">
-                            <p className="medium">Convenience Fee</p>
-                            <p className="bold">${CONVENIENCE_FEE}</p>
+                    <div className="seat-list__seat-input">
+                        <h3>Row Number</h3>
+                        <p className="mt-1 text-sm">
+                            Each section has a row from A to H
+                        </p>
+                        <p className="bold mb-4 text-sm">
+                            A is the closest, H is the farthest.
+                        </p>
+                        <Combobox
+                            labelPlaceholder="Select Row"
+                            placeholder="Search Row"
+                            className="search-bar__combo-box seat-input__combo-box"
+                            onChange={(v: any) => {
+                                setQuery('row', v);
+                            }}
+                            items={[
+                                {
+                                    value: 'A',
+                                    label: 'Row A',
+                                },
+                                {
+                                    value: 'B',
+                                    label: 'Row B',
+                                },
+                                {
+                                    value: 'C',
+                                    label: 'Row C',
+                                },
+                                {
+                                    value: 'D',
+                                    label: 'Row D',
+                                },
+                                {
+                                    value: 'E',
+                                    label: 'Row E',
+                                },
+                                {
+                                    value: 'F',
+                                    label: 'Row F',
+                                },
+                                {
+                                    value: 'G',
+                                    label: 'Row G',
+                                },
+                                {
+                                    value: 'H',
+                                    label: 'Row H',
+                                },
+                            ]}
+                        />
+                    </div>
+                    <div className="seat-list__seat-input">
+                        <h3>Ticket Quantity</h3>
+                        <p className="mt-1 mb-4 text-sm">
+                            Select from 1 Ticket to 6 Tickets
+                        </p>
+                        <Combobox
+                            labelPlaceholder="Select Quantity"
+                            placeholder="Search Ticket Quantity"
+                            className="search-bar__combo-box seat-input__combo-box"
+                            onChange={(v: any) => {
+                                setQuery('quantity', v);
+                            }}
+                            items={[
+                                {
+                                    value: '1',
+                                    label: '1 Ticket',
+                                },
+                                {
+                                    value: '2',
+                                    label: '2 Tickets',
+                                },
+                                {
+                                    value: '3',
+                                    label: '3 Tickets',
+                                },
+                                {
+                                    value: '4',
+                                    label: '4 Tickets',
+                                },
+                                {
+                                    value: '5',
+                                    label: '5 Tickets',
+                                },
+                                {
+                                    value: '6',
+                                    label: '6 Tickets',
+                                },
+                            ]}
+                        />
+                    </div>
+                    <div className="seat-list__seat-input">
+                        <h3>Seats</h3>
+                        <p className="mt-1 mb-4 text-sm">
+                            Selected seats will show at the bottom. Click
+                            continue to purchase these tickets.
+                        </p>
+                        <div className="recommended-seats-window">
+                            {recommendedSeatsList.map((seat) => {
+                                return <SeatChip seat={seat} />;
+                            })}
                         </div>
-                    )}
-                    <hr />
-                    <div className="order-details__pricing-final">
-                        <p className="bold">Total</p>
-                        <p className="black">
-                            {eventData['ticketCost'] <= 0
-                                ? 'FREE'
-                                : '$' +
-                                  (eventData['ticketCost'] + CONVENIENCE_FEE)}
-                        </p>
                     </div>
-                    <Policies
-                        className={'order-details__policies'}
-                        showAmenities
-                    />
+                    <Button asChild variant={'accent'}>
+                        <Link to={`/events/payment/${currentId}/transaction`}>Continue</Link>
+                    </Button>
                 </div>
             </div>
-            <PurchaseStrip total={eventData['ticketCost'] + CONVENIENCE_FEE} />
         </div>
     ) : (
         <BookingError />

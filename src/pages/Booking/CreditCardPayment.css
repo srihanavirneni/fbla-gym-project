@@ -1,0 +1,42 @@
+.credit-card-page__info-card {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.credit-card-page {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.credit-card-page__info {
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.credit-info-card__text-field {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.credit-info-card__text-field > input {
+    width: 90%;
+    margin-top: 0.5rem;
+}
+
+.credit-info-card__radio-group-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.credit-info-card__radio-group-item svg {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+}

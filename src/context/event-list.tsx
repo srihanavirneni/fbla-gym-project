@@ -80,6 +80,7 @@ export const BREAKS = [
 ];
 
 export const CONVENIENCE_FEE = 2;
+export const SEATS_PER_ROW = 30;
 export const EVENT_DATA = [
     {
         id: 'e1',
@@ -95,6 +96,7 @@ export const EVENT_DATA = [
         eventOrganizers: 'LHS Athletics Department',
         specialNotes: 'Parking Lot A and B, masks encouraged',
         socialMedia: 'Facebook, Twitter',
+        takenSeats: [ '1A23', '1A24', '1A25', '3B13', '3B14' ],
     },
     {
         id: 'e2',
@@ -109,6 +111,7 @@ export const EVENT_DATA = [
         eventOrganizers: 'LHS Student Council',
         specialNotes: 'Formal attire required, no re-entry policy',
         socialMedia: 'Instagram, Snapchat',
+        takenSeats: [ '3F14', '3F15', '2H3', '2H19', '1A14', '1A21' ]
     },
     {
         id: 'e3',
@@ -124,6 +127,7 @@ export const EVENT_DATA = [
         eventOrganizers: 'State Drama Council',
         specialNotes: 'Limited seating, early booking is advised',
         socialMedia: 'Facebook, Instagram',
+        takenSeats: []
     },
     {
         id: 'e4',
@@ -140,6 +144,7 @@ export const EVENT_DATA = [
         specialNotes:
             'Parking in Lot A only! Drivers who park in Lot B will automatically be escorted out.',
         socialMedia: 'Facebook, Twitter',
+        takenSeats: []
     },
     {
         id: 'e5',
@@ -154,6 +159,7 @@ export const EVENT_DATA = [
         eventOrganizers: 'LHS Music Department',
         specialNotes: 'Donations for charity are accepted.',
         socialMedia: 'Facebook, Twitter',
+        takenSeats: []
     },
     {
         id: 'e6',
@@ -169,6 +175,7 @@ export const EVENT_DATA = [
         eventOrganizers: 'Art Club',
         specialNotes: 'Open to the public',
         socialMedia: 'Facebook, Twitter',
+        takenSeats: []
     },
     {
         id: 'e7',
@@ -183,6 +190,7 @@ export const EVENT_DATA = [
         eventOrganizers: 'LHS Counseling Team',
         specialNotes: '',
         socialMedia: 'Facebook, Twitter',
+        takenSeats: []
     },
     {
         id: 'e8',
@@ -199,6 +207,7 @@ export const EVENT_DATA = [
         specialNotes:
             'People who do not pay the ticket fee are restricted to certain parts of the exhibit.',
         socialMedia: 'Facebook, Twitter',
+        takenSeats: []
     },
     {
         id: 'e9',
@@ -214,6 +223,7 @@ export const EVENT_DATA = [
         eventOrganizers: 'LHS Counseling Team',
         specialNotes: 'Blankets and chairs will NOT be provided!',
         socialMedia: 'Facebook, Twitter',
+        takenSeats: []
     },
     {
         id: 'e10',
@@ -228,6 +238,7 @@ export const EVENT_DATA = [
         ticketCost: 5,
         eventOrganizers: 'Student Council',
         socialMedia: 'Instagram, Facebook',
+        takenSeats: []
     },
     {
         id: 'e11',
@@ -242,6 +253,7 @@ export const EVENT_DATA = [
         ticketCost: 0,
         eventOrganizers: 'Chess Club',
         socialMedia: 'Instagram',
+        takenSeats: []
     },
     {
         id: 'e12',
@@ -257,6 +269,7 @@ export const EVENT_DATA = [
         specialNotes:
             'Some parts of the seats will not be available for the time being (may change)',
         socialMedia: 'Facebook, Twitter',
+        takenSeats: []
     },
     {
         id: 'e13',
@@ -272,6 +285,7 @@ export const EVENT_DATA = [
         specialNotes:
             'People who sign up for this event will only be able to watch the kids practice.',
         socialMedia: 'Twitter',
+        takenSeats: []
     },
     {
         id: 'e14',
@@ -285,6 +299,7 @@ export const EVENT_DATA = [
         ticketCost: 12,
         eventOrganizers: 'Athletics Department',
         socialMedia: 'Twitter',
+        takenSeats: []
     },
     {
         id: 'e15',
@@ -299,6 +314,7 @@ export const EVENT_DATA = [
         ticketCost: 10,
         eventOrganizers: 'Athletics Department',
         socialMedia: 'Facebook',
+        takenSeats: []
     },
     {
         id: 'e16',
@@ -313,6 +329,7 @@ export const EVENT_DATA = [
         ticketCost: 10,
         eventOrganizers: 'Athletics Department',
         socialMedia: 'Facebook',
+        takenSeats: []
     },
     {
         id: 'e17',
@@ -326,6 +343,7 @@ export const EVENT_DATA = [
         ticketCost: 15,
         eventOrganizers: 'Athletics Department',
         socialMedia: 'Instagram',
+        takenSeats: []
     },
     {
         id: 'e18',
@@ -339,6 +357,7 @@ export const EVENT_DATA = [
         ticketCost: 0,
         eventOrganizers: 'Science Club',
         socialMedia: 'Twitter',
+        takenSeats: []
     },
     {
         id: 'e19',
@@ -352,6 +371,7 @@ export const EVENT_DATA = [
         ticketCost: 12,
         eventOrganizers: 'Drama Club',
         socialMedia: 'Facebook',
+        takenSeats: []
     },
     {
         id: 'e20',
@@ -365,6 +385,7 @@ export const EVENT_DATA = [
         ticketCost: 20,
         eventOrganizers: 'Community Outreach',
         socialMedia: 'Instagram',
+        takenSeats: []
     },
     {
         id: 'e21',
@@ -378,6 +399,7 @@ export const EVENT_DATA = [
         ticketCost: 5,
         eventOrganizers: 'Art Department',
         socialMedia: 'Twitter',
+        takenSeats: []
     },
     {
         id: 'e22',
@@ -387,10 +409,12 @@ export const EVENT_DATA = [
         endTime: new Date('1970-01-01T15:00:00'),
         type: 'Education',
         location: 'Gymnasium',
-        description: 'Meet potential employers and explore career opportunities.',
+        description:
+            'Meet potential employers and explore career opportunities.',
         ticketCost: 0,
         eventOrganizers: 'Career Services',
         socialMedia: 'LinkedIn',
+        takenSeats: []
     },
     {
         id: 'e23',
@@ -404,6 +428,7 @@ export const EVENT_DATA = [
         ticketCost: 10,
         eventOrganizers: 'Student Council',
         socialMedia: 'Instagram',
+        takenSeats: []
     },
     {
         id: 'e24',
@@ -413,10 +438,12 @@ export const EVENT_DATA = [
         endTime: new Date('1970-01-01T20:00:00'),
         type: 'Education',
         location: 'Library',
-        description: 'A discussion featuring guest speakers and historical insights.',
+        description:
+            'A discussion featuring guest speakers and historical insights.',
         ticketCost: 0,
         eventOrganizers: 'Diversity Club',
         socialMedia: 'Facebook',
+        takenSeats: []
     },
     {
         id: 'e25',
@@ -430,6 +457,7 @@ export const EVENT_DATA = [
         ticketCost: 0,
         eventOrganizers: 'Debate Team',
         socialMedia: 'Twitter',
+        takenSeats: []
     },
     {
         id: 'e26',
@@ -443,6 +471,7 @@ export const EVENT_DATA = [
         ticketCost: 0,
         eventOrganizers: 'Environmental Club',
         socialMedia: 'Instagram',
+        takenSeats: []
     },
     {
         id: 'e27',
@@ -456,6 +485,7 @@ export const EVENT_DATA = [
         ticketCost: 5,
         eventOrganizers: 'Cultural Committee',
         socialMedia: 'Facebook',
+        takenSeats: []
     },
     {
         id: 'e28',
@@ -469,6 +499,7 @@ export const EVENT_DATA = [
         ticketCost: 8,
         eventOrganizers: 'Tech Club',
         socialMedia: 'LinkedIn',
+        takenSeats: []
     },
     {
         id: 'e29',
@@ -482,6 +513,7 @@ export const EVENT_DATA = [
         ticketCost: 5,
         eventOrganizers: 'Literature Club',
         socialMedia: 'Twitter',
+        takenSeats: []
     },
     {
         id: 'e30',
@@ -495,6 +527,7 @@ export const EVENT_DATA = [
         ticketCost: 0,
         eventOrganizers: 'Environmental Club',
         socialMedia: 'Instagram',
+        takenSeats: []
     },
     {
         id: 'e31',
@@ -508,6 +541,7 @@ export const EVENT_DATA = [
         ticketCost: 7,
         eventOrganizers: 'Drama Club',
         socialMedia: 'Facebook',
+        takenSeats: []
     },
     {
         id: 'e32',
@@ -517,9 +551,11 @@ export const EVENT_DATA = [
         endTime: new Date('1970-01-01T14:00:00'),
         type: 'Market',
         location: 'Community Center',
-        description: 'Shop fresh produce and handmade goods from local vendors.',
+        description:
+            'Shop fresh produce and handmade goods from local vendors.',
         ticketCost: 0,
         eventOrganizers: 'Local Business Association',
         socialMedia: 'Instagram',
-    }
+        takenSeats: []
+    },
 ];

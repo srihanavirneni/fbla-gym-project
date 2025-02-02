@@ -1,0 +1,30 @@
+.credit-card-page__order-details {
+    margin-top: 1rem;
+}
+
+.credit-card-page__order-details > h2,
+.credit-card-page__order-details > hr {
+    margin-bottom: 1rem;
+}
+
+.credit-card-page__order-details > .order-details__pricing {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.credit-card-page__order-details > .order-details__pricing-final {
+    display: flex;
+    justify-content: right;
+}
+
+.credit-card-page__order-details
+    > .order-details__pricing-final
+    > p:first-child {
+    margin-right: 0.75rem;
+}
+
+.order-details__policies {
+    padding: 0;
+    margin-top: 3rem;
+}
