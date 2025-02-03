@@ -19,7 +19,9 @@ const Contact = () => {
                 <div className="contact-page__contact-details">
                     <li>
                         <h2>Phone</h2>
-                        <h4>📞 (555) 123-7890</h4>
+                        <h4 className="mb-3">
+                            {import.meta.env.VITE_FULL_PHONE}
+                        </h4>
                         <p>Available Monday to Friday, 9:00 AM – 5:00 PM</p>
                     </li>
 
@@ -27,7 +29,7 @@ const Contact = () => {
 
                     <li>
                         <h2>E-mail</h2>
-                        <h4>lhsgymnasiumdept@gmail.com</h4>
+                        <h4 className="mb-3">{import.meta.env.VITE_EMAIL}</h4>
                         <p>
                             Feel free to email us with inquiries about bookings,
                             events, or any questions you may have!
@@ -40,8 +42,9 @@ const Contact = () => {
                         <li>
                             <a
                                 target="_blank"
-                                rel="noopener noreferrer"
-                                href="https://facebook.com/"
+                                href={`https://facebook.com/${
+                                    import.meta.env.VITE_FACEBOOK
+                                }`}
                             >
                                 <FontAwesomeIcon
                                     icon={faFacebook}
@@ -52,8 +55,9 @@ const Contact = () => {
                         <li>
                             <a
                                 target="_blank"
-                                rel="noopener noreferrer"
-                                href="https://X.com/"
+                                href={`https://X.com/${
+                                    import.meta.env.VITE_TWITTER
+                                }`}
                             >
                                 <FontAwesomeIcon
                                     icon={faXTwitter}
@@ -64,8 +68,9 @@ const Contact = () => {
                         <li>
                             <a
                                 target="_blank"
-                                rel="noopener noreferrer"
-                                href="https://www.instagram.com/"
+                                href={`https://www.instagram.com/${
+                                    import.meta.env.VITE_INSTAGRAM
+                                }`}
                             >
                                 <FontAwesomeIcon
                                     icon={faInstagram}
@@ -76,8 +81,7 @@ const Contact = () => {
                         <li>
                             <a
                                 target="_blank"
-                                rel="noopener noreferrer"
-                                href="https://www.gmail.com/"
+                                href={`mailto:${import.meta.env.VITE_EMAIL}`}
                             >
                                 <FontAwesomeIcon
                                     icon={faEnvelope}

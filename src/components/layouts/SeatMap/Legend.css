@@ -1,0 +1,31 @@
+.legend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.legend-taken {
+    background-color: var(--color-primary);
+}
+
+.legend-selected {
+    background-color: red;
+}
+
+.legend-available {
+    background-color: rgb(206, 206, 206);
+}
+
+.legend__item-color {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.legend__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-right: 1rem;
+}

@@ -1,0 +1,76 @@
+.seat-list__big-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 4rem;
+}
+
+.seat-list__big-container > a {
+    padding: 0 1.5rem;
+}
+
+.seat-list__big-container > a {
+    background-color: var(--color-secondary);
+    color: black;
+}
+.seat-list__big-container a:hover {
+    background-color: rgb(205, 205, 205);
+}
+
+.seat-list__big-container a svg {
+    margin-right: 0.35rem;
+}
+
+.seat-list__container .vertical {
+    height: 100%;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seat-list__container .horizontal {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-court {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seat-list__container h1 {
+    margin: 2rem 0;
+    opacity: 0.4;
+    text-align: center;
+}
+
+.container-court h1 {
+    margin: 0 2rem;
+}
+
+.seat-list {
+    background-color: rgb(245, 245, 245);
+    padding: 1rem 0.5rem;
+}
+
+.seat-row {
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.vertical .seat-row {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.horizontal .seat-row {
+    grid-template-columns: repeat(20, 1fr);
+}

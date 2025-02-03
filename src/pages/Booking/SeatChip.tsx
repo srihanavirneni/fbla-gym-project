@@ -7,7 +7,7 @@ const SeatChip = (props: any) => {
     return (
         <div className={`seat-chip bold ${props.display && 'seat-chip--display'}`}>
             {!props.display && (
-                <button>
+                <button onClick={props.onRemove}>
                     <FontAwesomeIcon icon={faX} />
                 </button>
             )}

@@ -1,0 +1,40 @@
+.seat {
+    background-color: rgb(206, 206, 206);
+    width: 2.75rem;
+    height: 2.75rem;
+    color: black;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.seat:hover {
+    background-color: rgb(178, 178, 178);
+}
+
+.seat p {
+    font-size: 0.75rem;
+    text-align: left;
+    margin-left: 0.3rem;
+    margin-top: 0.3rem;
+}
+
+.seat-taken {
+    background-color: var(--color-primary);
+    color: white;
+    cursor: not-allowed;
+}
+
+.seat-selected {
+    background-color: red;
+    color: white;
+}
+
+.seat-selected:hover {
+    background-color: red;
+}
+
+.seat-taken:hover {
+    background-color: var(--color-primary);
+}

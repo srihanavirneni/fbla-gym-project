@@ -16,6 +16,10 @@ const Booking = () => {
     const params = useParams();
 
     const currentId = params.id;
+    const currentPath = params.path;
+
+    console.log(currentPath);
+
     let eventData;
 
     EVENT_DATA.forEach((event: any) => {
@@ -45,6 +49,18 @@ const Booking = () => {
         setRecommendedSeatsList(['1A32', '1A33']);
     };
 
+    const pushSeat = (seatName: String, selected: boolean) => {
+        if (!selected) {
+            setRecommendedSeatsList([...recommendedSeatsList, seatName]);
+        } else {
+            setRecommendedSeatsList(recommendedSeatsList.filter((seat) => seat !== seatName));
+        }
+    };
+
+    const removeSeat = (seatName: String) => {
+        setRecommendedSeatsList(recommendedSeatsList.filter((seat) => seat !== seatName));
+    };
+
     return eventData ? (
         <div className="booking-page">
             <BookingHeader
@@ -57,10 +73,9 @@ const Booking = () => {
                 <div className="booking-page__seat-list">
                     <h1 className="black">Pick A Seat</h1>
                     <p className="medium mb-10">
-                        Seats for the Stadium range from 100 to 400; ticket
-                        prices are flat no matter where you sit.
+                        You cannot select seats that are taken. Ticket prices are flat no matter where you sit.
                     </p>
-                    <SeatMap />
+                    <SeatMap id={currentId} path={currentPath} takenSeats={eventData['takenSeats']} onSeatToggle={pushSeat} />
                 </div>
                 <div className="booking-page__ticket-selection">
                     <div className="seat-list__seat-input">
@@ -195,7 +210,7 @@ const Booking = () => {
                         </p>
                         <div className="recommended-seats-window">
                             {recommendedSeatsList.map((seat) => {
-                                return <SeatChip seat={seat} />;
+                                return <SeatChip seat={seat} onRemove={() => removeSeat(seat)} />;
                             })}
                         </div>
                     </div>

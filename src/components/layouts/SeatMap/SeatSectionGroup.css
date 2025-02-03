@@ -1,0 +1,25 @@
+.vertical {
+    height: 15rem;
+    width: 5rem;
+}
+
+.horizontal {
+    height: 5rem;
+    width: 15rem;
+}
+
+.section-group {
+    background-color: #ccc;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+.section-group:hover {
+    background-color: #dfdfdf;
+    border: 1px solid #fff;
+}
+
+.section-group > h1 {
+    color: black;
+}

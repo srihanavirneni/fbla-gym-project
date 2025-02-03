@@ -38,6 +38,7 @@ const App = () => {
                         element={<CreateEvent />}
                     />
                     <Route path="events/payment/:id" element={<Booking />} />
+                    <Route path="events/payment/:id/:path" element={<Booking />} />
                     <Route
                         path="events/payment/:id/transaction/:seats"
                         element={<Transaction />}

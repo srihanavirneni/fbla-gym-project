@@ -80,7 +80,8 @@ export const BREAKS = [
 ];
 
 export const CONVENIENCE_FEE = 2;
-export const SEATS_PER_ROW = 30;
+export const SEATS_PER_ROW = 20;
+export const ROWS = 8;
 export const EVENT_DATA = [
     {
         id: 'e1',
@@ -127,7 +128,16 @@ export const EVENT_DATA = [
         eventOrganizers: 'State Drama Council',
         specialNotes: 'Limited seating, early booking is advised',
         socialMedia: 'Facebook, Instagram',
-        takenSeats: ['1A14', '1A21', '1A22', '1A23', '1A24', '1A25', '3B13', '3B14'],
+        takenSeats: [
+            '1A14',
+            '1A21',
+            '1A22',
+            '1A23',
+            '1A24',
+            '1A25',
+            '3B13',
+            '3B14',
+        ],
     },
     {
         id: 'e4',
@@ -144,7 +154,16 @@ export const EVENT_DATA = [
         specialNotes:
             'Parking in Lot A only! Drivers who park in Lot B will automatically be escorted out.',
         socialMedia: 'Facebook, Twitter',
-        takenSeats: ['1A14', '1A21', '1A22', '1A23', '1A24', '1A25', '3B13', '3B14'],
+        takenSeats: [
+            '1A14',
+            '1A21',
+            '1A22',
+            '1A23',
+            '1A24',
+            '1A25',
+            '3B13',
+            '3B14',
+        ],
     },
     {
         id: 'e5',
@@ -159,7 +178,16 @@ export const EVENT_DATA = [
         eventOrganizers: 'LHS Music Department',
         specialNotes: 'Donations for charity are accepted.',
         socialMedia: 'Facebook, Twitter',
-        takenSeats: ['4A14', '4A15', '4A16', '4A17', '4A18', '4A19', '4A20', '4A21'],
+        takenSeats: [
+            '4A14',
+            '4A15',
+            '4A16',
+            '4A17',
+            '4A18',
+            '4A19',
+            '4A20',
+            '4A21',
+        ],
     },
     {
         id: 'e6',
@@ -175,7 +203,16 @@ export const EVENT_DATA = [
         eventOrganizers: 'Art Club',
         specialNotes: 'Open to the public',
         socialMedia: 'Facebook, Twitter',
-        takenSeats: ['1A14', '1A21', '1A22', '1A23', '1A24', '1A25', '3B13', '3B14'],
+        takenSeats: [
+            '1A14',
+            '1A21',
+            '1A22',
+            '1A23',
+            '1A24',
+            '1A25',
+            '3B13',
+            '3B14',
+        ],
     },
     {
         id: 'e7',
@@ -190,7 +227,16 @@ export const EVENT_DATA = [
         eventOrganizers: 'LHS Counseling Team',
         specialNotes: '',
         socialMedia: 'Facebook, Twitter',
-        takenSeats: ['4A14', '4A15', '4A16', '4A17', '4A18', '4A19', '4A20', '4A21'],
+        takenSeats: [
+            '4A14',
+            '4A15',
+            '4A16',
+            '4A17',
+            '4A18',
+            '4A19',
+            '4A20',
+            '4A21',
+        ],
     },
     {
         id: 'e8',
@@ -285,7 +331,28 @@ export const EVENT_DATA = [
         specialNotes:
             'People who sign up for this event will only be able to watch the kids practice.',
         socialMedia: 'Twitter',
-        takenSeats: [],
+        takenSeats: [
+            '1A1',
+            '1A2',
+            '1A3',
+            '1A4',
+            '1A5',
+            '1A6',
+            '1A7',
+            '1A8',
+            '1A9',
+            '1A10',
+            '1A11',
+            '1A12',
+            '1A13',
+            '1A14',
+            '1A15',
+            '1A16',
+            '1A17',
+            '1A18',
+            '1A19',
+            '1A20',
+        ],
     },
     {
         id: 'e14',
@@ -299,7 +366,7 @@ export const EVENT_DATA = [
         ticketCost: 12,
         eventOrganizers: 'Athletics Department',
         socialMedia: 'Twitter',
-        takenSeats: [],
+        takenSeats: ['4B23', '3A12'],
     },
     {
         id: 'e15',
@@ -329,7 +396,7 @@ export const EVENT_DATA = [
         ticketCost: 10,
         eventOrganizers: 'Athletics Department',
         socialMedia: 'Facebook',
-        takenSeats: [],
+        takenSeats: ['1A5', '1B7', '2C12', '3D15', '4E8', '4F19'],
     },
     {
         id: 'e17',
@@ -343,7 +410,7 @@ export const EVENT_DATA = [
         ticketCost: 15,
         eventOrganizers: 'Athletics Department',
         socialMedia: 'Instagram',
-        takenSeats: [],
+        takenSeats: ['1C3', '1C4', '1C5', '2A10', '3B8', '4H15', '4H16'],
     },
     {
         id: 'e18',
@@ -357,7 +424,7 @@ export const EVENT_DATA = [
         ticketCost: 0,
         eventOrganizers: 'Science Club',
         socialMedia: 'Twitter',
-        takenSeats: [],
+        takenSeats: ['1D8', '2E12', '3F5', '3F6', '4G10', '4G11'],
     },
     {
         id: 'e19',
@@ -371,7 +438,7 @@ export const EVENT_DATA = [
         ticketCost: 12,
         eventOrganizers: 'Drama Club',
         socialMedia: 'Facebook',
-        takenSeats: [],
+        takenSeats: ['1H1', '1H2', '2A15', '3B8', '4C12', '4D5'],
     },
     {
         id: 'e20',
@@ -385,7 +452,7 @@ export const EVENT_DATA = [
         ticketCost: 20,
         eventOrganizers: 'Community Outreach',
         socialMedia: 'Instagram',
-        takenSeats: [],
+        takenSeats: ['1A10', '2B15', '3C8', '3D12', '4E5', '4F18'],
     },
     {
         id: 'e21',
@@ -399,7 +466,7 @@ export const EVENT_DATA = [
         ticketCost: 5,
         eventOrganizers: 'Art Department',
         socialMedia: 'Twitter',
-        takenSeats: [],
+        takenSeats: ['1B5', '2C10', '3D15', '3E8', '4F12', '4G5'],
     },
     {
         id: 'e22',
@@ -414,7 +481,7 @@ export const EVENT_DATA = [
         ticketCost: 0,
         eventOrganizers: 'Career Services',
         socialMedia: 'LinkedIn',
-        takenSeats: [],
+        takenSeats: ['1C8', '2D12', '3E5', '3F10', '4G15', '4H8'],
     },
     {
         id: 'e23',
@@ -428,7 +495,7 @@ export const EVENT_DATA = [
         ticketCost: 10,
         eventOrganizers: 'Student Council',
         socialMedia: 'Instagram',
-        takenSeats: [],
+        takenSeats: ['1D12', '2E5', '3F8', '3G12', '4H5', '4A10'],
     },
     {
         id: 'e24',
@@ -443,7 +510,7 @@ export const EVENT_DATA = [
         ticketCost: 0,
         eventOrganizers: 'Diversity Club',
         socialMedia: 'Facebook',
-        takenSeats: [],
+        takenSeats: ['1E5', '2F10', '3G15', '3H8', '4A12', '4B5'],
     },
     {
         id: 'e25',
@@ -457,7 +524,7 @@ export const EVENT_DATA = [
         ticketCost: 0,
         eventOrganizers: 'Debate Team',
         socialMedia: 'Twitter',
-        takenSeats: [],
+        takenSeats: ['1F8', '2G12', '3H5', '3A10', '4B15', '4C8'],
     },
     {
         id: 'e26',
@@ -471,7 +538,7 @@ export const EVENT_DATA = [
         ticketCost: 0,
         eventOrganizers: 'Environmental Club',
         socialMedia: 'Instagram',
-        takenSeats: [],
+        takenSeats: ['1G12', '2H5', '3A8', '3B12', '4C5', '4D10'],
     },
     {
         id: 'e27',
@@ -485,7 +552,7 @@ export const EVENT_DATA = [
         ticketCost: 5,
         eventOrganizers: 'Cultural Committee',
         socialMedia: 'Facebook',
-        takenSeats: [],
+        takenSeats: ['1H5', '2A10', '3B15', '3C8', '4D12', '4E5'],
     },
     {
         id: 'e28',
@@ -499,7 +566,7 @@ export const EVENT_DATA = [
         ticketCost: 8,
         eventOrganizers: 'Tech Club',
         socialMedia: 'LinkedIn',
-        takenSeats: [],
+        takenSeats: ['1A8', '2B12', '3C5', '3D10', '4E15', '4F8'],
     },
     {
         id: 'e29',
@@ -513,7 +580,7 @@ export const EVENT_DATA = [
         ticketCost: 5,
         eventOrganizers: 'Literature Club',
         socialMedia: 'Twitter',
-        takenSeats: [],
+        takenSeats: ['1B12', '2C5', '3D8', '3E12', '4F5', '4G10'],
     },
     {
         id: 'e30',
@@ -527,7 +594,7 @@ export const EVENT_DATA = [
         ticketCost: 0,
         eventOrganizers: 'Environmental Club',
         socialMedia: 'Instagram',
-        takenSeats: [],
+        takenSeats: ['1C5', '2D10', '3E15', '3F8', '4G12', '4H5'],
     },
     {
         id: 'e31',
@@ -541,7 +608,7 @@ export const EVENT_DATA = [
         ticketCost: 7,
         eventOrganizers: 'Drama Club',
         socialMedia: 'Facebook',
-        takenSeats: [],
+        takenSeats: ['1D8', '2E12', '3F5', '3G10', '4H15', '4A8'],
     },
     {
         id: 'e32',

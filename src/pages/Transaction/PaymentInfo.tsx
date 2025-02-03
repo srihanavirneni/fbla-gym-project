@@ -130,7 +130,7 @@ const PaymentInfo = () => {
                             </div>
                             <div className="modal__credit-card-input">
                                 <p className="text-sm bold mb-1">Card Name</p>
-                                <Input type="number" placeholder="Card Name" />
+                                <Input type="text" placeholder="Card Name" />
                             </div>
                             <hr className="my-3" />
                             <div className="modal__credit-card-input select-country">
