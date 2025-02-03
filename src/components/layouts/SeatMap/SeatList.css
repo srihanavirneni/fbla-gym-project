@@ -74,3 +74,28 @@
 .horizontal .seat-row {
     grid-template-columns: repeat(20, 1fr);
 }
+
+
+@media only screen and (max-width: 1200px) {
+    .seat-list__big-container {
+        align-items: center;
+    }
+
+    .seat-list__container .vertical {
+        margin-bottom: 5rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .seat-list__container .horizontal {
+        width: 60rem;
+        align-items: start;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .seat-list__container .horizontal {
+        width: 30rem;
+        align-items: start;
+    }
+}   

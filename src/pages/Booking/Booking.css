@@ -74,6 +74,15 @@
     .booking-page__content {
         flex-direction: column;
         align-items: center;
+        height: auto;
+    }
+
+    .booking-page__ticket-selection {
+        width: 50rem;
+    }
+
+    .booking-page__seat-list {
+        width: 100%;
     }
 }
 
@@ -82,8 +91,8 @@
         width: 100%;
     }
 
-    .booking-page__seat-list {
-        padding: 2rem;
+    .booking-page__ticket-selection {
+        width: 80%;
     }
 
     .credit-card-page {
@@ -101,12 +110,5 @@
     .credit-card-page__order-details {
         width: 100%;
         margin-top: 3rem;
-    }
-}
-
-@media only screen and (max-width: 750px) {
-    .booking-page__content {
-        align-items: start;
-        padding: 1rem 2rem;
     }
 }
