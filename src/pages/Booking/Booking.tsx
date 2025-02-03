@@ -51,12 +51,16 @@ const Booking = () => {
         if (!selected) {
             setRecommendedSeatsList([...recommendedSeatsList, seatName]);
         } else {
-            setRecommendedSeatsList(recommendedSeatsList.filter((seat) => seat !== seatName));
+            setRecommendedSeatsList(
+                recommendedSeatsList.filter((seat) => seat !== seatName)
+            );
         }
     };
 
     const removeSeat = (seatName: String) => {
-        setRecommendedSeatsList(recommendedSeatsList.filter((seat) => seat !== seatName));
+        setRecommendedSeatsList(
+            recommendedSeatsList.filter((seat) => seat !== seatName)
+        );
     };
 
     return eventData ? (
@@ -68,15 +72,8 @@ const Booking = () => {
                 endTime={eventData['endTime']}
             />
             <div className="booking-page__content">
-                <div className="booking-page__seat-list">
-                    <h1 className="black">Pick A Seat</h1>
-                    <p className="medium mb-10">
-                        You cannot select seats that are taken. Ticket prices are flat no matter where you sit.
-                    </p>
-                    <SeatMap id={currentId} path={currentPath} takenSeats={eventData['takenSeats']} onSeatToggle={pushSeat} />
-                </div>
                 <div className="booking-page__ticket-selection">
-                    <div className="seat-list__seat-input">
+                    {/* <div className="seat-list__seat-input">
                         <h3>Section</h3>
                         <p className="mt-1 mb-4 text-sm">
                             There are a total of 4 sections surrounding the
@@ -199,7 +196,12 @@ const Booking = () => {
                                 },
                             ]}
                         />
-                    </div>
+                    </div> */}
+                    <h1 className="black">Pick A Seat</h1>
+                    <p className="medium mb-10">
+                        You cannot select seats that are taken. Ticket prices
+                        are flat no matter where you sit.
+                    </p>
                     <div className="seat-list__seat-input">
                         <h3>Seats</h3>
                         <p className="mt-1 mb-4 text-sm">
@@ -208,7 +210,12 @@ const Booking = () => {
                         </p>
                         <div className="recommended-seats-window">
                             {recommendedSeatsList.map((seat) => {
-                                return <SeatChip seat={seat} onRemove={() => removeSeat(seat)} />;
+                                return (
+                                    <SeatChip
+                                        seat={seat}
+                                        onRemove={() => removeSeat(seat)}
+                                    />
+                                );
                             })}
                         </div>
                     </div>
@@ -216,14 +223,33 @@ const Booking = () => {
                         variant={'accent'}
                         disabled={recommendedSeatsList.length === 0}
                         asChild={recommendedSeatsList.length !== 0}
+                        className="booking-page__continue-btn"
                     >
                         <Link
-                            to={`/events/payment/${currentId}/transaction/${recommendedSeatsList.join('b')}`}
+                            to={`/events/payment/${currentId}/transaction/${recommendedSeatsList.join(
+                                'b'
+                            )}`}
                             className="text-white"
                         >
                             Continue
                         </Link>
                     </Button>
+                    <Button variant={'outline'} asChild className="ml-3">
+                        <Link
+                            to={'/events/'}
+                            className="text-black booking-page__back-btn bg-secondary"
+                        >
+                            Back
+                        </Link>
+                    </Button>
+                </div>
+                <div className="booking-page__seat-list">
+                    <SeatMap
+                        id={currentId}
+                        path={currentPath}
+                        takenSeats={eventData['takenSeats']}
+                        onSeatToggle={pushSeat}
+                    />
                 </div>
             </div>
         </div>

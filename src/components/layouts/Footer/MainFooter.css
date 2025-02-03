@@ -2,6 +2,8 @@
     background: var(--color-complementary);
     padding: 5rem 0;
     color: white;
+    position: static;
+    z-index: 100;
 }
 
 .main-footer__content-list {

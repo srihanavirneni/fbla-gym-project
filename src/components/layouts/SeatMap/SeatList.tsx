@@ -1,4 +1,8 @@
-import { SEATS_PER_ROW, ROWS } from '@/context/event-list';
+import {
+    SEATS_PER_ROW,
+    SEATS_PER_ROW_SIDE,
+    ROWS,
+} from '@/context/event-list';
 import { Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,8 +15,30 @@ import Seat from './Seat';
 import './SeatList.css';
 
 const SeatList = (props: any) => {
+    const getSectionName = () => {
+        if (props.section === '1') {
+            return 'Freshmen';
+        } else if (props.section === '2') {
+            return 'Sophomore';
+        } else if (props.section === '3') {
+            return 'Junior';
+        } else if (props.section === '4') {
+            return 'Senior';
+        }
+    };
+
+    const isSide = () => {
+        if (props.section === '3' || props.section === '4') {
+            return true;
+        }
+        return false;
+    };
+
     return (
         <div className="seat-list__big-container">
+            <h1 className='mb-0'>
+                Section {props.section}: {getSectionName()} Rank
+            </h1>
             <Button asChild variant={'outline'}>
                 <Link to={`/events/payment/${props.eventId}`}>
                     <FontAwesomeIcon icon={faArrowLeft} />
@@ -30,7 +56,11 @@ const SeatList = (props: any) => {
                     {Array.from({ length: ROWS }, (_, rowIndex) => (
                         <div key={rowIndex} className="seat-row">
                             {Array.from(
-                                { length: SEATS_PER_ROW },
+                                {
+                                    length: isSide()
+                                        ? SEATS_PER_ROW_SIDE
+                                        : SEATS_PER_ROW,
+                                },
                                 (_, seatIndex) => (
                                     <Seat
                                         seatIndex={seatIndex}
