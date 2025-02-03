@@ -21,9 +21,12 @@ const Seat = (props: any) => {
     };
 
     const selectSeat = () => {
-        if (!isSeatTaken(seatName)) {
-            setSelected(!selected);
-            props.onSeatToggle(seatName, selected);
+        const success = props.onSeatToggle2(seatName, !selected);
+        if (success === true) {
+            if (!isSeatTaken(seatName)) {
+                setSelected(!selected);
+                props.onSeatToggle(seatName, selected);
+            }
         }
     };
 

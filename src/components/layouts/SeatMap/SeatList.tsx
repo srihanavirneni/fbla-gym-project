@@ -1,9 +1,11 @@
 import {
     SEATS_PER_ROW,
     SEATS_PER_ROW_SIDE,
+    MAX_TICKETS_PER_PURCHASE,
     ROWS,
 } from '@/context/event-list';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
@@ -34,9 +36,24 @@ const SeatList = (props: any) => {
         return false;
     };
 
+    const [selectedSeats, setSelectedSeats] = useState<String[]>([]);
+    const pushSeat = (seatName: String, selected: boolean) => {
+        if (selected) {
+            if (selectedSeats.length >= MAX_TICKETS_PER_PURCHASE) {
+                return false;
+            }
+
+            setSelectedSeats([...selectedSeats, seatName]);
+        } else {
+            setSelectedSeats(selectedSeats.filter((seat) => seat !== seatName));
+        }
+
+        return true;
+    };
+
     return (
         <div className="seat-list__big-container">
-            <h1 className='mb-0'>
+            <h1 className="mb-0">
                 Section {props.section}: {getSectionName()} Rank
             </h1>
             <Button asChild variant={'outline'}>
@@ -68,6 +85,7 @@ const SeatList = (props: any) => {
                                         section={props.section}
                                         takenSeats={props.takenSeats}
                                         onSeatToggle={props.onSeatToggle}
+                                        onSeatToggle2={pushSeat}
                                     />
                                 )
                             )}
