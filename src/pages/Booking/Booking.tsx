@@ -26,25 +26,10 @@ const Booking = () => {
             eventData = event;
         }
     });
-
-    const [section, setSection] = useState(1);
-    const [row, setRow] = useState('A');
-    const [quantity, setQuantity] = useState(1);
-
-    console.log(section, row, quantity);
+    
     const [recommendedSeatsList, setRecommendedSeatsList] = useState<String[]>(
         []
     );
-
-    const setQuery = (queryName: String, value: any) => {
-        if (queryName == 'section') {
-            setSection(value);
-        } else if (queryName == 'row') {
-            setRow(value);
-        } else if (queryName == 'quantity') {
-            setQuantity(value);
-        }
-    };
 
     const pushSeat = (seatName: String, selected: boolean) => {
         if (!selected) {
