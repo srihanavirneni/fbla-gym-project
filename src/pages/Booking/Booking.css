@@ -55,6 +55,12 @@
     margin-right: 0.5rem;
 }
 
+@media only screen and (max-width: 1200px) {
+    .booking-page__content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 @media only screen and (max-width: 1000px) {
     .booking-page__seat-list img {
@@ -80,5 +86,12 @@
     .credit-card-page__order-details {
         width: 100%;
         margin-top: 3rem;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .booking-page__content {
+        align-items: start;
+        padding: 1rem 2rem;
     }
 }

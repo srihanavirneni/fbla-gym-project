@@ -59,7 +59,7 @@ const PaymentInfo = () => {
                         <p className="ml-2">Credit Card</p>
                     </div>
                     <div>
-                        <ul>
+                        <ul className='payment-info__credit-card-icons'>
                             <img
                                 src={
                                     'https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1.en/assets/visa.sxIq5Dot.svg'

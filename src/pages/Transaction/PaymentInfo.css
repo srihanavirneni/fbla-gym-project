@@ -138,3 +138,9 @@
     width: 100%;
     padding: 1.5rem 0;
 }
+
+@media only screen and (max-width: 1000px) {
+    .payment-info__credit-card-icons li {
+        display: none;
+    }
+}
