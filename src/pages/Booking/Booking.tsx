@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { EVENT_DATA } from '@/context/event-list';
+import { EVENT_DATA, MAX_TICKETS_PER_PURCHASE } from '@/context/event-list';
 
-import Combobox from '@/components/interface/Combobox';
 import { Button } from '@/components/ui/button';
 
 import SeatChip from './SeatChip';
@@ -204,9 +203,13 @@ const Booking = () => {
                     </p>
                     <div className="seat-list__seat-input">
                         <h3>Seats</h3>
-                        <p className="mt-1 mb-4 text-sm">
+                        <p className="mt-1 mb-1 text-sm">
                             Selected seats will show at the bottom. Click
                             continue to purchase these tickets.
+                        </p>
+                        <p className="mt-1 mb-4 text-sm">
+                            Maximum of <b>{MAX_TICKETS_PER_PURCHASE} tickets</b> per
+                            purchase.
                         </p>
                         <div className="recommended-seats-window">
                             {recommendedSeatsList.map((seat) => {

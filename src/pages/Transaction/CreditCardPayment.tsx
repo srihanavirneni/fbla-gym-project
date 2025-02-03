@@ -73,6 +73,9 @@ const CreditCardPayment = (props: any) => {
                         </div>
                         <div className="credit-info-card__text-field">
                             <p>Phone Number</p>
+                            <p className="text-sm">
+                                Please include dashes in your phone number.
+                            </p>
                             <Input
                                 placeholder="XXX-XXX-XXXX"
                                 type="tel"

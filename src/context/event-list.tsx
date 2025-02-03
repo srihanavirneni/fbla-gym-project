@@ -82,6 +82,7 @@ export const BREAKS = [
 export const CONVENIENCE_FEE = 2;
 export const SEATS_PER_ROW = 20;
 export const SEATS_PER_ROW_SIDE = 10;
+export const MAX_TICKETS_PER_PURCHASE = 6;
 export const ROWS = 8;
 export const EVENT_DATA = [
     {
