@@ -76,23 +76,23 @@ const Transaction = () => {
 
         setPurchased(true);
 
-        // emailjs.send(
-        //     import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        //     import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        //     {
-        //         to_email: email,
-        //         to_name: name,
-        //         id: generateOrderId(),
-        //         event_name: eventData['name'],
-        //         event_description: eventData['description'],
-        //         date: parseDate(),
-        //         time: parseTime(),
-        //         location: eventData['location'],
-        //         quantity: currentSeatsArray.length,
-        //         seats: parseSeats(),
-        //     },
-        //     import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-        // );
+        emailjs.send(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+            {
+                to_email: email,
+                to_name: name,
+                id: generateOrderId(),
+                event_name: eventData['name'],
+                event_description: eventData['description'],
+                date: parseDate(),
+                time: parseTime(),
+                location: eventData['location'],
+                quantity: currentSeatsArray.length,
+                seats: parseSeats(),
+            },
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        );
     };
 
     return eventData ? (
