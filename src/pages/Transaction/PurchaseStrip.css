@@ -20,6 +20,10 @@
     margin-right: 2rem;
 }
 
+.purchase-strip__total > button {
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 1000px) {
     .ticket-purchase-strip {
         flex-direction: column;

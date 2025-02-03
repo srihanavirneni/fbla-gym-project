@@ -1,0 +1,14 @@
+.confirmation-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+}
+
+.confirmation-card {
+    padding: 2rem;
+}
+
+.confirmation__back-btn {
+    padding: 0.15rem 1.5rem;
+}

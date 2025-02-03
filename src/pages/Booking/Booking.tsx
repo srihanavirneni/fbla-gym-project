@@ -45,8 +45,6 @@ const Booking = () => {
         } else if (queryName == 'quantity') {
             setQuantity(value);
         }
-
-        setRecommendedSeatsList(['1A32', '1A33']);
     };
 
     const pushSeat = (seatName: String, selected: boolean) => {

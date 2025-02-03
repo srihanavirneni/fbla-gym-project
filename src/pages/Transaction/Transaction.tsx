@@ -10,9 +10,9 @@ import CreditCardPayment from './CreditCardPayment';
 import OrderDetails from './OrderDetails';
 
 import PurchaseStrip from './PurchaseStrip';
+import Confirmation from './Confirmation';
 
 import './Transaction.css';
-
 const Transaction = () => {
     const params = useParams();
 
@@ -33,6 +33,8 @@ const Transaction = () => {
         }
     });
 
+    const [purchased, setPurchased] = useState(false);
+
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
 
@@ -41,7 +43,6 @@ const Transaction = () => {
     };
 
     const parseSeats = () => {
-        console.log(currentSeatsArray);
         let seats = '';
         for (let i = 0; i < currentSeatsArray.length; i++) {
             const sectionNum = currentSeatsArray[i].charAt(0);
@@ -49,8 +50,6 @@ const Transaction = () => {
             const seatNum = currentSeatsArray[i].substring(2);
             seats += `- Section ${sectionNum}, Row ${rowLetter}, Seat ${seatNum}\n`;
         }
-
-        console.log(seats);
 
         return seats;
     };
@@ -75,23 +74,25 @@ const Transaction = () => {
     const sendEmail = (e: any) => {
         e.preventDefault();
 
-        emailjs.send(
-            import.meta.env.VITE_EMAILJS_SERVICE_ID,
-            import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-            {
-                to_email: email,
-                to_name: name,
-                id: generateOrderId(),
-                event_name: eventData['name'],
-                event_description: eventData['description'],
-                date: parseDate(),
-                time: parseTime(),
-                location: eventData['location'],
-                quantity: currentSeatsArray.length,
-                seats: parseSeats(),
-            },
-            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-        );
+        setPurchased(true);
+
+        // emailjs.send(
+        //     import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        //     import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        //     {
+        //         to_email: email,
+        //         to_name: name,
+        //         id: generateOrderId(),
+        //         event_name: eventData['name'],
+        //         event_description: eventData['description'],
+        //         date: parseDate(),
+        //         time: parseTime(),
+        //         location: eventData['location'],
+        //         quantity: currentSeatsArray.length,
+        //         seats: parseSeats(),
+        //     },
+        //     import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        // );
     };
 
     return eventData ? (
@@ -102,23 +103,33 @@ const Transaction = () => {
                 startTime={eventData['startTime']}
                 endTime={eventData['endTime']}
             />
-            <div className="transaction-content">
-                <CreditCardPayment setEmail={setEmail} setName={setName} />
-                <OrderDetails
-                    ticketCost={eventData['ticketCost']}
-                    convenienceFee={CONVENIENCE_FEE}
-                    seats={currentSeatsArray}
-                />
-            </div>
-            <PurchaseStrip
-                total={
-                    eventData['ticketCost'] > 0
-                        ? eventData['ticketCost'] * currentSeatsArray.length +
-                          CONVENIENCE_FEE
-                        : 0
-                }
-                sendEmail={sendEmail}
-            />
+            {purchased ? (
+                <Confirmation />
+            ) : (
+                <>
+                    <div className="transaction-content">
+                        <CreditCardPayment
+                            setEmail={setEmail}
+                            setName={setName}
+                        />
+                        <OrderDetails
+                            ticketCost={eventData['ticketCost']}
+                            convenienceFee={CONVENIENCE_FEE}
+                            seats={currentSeatsArray}
+                        />
+                    </div>
+                    <PurchaseStrip
+                        total={
+                            eventData['ticketCost'] > 0
+                                ? eventData['ticketCost'] *
+                                      currentSeatsArray.length +
+                                  CONVENIENCE_FEE
+                                : 0
+                        }
+                        sendEmail={sendEmail}
+                    />
+                </>
+            )}
         </div>
     ) : (
         <BookingError />
