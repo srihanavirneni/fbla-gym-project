@@ -31,6 +31,12 @@ const BookingHeader = (props: any) => {
                         formatTime(props['endTime'])}
                 </b>
             </p>
+            <p>
+                Location: <b>{props['location']}</b>
+            </p>
+            <p>
+                Ticket Cost: <b>{props['ticketCost'] === 0 ? 'FREE' : "$" + props['ticketCost']}</b>
+            </p>
         </div>
     );
 };

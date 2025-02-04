@@ -102,6 +102,8 @@ const Transaction = () => {
                 description={eventData['description']}
                 startTime={eventData['startTime']}
                 endTime={eventData['endTime']}
+                location={eventData['location']}
+                ticketCost={eventData['ticketCost']}
             />
             {purchased ? (
                 <Confirmation />

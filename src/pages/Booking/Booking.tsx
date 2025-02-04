@@ -26,7 +26,7 @@ const Booking = () => {
             eventData = event;
         }
     });
-    
+
     const [recommendedSeatsList, setRecommendedSeatsList] = useState<String[]>(
         []
     );
@@ -54,133 +54,11 @@ const Booking = () => {
                 description={eventData['description']}
                 startTime={eventData['startTime']}
                 endTime={eventData['endTime']}
+                location={eventData['location']}
+                ticketCost={eventData['ticketCost']}
             />
             <div className="booking-page__content">
                 <div className="booking-page__ticket-selection">
-                    {/* <div className="seat-list__seat-input">
-                        <h3>Section</h3>
-                        <p className="mt-1 mb-4 text-sm">
-                            There are a total of 4 sections surrounding the
-                            basketball court.
-                        </p>
-                        <Combobox
-                            labelPlaceholder="Select Section"
-                            placeholder="Search Section"
-                            className="search-bar__combo-box seat-input__combo-box"
-                            onChange={(v: any) => {
-                                setQuery('section', v);
-                            }}
-                            items={[
-                                {
-                                    value: '1',
-                                    label: 'Section 1: Freshmen',
-                                },
-                                {
-                                    value: '2',
-                                    label: 'Section 2: Sophomore',
-                                },
-                                {
-                                    value: '3',
-                                    label: 'Section 3: Junior',
-                                },
-                                {
-                                    value: '4',
-                                    label: 'Section 4: Senior',
-                                },
-                            ]}
-                        />
-                    </div>
-                    <div className="seat-list__seat-input">
-                        <h3>Row Number</h3>
-                        <p className="mt-1 text-sm">
-                            Each section has a row from A to H
-                        </p>
-                        <p className="bold mb-4 text-sm">
-                            A is the closest, H is the farthest.
-                        </p>
-                        <Combobox
-                            labelPlaceholder="Select Row"
-                            placeholder="Search Row"
-                            className="search-bar__combo-box seat-input__combo-box"
-                            onChange={(v: any) => {
-                                setQuery('row', v);
-                            }}
-                            items={[
-                                {
-                                    value: 'A',
-                                    label: 'Row A',
-                                },
-                                {
-                                    value: 'B',
-                                    label: 'Row B',
-                                },
-                                {
-                                    value: 'C',
-                                    label: 'Row C',
-                                },
-                                {
-                                    value: 'D',
-                                    label: 'Row D',
-                                },
-                                {
-                                    value: 'E',
-                                    label: 'Row E',
-                                },
-                                {
-                                    value: 'F',
-                                    label: 'Row F',
-                                },
-                                {
-                                    value: 'G',
-                                    label: 'Row G',
-                                },
-                                {
-                                    value: 'H',
-                                    label: 'Row H',
-                                },
-                            ]}
-                        />
-                    </div>
-                    <div className="seat-list__seat-input">
-                        <h3>Ticket Quantity</h3>
-                        <p className="mt-1 mb-4 text-sm">
-                            Select from 1 Ticket to 6 Tickets
-                        </p>
-                        <Combobox
-                            labelPlaceholder="Select Quantity"
-                            placeholder="Search Ticket Quantity"
-                            className="search-bar__combo-box seat-input__combo-box"
-                            onChange={(v: any) => {
-                                setQuery('quantity', v);
-                            }}
-                            items={[
-                                {
-                                    value: '1',
-                                    label: '1 Ticket',
-                                },
-                                {
-                                    value: '2',
-                                    label: '2 Tickets',
-                                },
-                                {
-                                    value: '3',
-                                    label: '3 Tickets',
-                                },
-                                {
-                                    value: '4',
-                                    label: '4 Tickets',
-                                },
-                                {
-                                    value: '5',
-                                    label: '5 Tickets',
-                                },
-                                {
-                                    value: '6',
-                                    label: '6 Tickets',
-                                },
-                            ]}
-                        />
-                    </div> */}
                     <h1 className="black">Pick A Seat</h1>
                     <p className="medium mb-10">
                         You cannot select seats that are taken. Ticket prices
@@ -193,8 +71,8 @@ const Booking = () => {
                             continue to purchase these tickets.
                         </p>
                         <p className="mt-1 mb-4 text-sm">
-                            Maximum of <b>{MAX_TICKETS_PER_PURCHASE} tickets</b> per
-                            purchase.
+                            Maximum of <b>{MAX_TICKETS_PER_PURCHASE} tickets</b>{' '}
+                            per purchase.
                         </p>
                         <div className="recommended-seats-window">
                             {recommendedSeatsList.map((seat) => {
