@@ -34,7 +34,11 @@ const CreditCardPayment = (props: any) => {
                                 <FontAwesomeIcon icon={faArrowLeft} />
                             </Link>
                         </Button>
-                        <CardTitle className="black">Purchase Ticket</CardTitle>
+                        <CardTitle className="black">
+                            {props.ticketCost <= 0
+                                ? 'Get Ticket for FREE'
+                                : 'Purchase Ticket'}
+                        </CardTitle>
                         <CardDescription>
                             <p className="mt-2">
                                 Fill out the following information to complete
@@ -42,7 +46,8 @@ const CreditCardPayment = (props: any) => {
                             </p>
                             <p className="bold mt-1">
                                 DISCLAIMER: Your session will expire if you do
-                                not pay within 20 minutes.
+                                not {props.ticketCost <= 0 ? 'claim' : 'pay'}
+                                within 20 minutes.
                             </p>
                             <hr className="mt-5" />
                         </CardDescription>
@@ -50,10 +55,11 @@ const CreditCardPayment = (props: any) => {
                     <CardContent>
                         <h3>Contact Information</h3>
                         <p className="mt-2 mb-5">
-                            You will receive a <b>bar code</b> upon purchase. It
-                            will be emailed to you (if provided) and also sent
-                            to your phone (if provided). It is mandatory to show
-                            your bar code in the check-in area.
+                            You will receive a <b>bar code</b> upon{' '}
+                            {props.ticketCost <= 0 ? 'claiming the ticket' : 'purchase'}
+                            . It will be emailed to you (if provided) and also
+                            sent to your phone (if provided). It is mandatory to
+                            show your bar code in the check-in area.
                         </p>
                         <div className="credit-info-card__text-field">
                             <p>Full Name</p>
@@ -82,12 +88,16 @@ const CreditCardPayment = (props: any) => {
                                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                             />
                         </div>
-                        <hr className="mt-7 mb-7" />
-                        <h3 className="mb-1">Payment Information</h3>
-                        <p className="mb-3 text-sm">
-                            All transactions are secured and encrypted.
-                        </p>
-                        <PaymentInfo />
+                        {props.ticketCost > 0 && (
+                            <>
+                                <hr className="mt-7 mb-7" />
+                                <h3 className="mb-1">Payment Information</h3>
+                                <p className="mb-3 text-sm">
+                                    All transactions are secured and encrypted.
+                                </p>
+                                <PaymentInfo />
+                            </>
+                        )}
                     </CardContent>
                 </Card>
             </div>

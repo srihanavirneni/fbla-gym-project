@@ -133,6 +133,7 @@ const EventsList = (props: any) => {
                             eventOrganizers={event.eventOrganizers}
                             specialNotes={event.specialNotes}
                             socialMedia={event.socialMedia}
+                            noSeats={event.noSeats}
                         />
                     ))
                 ) : (

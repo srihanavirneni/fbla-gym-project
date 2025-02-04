@@ -115,6 +115,7 @@ export const EVENT_DATA = [
         specialNotes: 'Formal attire required, no re-entry policy',
         socialMedia: 'Instagram, Snapchat',
         noSeats: true,
+        takenSeats: [],
     },
     {
         id: 'e3',
@@ -157,6 +158,7 @@ export const EVENT_DATA = [
             'Parking in Lot A only! Drivers who park in Lot B will automatically be escorted out.',
         socialMedia: 'Facebook, Twitter',
         noSeats: true,
+        takenSeats: [],
     },
     {
         id: 'e5',
@@ -197,6 +199,7 @@ export const EVENT_DATA = [
         specialNotes: 'Open to the public',
         socialMedia: 'Facebook, Twitter',
         noSeats: true,
+        takenSeats: [],
     },
     {
         id: 'e7',
@@ -212,6 +215,7 @@ export const EVENT_DATA = [
         specialNotes: '',
         socialMedia: 'Facebook, Twitter',
         noSeats: true,
+        takenSeats: [],
     },
     {
         id: 'e8',
@@ -229,6 +233,7 @@ export const EVENT_DATA = [
             'People who do not pay the ticket fee are restricted to certain parts of the exhibit.',
         socialMedia: 'Facebook, Twitter',
         noSeats: true,
+        takenSeats: [],
     },
     {
         id: 'e9',
@@ -260,6 +265,7 @@ export const EVENT_DATA = [
         eventOrganizers: 'Student Council',
         socialMedia: 'Instagram, Facebook',
         noSeats: true,
+        takenSeats: [],
     },
     {
         id: 'e11',
@@ -275,6 +281,7 @@ export const EVENT_DATA = [
         eventOrganizers: 'Chess Club',
         socialMedia: 'Instagram',
         noSeats: true,
+        takenSeats: [],
     },
     {
         id: 'e12',
@@ -399,7 +406,7 @@ export const EVENT_DATA = [
         ticketCost: 0,
         eventOrganizers: 'Science Club',
         socialMedia: 'Twitter',
-        noSeats: true,
+        takenSeats: [ '2D3', '2D4' ],
     },
     {
         id: 'e19',
@@ -408,7 +415,7 @@ export const EVENT_DATA = [
         startTime: new Date('1970-01-01T19:00:00'),
         endTime: new Date('1970-01-01T21:30:00'),
         type: 'Theater',
-        location: 'Performing Arts Center',
+        location: 'Auditorium',
         description: 'School-wide production of "The Sound of Music."',
         ticketCost: 12,
         eventOrganizers: 'Drama Club',
@@ -428,6 +435,7 @@ export const EVENT_DATA = [
         eventOrganizers: 'Community Outreach',
         socialMedia: 'Instagram',
         noSeats: true,
+        takenSeats: [],
     },
     {
         id: 'e21',
@@ -442,6 +450,7 @@ export const EVENT_DATA = [
         eventOrganizers: 'Art Department',
         socialMedia: 'Twitter',
         noSeats: true,
+        takenSeats: [],
     },
     {
         id: 'e22',
@@ -457,6 +466,7 @@ export const EVENT_DATA = [
         eventOrganizers: 'Career Services',
         socialMedia: 'LinkedIn',
         noSeats: true,
+        takenSeats: [],
     },
     {
         id: 'e24',
@@ -471,6 +481,7 @@ export const EVENT_DATA = [
         eventOrganizers: 'Student Council',
         socialMedia: 'Instagram',
         noSeats: true,
+        takenSeats: [],
     },
     {
         id: 'e25',
@@ -486,6 +497,7 @@ export const EVENT_DATA = [
         eventOrganizers: 'Diversity Club',
         socialMedia: 'Facebook',
         noSeats: true,
+        takenSeats: [],
     },
     {
         id: 'e26',
@@ -557,6 +569,7 @@ export const EVENT_DATA = [
         eventOrganizers: 'Environmental Club',
         socialMedia: 'Instagram',
         noSeats: true,
+        takenSeats: [],
     },
     {
         id: 'e31',
@@ -586,5 +599,6 @@ export const EVENT_DATA = [
         eventOrganizers: 'Local Business Association',
         socialMedia: 'Instagram',
         noSeats: true,
+        takenSeats: [],
     },
 ];

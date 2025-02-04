@@ -43,6 +43,10 @@ const Transaction = () => {
     };
 
     const parseSeats = () => {
+        if (currentSeats === 'no-seat') {
+            return 'No seat selected! Enjoy the event!';
+        }
+
         let seats = '';
         for (let i = 0; i < currentSeatsArray.length; i++) {
             const sectionNum = currentSeatsArray[i].charAt(0);
@@ -113,11 +117,14 @@ const Transaction = () => {
                         <CreditCardPayment
                             setEmail={setEmail}
                             setName={setName}
+                            noSeats={currentSeats === 'no-seat'}
+                            ticketCost={eventData['ticketCost']}
                         />
                         <OrderDetails
                             ticketCost={eventData['ticketCost']}
                             convenienceFee={CONVENIENCE_FEE}
                             seats={currentSeatsArray}
+                            noSeats={currentSeats === 'no-seat'}
                         />
                     </div>
                     <PurchaseStrip
@@ -129,6 +136,7 @@ const Transaction = () => {
                                 : 0
                         }
                         sendEmail={sendEmail}
+                        noSeats={currentSeats === 'no-seat'}
                     />
                 </>
             )}

@@ -39,7 +39,9 @@ const PurchaseStrip = (props: any) => {
                     variant={'accent'}
                     onClick={props.sendEmail}
                 >
-                    Purchase {/* LEADS TO PURCHASE */}
+                    {props.noSeats
+                        ? 'Claim Ticket'
+                        : 'Purchase Ticket'} {/* LEADS TO PURCHASE */}
                 </Button>
             </div>
         </div>
