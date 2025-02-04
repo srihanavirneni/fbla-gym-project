@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -23,7 +24,12 @@ const AboveTheFold = () => {
 
     return (
         <div className="above-the-fold">
-            <div className="above-the-fold__main-info">
+            <motion.div
+                className="above-the-fold__main-info"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+            >
                 <h1 className="black">A Gymnasium For All Your Needs</h1>
                 <h2>Looking for the perfect venue?</h2>
                 <h3 className="medium">
@@ -57,7 +63,7 @@ const AboveTheFold = () => {
                 <Button asChild variant={'link'}>
                     <Link to="/status">See Current Status</Link>
                 </Button>
-            </div>
+            </motion.div>
         </div>
     );
 };
