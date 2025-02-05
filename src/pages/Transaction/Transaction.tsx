@@ -8,6 +8,7 @@ import BookingError from '../Booking/BookingError';
 
 import CreditCardPayment from './CreditCardPayment';
 import OrderDetails from './OrderDetails';
+import NoSeatAlert from './NoSeatAlert';
 
 import PurchaseStrip from './PurchaseStrip';
 import Confirmation from './Confirmation';
@@ -109,6 +110,7 @@ const Transaction = () => {
                 location={eventData['location']}
                 ticketCost={eventData['ticketCost']}
             />
+            {currentSeats === 'no-seat' && <NoSeatAlert />}
             {purchased ? (
                 <Confirmation />
             ) : (
