@@ -30,7 +30,13 @@ const CreditCardPayment = (props: any) => {
                             className="border-none transaction__back-button"
                             variant={'accent'}
                         >
-                            <Link to={`/events/payment/${currentId}`}>
+                            <Link
+                                to={
+                                    props.noSeats
+                                        ? `/events/`
+                                        : `/events/payment/${currentId}`
+                                }
+                            >
                                 <FontAwesomeIcon icon={faArrowLeft} />
                             </Link>
                         </Button>
@@ -46,7 +52,7 @@ const CreditCardPayment = (props: any) => {
                             </p>
                             <p className="bold mt-1">
                                 DISCLAIMER: Your session will expire if you do
-                                not {props.ticketCost <= 0 ? 'claim' : 'pay'}
+                                not {props.ticketCost <= 0 ? 'claim' : 'pay'}{' '}
                                 within 20 minutes.
                             </p>
                             <hr className="mt-5" />
@@ -56,7 +62,9 @@ const CreditCardPayment = (props: any) => {
                         <h3>Contact Information</h3>
                         <p className="mt-2 mb-5">
                             You will receive a <b>bar code</b> upon{' '}
-                            {props.ticketCost <= 0 ? 'claiming the ticket' : 'purchase'}
+                            {props.ticketCost <= 0
+                                ? 'claiming the ticket'
+                                : 'purchase'}
                             . It will be emailed to you (if provided) and also
                             sent to your phone (if provided). It is mandatory to
                             show your bar code in the check-in area.

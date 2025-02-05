@@ -79,6 +79,10 @@ export const BREAKS = [
     },
 ];
 
+export const AUDITORIUM_SEATS_PER_ROW = 8;
+export const AUDITORIUM_SEATS_PER_ROW_SIDE = 4;
+export const AUDITORIUM_ROWS = 10;
+
 export const CONVENIENCE_FEE = 2;
 export const SEATS_PER_ROW = 20;
 export const SEATS_PER_ROW_SIDE = 10;

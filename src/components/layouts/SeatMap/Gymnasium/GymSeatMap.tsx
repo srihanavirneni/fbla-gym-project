@@ -1,9 +1,9 @@
 import SeatSectionGroup from './SeatSectionGroup';
 import SeatList from './SeatList';
 
-import './SeatMap.css';
+import './GymSeatMap.css';
 
-const SeatMap = (props: any) => {
+const GymSeatMap = (props: any) => {
     const getLocationName = () => {
         if (props.location === 'Main Field') {
             return 'FIELD';
@@ -47,4 +47,4 @@ const SeatMap = (props: any) => {
     );
 };
 
-export default SeatMap;
+export default GymSeatMap;

@@ -3,13 +3,20 @@ import './Seat.css';
 
 const Seat = (props: any) => {
     const rows = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+    const rowsAuditorium = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
+
     const [selected, setSelected] = useState(false);
 
-    const seatName = `${props.section}${
+    const auditoriumSeatName = `${props.section}${
+        rowsAuditorium[props.rowIndex]
+    }${props.seatIndex + 1}`;
+    const gymSeatName = `${props.section}${
         props.section == 2 || props.section == 4
             ? rows[props.rowIndex]
             : rows[rows.length - props.rowIndex - 1]
     }${props.seatIndex + 1}`;
+
+    const seatName = props.auditorium ? auditoriumSeatName : gymSeatName;
 
     const isSeatTaken = (seat: string) => {
         for (let i = 0; i < props.takenSeats.length; i++) {

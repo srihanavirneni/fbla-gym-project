@@ -84,9 +84,6 @@ const PaymentInfo = () => {
                                 }
                                 alt="Discover"
                             />
-                            <li>
-                                <p className="black">+4</p>
-                            </li>
                         </ul>
                     </div>
                 </Button>

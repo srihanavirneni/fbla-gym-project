@@ -4,10 +4,12 @@ import { EVENT_DATA, MAX_TICKETS_PER_PURCHASE } from '@/context/event-list';
 
 import { Button } from '@/components/ui/button';
 
+import GymSeatMap from '@/components/layouts/SeatMap/Gymnasium/GymSeatMap';
+import AuditoriumSeatMap from '@/components/layouts/SeatMap/Auditorium/AuditoriumSeatMap';
+
 import SeatChip from './SeatChip';
 import BookingError from './BookingError';
 import BookingHeader from './BookingHeader';
-import SeatMap from '@/components/layouts/SeatMap/SeatMap';
 
 import './Booking.css';
 
@@ -110,13 +112,22 @@ const Booking = () => {
                     </Button>
                 </div>
                 <div className="booking-page__seat-list">
-                    <SeatMap
-                        id={currentId}
-                        path={currentPath}
-                        takenSeats={eventData['takenSeats']}
-                        onSeatToggle={pushSeat}
-                        location={eventData['location']}
-                    />
+                    {eventData['location'] === 'Auditorium' ? (
+                        <AuditoriumSeatMap
+                            id={currentId}
+                            path={currentPath}
+                            takenSeats={eventData['takenSeats']}
+                            onSeatToggle={pushSeat}
+                        />
+                    ) : (
+                        <GymSeatMap
+                            id={currentId}
+                            path={currentPath}
+                            takenSeats={eventData['takenSeats']}
+                            onSeatToggle={pushSeat}
+                            location={eventData['location']}
+                        />
+                    )}
                 </div>
             </div>
         </div>

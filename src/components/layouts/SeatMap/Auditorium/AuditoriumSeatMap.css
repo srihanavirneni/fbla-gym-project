@@ -1,0 +1,28 @@
+.stage {
+    padding: 2rem;
+}
+
+.stage h1 {
+    opacity: 0.4;
+    margin-bottom: 2rem;
+}
+
+.auditorium-seats {
+    display: flex;
+    gap: 3rem;
+}
+
+.auditorium-seat-map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+@media (max-width: 1200px) {
+    .auditorium-seat-map {
+        margin: 10rem 0;
+    }
+}
+

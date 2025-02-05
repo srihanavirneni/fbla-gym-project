@@ -11,8 +11,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 import { Button } from '@/components/ui/button';
-import Legend from './Legend';
-import Seat from './Seat';
+import Legend from '../Legend';
+import Seat from '../Seat';
 
 import './SeatList.css';
 
