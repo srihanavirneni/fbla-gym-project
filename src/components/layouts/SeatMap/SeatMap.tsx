@@ -4,6 +4,16 @@ import SeatList from './SeatList';
 import './SeatMap.css';
 
 const SeatMap = (props: any) => {
+    const getLocationName = () => {
+        if (props.location === 'Main Field') {
+            return 'FIELD';
+        } else if (props.location === 'STADIUM') {
+            return 'FIELD';
+        }
+
+        return 'COURT';
+    };
+
     return props.path > 0 ? (
         <div className="seat-group__container">
             <SeatList
@@ -26,7 +36,7 @@ const SeatMap = (props: any) => {
             <div className="seat-map__middle">
                 <SeatSectionGroup side="vertical" id={props.id} section={3} />
                 <div className="stadium">
-                    <h1>COURT</h1>
+                    <h1>{getLocationName()}</h1>
                 </div>
                 <SeatSectionGroup side="vertical" id={props.id} section={4} />
             </div>

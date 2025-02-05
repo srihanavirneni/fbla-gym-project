@@ -115,6 +115,7 @@ const Booking = () => {
                         path={currentPath}
                         takenSeats={eventData['takenSeats']}
                         onSeatToggle={pushSeat}
+                        location={eventData['location']}
                     />
                 </div>
             </div>
