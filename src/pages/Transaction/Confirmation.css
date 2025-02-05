@@ -12,3 +12,10 @@
 .confirmation__back-btn {
     padding: 0.15rem 1.5rem;
 }
+
+@media only screen and (max-width: 800px) {
+    .confirmation-card-container {
+        padding: 4rem 2.5rem;
+    }
+}
+
