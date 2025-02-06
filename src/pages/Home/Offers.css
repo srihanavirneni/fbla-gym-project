@@ -9,7 +9,7 @@
 .home-offers__content {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: start;
     margin-top: 3rem;
 }
 
@@ -43,7 +43,7 @@
 
 .home-offers__case-studies {
     width: 50rem;
-    margin-left: 10rem;
+    margin-left: 5rem;
 }
 
 .home-offers__case-studies li > img {
@@ -68,19 +68,22 @@
 
 .case-studies__concert img {
     width: 30rem;
+    height: 20rem;
 }
 
 .case-studies__art-exhibit img {
     height: 20rem;
-    width: 25rem;
+    width: 30rem;
 }
 
 .case-studies__sporting-event img {
-    width: 25rem;
+    width: 30rem;
+    height: 20rem;
 }
 
 .case-studies__community-gathering img {
-    width: 20rem;
+    width: 30rem;
+    height: 20rem;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -118,39 +121,40 @@
     }
 
     .case-studies__concert img {
-        width: 80%;
+        width: auto;
     }
 
     .case-studies__art-exhibit img {
-        width: 60%;
-        height: 100%;
+        width: auto;
     }
 
     .case-studies__sporting-event img {
-        width: 70%;
+        width: auto;
     }
 
     .case-studies__community-gathering img {
-        width: 60%;
+        width: auto;
     }
 }
-
 
 @media only screen and (max-width: 800px) {
     .case-studies__concert img {
         width: 100%;
+        height: auto;
     }
 
     .case-studies__art-exhibit img {
         width: 100%;
-        height: 100%;
+        height: auto;
     }
 
     .case-studies__sporting-event img {
         width: 100%;
+        height: auto;
     }
 
     .case-studies__community-gathering img {
         width: 100%;
+        height: auto;
     }
 }
