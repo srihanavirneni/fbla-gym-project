@@ -117,7 +117,7 @@ const Testimonials = () => {
                     config={{
                         user: {
                             nickname: 'david_scott',
-                            name: 'David S.',
+                            name: 'Dr. David',
                             avatar: businessExpo,
                             verified: true,
                             locked: false,
