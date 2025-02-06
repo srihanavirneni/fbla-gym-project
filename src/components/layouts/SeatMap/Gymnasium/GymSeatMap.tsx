@@ -30,6 +30,9 @@ const GymSeatMap = (props: any) => {
         </div>
     ) : (
         <div className="seat-map">
+            <p className="black mb-5">
+                Click on a section to view seats
+            </p>
             <div className="seat-map__top">
                 <SeatSectionGroup side="horizontal" id={props.id} section={1} />
             </div>
