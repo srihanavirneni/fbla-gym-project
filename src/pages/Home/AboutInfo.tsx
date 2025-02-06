@@ -2,6 +2,8 @@ import placeholder from '../../assets/images/placeholder.png';
 import garbaNight from '../../assets/images/garbanight.png';
 import hsLogo from '../../assets/images/hslogo.png';
 
+import { motion } from 'framer-motion';
+
 import './AboutInfo.css';
 
 const CaseStudy = (props: any) => {
@@ -18,13 +20,24 @@ const AboutInfo = (props: any) => {
         <div className="home__about-info-main">
             <div className="home__about-info">
                 <div className="about-info__visual">
-                    <CaseStudy
-                        image={garbaNight}
-                        alt="gymnasium"
-                        description="Gymnasium during Garba Night!"
-                    />
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <CaseStudy
+                            image={garbaNight}
+                            alt="gymnasium"
+                            description="Gymnasium during Garba Night!"
+                        />
+                    </motion.div>
                 </div>
-                <div className="about-info__content">
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="about-info__content"
+                >
                     <img src={hsLogo} alt="school image" />
                     <h1 className="black">Who are we?</h1>
                     {props.showDeepInfo ? (
@@ -82,7 +95,7 @@ const AboutInfo = (props: any) => {
                     <p className="about-info__content-slogan bold">
                         We are here to elevate every decision!
                     </p>
-                </div>
+                </motion.div>
             </div>
         </div>
     );

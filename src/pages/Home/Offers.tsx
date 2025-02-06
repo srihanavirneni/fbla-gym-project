@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBurger, faGuitar } from '@fortawesome/free-solid-svg-icons';
 
+import { motion } from 'framer-motion';
+
 import placeholder from '../../assets/images/placeholder.png';
 import artExhibit from '../../assets/images/artexhibit.jpeg';
 import basketballGame from '../../assets/images/basketballgame.png';
@@ -29,7 +31,11 @@ const Offers = () => {
             </h3>
             <div className="home-offers__content">
                 <div className="home-offers__dimensions">
-                    <ul>
+                    <motion.ul
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                    >
                         <li>
                             <img src={basketballCourt} />
                             <h2 className="black">It's huge!</h2>
@@ -58,10 +64,14 @@ const Offers = () => {
                                 immerse your audience.
                             </p>
                         </li>
-                    </ul>
+                    </motion.ul>
                 </div>
                 <div className="home-offers__case-studies">
-                    <ul>
+                    <motion.ul
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                    >
                         <li>
                             <CaseStudy
                                 className="case-studies__concert"
@@ -90,7 +100,7 @@ const Offers = () => {
                                 description="High School FBLA Club Meeting"
                             />
                         </li>
-                    </ul>
+                    </motion.ul>
                 </div>
             </div>
         </div>

@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 import FakeTweet from '@njrardin/react-fake-tweet';
 
 import basketballCoach from '../../assets/profilepictures/basketballcoach.jpeg';
@@ -17,7 +19,12 @@ const Testimonials = () => {
                 Check out these amazing testimonials from people who've
                 experienced our gym firsthand!
             </p>
-            <div className="testimonials-list__wrapper">
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="testimonials-list__wrapper"
+            >
                 <FakeTweet
                     config={{
                         user: {
@@ -132,7 +139,7 @@ const Testimonials = () => {
                         likes: 3652,
                     }}
                 />
-            </div>
+            </motion.div>
         </div>
     );
 };
