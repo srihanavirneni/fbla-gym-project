@@ -39,11 +39,15 @@ const Updates = () => {
                     <CardContent className="info-card__main-info">
                         <ul>
                             <li>
-                                <h4>Main Facility</h4>
+                                <h4>Gymnasium</h4>
                                 <Badge className='status-badge__available'>Available</Badge>
                             </li>
                             <li>
-                                <h4>Stadium</h4>
+                                <h4>Soccer Field</h4>
+                                <Badge className='status-badge__available'>Available</Badge>
+                            </li>
+                            <li>
+                                <h4>Football Stadium</h4>
                                 <Badge className='status-badge__available'>Available</Badge>
                             </li>
                             <li>
@@ -52,11 +56,15 @@ const Updates = () => {
                             </li>
                             <hr />
                             <li>
-                                <h4>Sound</h4>
+                                <h4>Audio</h4>
                                 <Badge className='status-badge__available'>Available</Badge>
                             </li>
                             <li>
                                 <h4>Lighting</h4>
+                                <Badge className='status-badge__available'>Available</Badge>
+                            </li>
+                            <li>
+                                <h4>Food Stations</h4>
                                 <Badge className='status-badge__available'>Available</Badge>
                             </li>
                         </ul>

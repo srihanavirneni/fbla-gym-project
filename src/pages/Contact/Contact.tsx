@@ -6,7 +6,7 @@ import {
     faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 
-import gymPhoto0 from '../../assets/images/gymphoto0.png';
+import gymPhoto0 from '../../assets/images/gym.jpg';
 
 import ContactHeader from './ContactHeader';
 import './Contact.css';

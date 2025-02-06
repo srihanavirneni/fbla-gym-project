@@ -248,16 +248,28 @@ const CreateEvent = () => {
                                                         placeholder="Select Location"
                                                         items={[
                                                             {
-                                                                value: 'maingymnasium',
-                                                                label: 'Main Gymnasium',
+                                                                value: 'gymnasium',
+                                                                label: 'Gymnasium',
                                                             },
                                                             {
-                                                                value: 'stadium',
-                                                                label: 'Stadium',
+                                                                value: 'auditorium',
+                                                                label: 'Auditorium',
+                                                            },
+                                                            {
+                                                                value: 'soccerfield',
+                                                                label: 'Soccer Field',
+                                                            },
+                                                            {
+                                                                value: 'footballstadium',
+                                                                label: 'Football Stadium',
                                                             },
                                                             {
                                                                 value: 'cafeteria',
                                                                 label: 'Cafeteria',
+                                                            },
+                                                            {
+                                                                value: 'library',
+                                                                label: 'Library',
                                                             },
                                                         ]}
                                                         {...field}
