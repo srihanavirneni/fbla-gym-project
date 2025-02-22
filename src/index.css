@@ -29,11 +29,16 @@
     --contact-strip-height: 5px;
 }
 
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    src: url('https://fonts.gstatic.com/s/inter/v3/UcCO3Fwr0p9nJZt0pA.woff2') format('woff2');
+}
+
 * {
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
         'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
         'Helvetica Neue', sans-serif;
-    font-display: swap;
     margin: 0;
     padding: 0;
 }
