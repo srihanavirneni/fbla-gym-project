@@ -37,7 +37,7 @@ const Offers = () => {
                         transition={{ duration: 0.5 }}
                     >
                         <li>
-                            <img src={basketballCourt} />
+                            <img src={basketballCourt} alt="basketball" />
                             <h2 className="black">It's huge!</h2>
                             <p>
                                 With the ability to <b>seat 3,900 people</b>,
