@@ -25,10 +25,10 @@ const Offers = () => {
     return (
         <div className="home-offers">
             <h1 className="black">Our gym is not like the rest</h1>
-            <h3>
+            <h2 className='text-lg'>
                 Perfect for live concerts, trade shows, local sporting events,
                 and other community events and gatherings!
-            </h3>
+            </h2>
             <div className="home-offers__content">
                 <div className="home-offers__dimensions">
                     <motion.ul

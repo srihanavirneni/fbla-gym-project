@@ -22,19 +22,19 @@ const MainFooter = () => {
     return (
         <React.Fragment>
             <footer className="main-footer">
-                <ul className="main-footer__content-list">
-                    <li className="main-footer__tldr-info">
+                <div className="main-footer__content-list">
+                    <div className="main-footer__tldr-info">
                         <img src={hsLogo} alt="logo" />
-                        <h3 className="black">
+                        <h1 className="black text-lg mb-2">
                             {import.meta.env.VITE_SCHOOL_NAME}
-                        </h3>
+                        </h1>
                         <p className="medium">
                             As home of the Longhorns, we offer plenty of
                             services for our community - whether that be for
                             community events, or for club meetings, our
                             Gymnasium is the perfect fit!
                         </p>
-                    </li>
+                    </div>
                     <ul className="footer-content__links">
                         <li>
                             <h3>Browse</h3>
@@ -122,7 +122,7 @@ const MainFooter = () => {
                             </ul>
                         </li>
                     </ul>
-                </ul>
+                </div>
             </footer>
             <Copyright />
         </React.Fragment>
