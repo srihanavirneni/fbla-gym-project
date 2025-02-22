@@ -28,6 +28,7 @@ const ContactStrip = () => {
                 <li>
                     <a
                         target="_blank"
+                        aria-label="Facebook"
                         rel="noopener noreferrer"
                         href={`https://facebook.com/${import.meta.env.VITE_FACEBOOK}`}
                     >
@@ -37,6 +38,7 @@ const ContactStrip = () => {
                 <li>
                     <a
                         target="_blank"
+                        aria-label="Twitter"
                         rel="noopener noreferrer"
                         href={`https://X.com/${import.meta.env.VITE_TWITTER}`}
                     >
@@ -46,6 +48,7 @@ const ContactStrip = () => {
                 <li>
                     <a
                         target="_blank"
+                        aria-label="Instagram"
                         rel="noopener noreferrer"
                         href={`https://www.instagram.com/${import.meta.env.VITE_INSTAGRAM}`}
                     >
@@ -55,6 +58,7 @@ const ContactStrip = () => {
                 <li>
                     <a
                         target="_blank"
+                        aria-label="Email"
                         rel="noopener noreferrer"
                         href={`mailto:${import.meta.env.VITE_EMAIL}`}
                     >
