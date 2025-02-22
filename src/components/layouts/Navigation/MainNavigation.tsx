@@ -7,7 +7,7 @@ import SideDrawer from './SideDrawer.tsx';
 import Backdrop from '../../interface/Backdrop.tsx';
 import ContactStrip from './ContactStrip.tsx';
 
-import menu from '../../../assets/icons/menu.png';
+import menu from '../../../assets/icons/menu.webp';
 import './MainNavigation.css';
 
 const MainNavigation = () => {

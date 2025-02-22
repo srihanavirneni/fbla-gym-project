@@ -1,4 +1,4 @@
-import pin from '../../../assets/icons/pin.png';
+import pin from '../../../assets/icons/pin.webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons/faEnvelope';
 import {

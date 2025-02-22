@@ -8,7 +8,7 @@ import basketballGame from '../../assets/images/basketballgame.webp';
 import fblameeting from '../../assets/images/fblameeting.webp';
 import concert from '../../assets/images/concert.webp';
 
-import basketballCourt from '../../assets/icons/basketballCourt.png';
+import basketballCourt from '../../assets/icons/basketballCourt.webp';
 import './Offers.css';
 
 const CaseStudy = (props: any) => {
