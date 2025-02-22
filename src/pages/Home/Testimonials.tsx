@@ -2,12 +2,12 @@ import { motion } from 'framer-motion';
 
 import FakeTweet from '@njrardin/react-fake-tweet';
 
-import basketballCoach from '../../assets/profilepictures/basketballcoach.jpeg';
-import concertHolder from '../../assets/profilepictures/concertholder.png';
-import craftFair from '../../assets/profilepictures/craftfair.png';
-import charityOrganizer from '../../assets/profilepictures/charityorganizer.png';
-import volleyballtournament from '../../assets/profilepictures/volleyballtournament.png';
-import businessExpo from '../../assets/profilepictures/businessexpo.png';
+import basketballCoach from '../../assets/profilepictures/basketballcoach.webp';
+import concertHolder from '../../assets/profilepictures/concertholder.webp';
+import craftFair from '../../assets/profilepictures/craftfair.webp';
+import charityOrganizer from '../../assets/profilepictures/charityorganizer.webp';
+import volleyballtournament from '../../assets/profilepictures/volleyballtournament.webp';
+import businessExpo from '../../assets/profilepictures/businessexpo.webp';
 
 import './Testimonials.css';
 

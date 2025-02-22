@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import hslogo from '../../assets/images/hslogo.png';
+import hslogo from '../../assets/images/hslogo.webp';
 import './Brand.css';
 
 const Brand = (props: any) => {

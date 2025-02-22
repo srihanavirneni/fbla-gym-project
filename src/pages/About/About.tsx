@@ -10,19 +10,17 @@ import Map from '@/components/interface/Map';
 import AboutInfo from '../Home/AboutInfo';
 import AboutHeader from './AboutHeader';
 
-import placeholder from '../../assets/images/placeholder.png';
-
-import gym1 from '../../assets/images/gymphoto1.png';
-import gym2 from '../../assets/images/gymphoto2.png';
-import gym3 from '../../assets/images/gymphoto3.png';
-import gym4 from '../../assets/images/gymphoto4.png';
+import gym1 from '../../assets/images/gymphoto1.webp';
+import gym2 from '../../assets/images/gymphoto2.webp';
+import gym3 from '../../assets/images/gymphoto3.webp';
+import gym4 from '../../assets/images/gymphoto4.webp';
 
 import './About.css';
 
 const ImageHolder = (props: any) => {
     return (
         <div className={`${props.className}`}>
-            <img src={props.image || placeholder} alt={props.alt} />
+            <img src={props.image} alt={props.alt} />
             <p>{props.description}</p>
         </div>
     );

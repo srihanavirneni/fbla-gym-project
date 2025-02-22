@@ -15,7 +15,7 @@ import { faApple } from '@fortawesome/free-brands-svg-icons';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 
-import paypal from '../../assets/images/paypal.png';
+import paypal from '../../assets/images/paypal.webp';
 import './PaymentInfo.css';
 
 const PaymentInfo = () => {

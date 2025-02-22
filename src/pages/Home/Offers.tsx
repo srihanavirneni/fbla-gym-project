@@ -3,11 +3,10 @@ import { faBurger, faGuitar } from '@fortawesome/free-solid-svg-icons';
 
 import { motion } from 'framer-motion';
 
-import placeholder from '../../assets/images/placeholder.png';
-import artExhibit from '../../assets/images/artexhibit.jpeg';
-import basketballGame from '../../assets/images/basketballgame.png';
-import fblameeting from '../../assets/images/fblameeting.png';
-import concert from '../../assets/images/concert.png';
+import artExhibit from '../../assets/images/artexhibit.webp';
+import basketballGame from '../../assets/images/basketballgame.webp';
+import fblameeting from '../../assets/images/fblameeting.webp';
+import concert from '../../assets/images/concert.webp';
 
 import basketballCourt from '../../assets/icons/basketballCourt.png';
 import './Offers.css';
@@ -15,7 +14,7 @@ import './Offers.css';
 const CaseStudy = (props: any) => {
     return (
         <div className={`${props.className}`}>
-            <img src={props.image || placeholder} alt={props.alt} />
+            <img src={props.image} alt={props.alt} />
             <p>{props.description}</p>
         </div>
     );

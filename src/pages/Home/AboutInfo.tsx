@@ -1,6 +1,5 @@
-import placeholder from '../../assets/images/placeholder.png';
-import garbaNight from '../../assets/images/garbanight.png';
-import hsLogo from '../../assets/images/hslogo.png';
+import garbaNight from '../../assets/images/garbanight.webp';
+import hsLogo from '../../assets/images/hslogo.webp';
 
 import { motion } from 'framer-motion';
 
@@ -9,7 +8,7 @@ import './AboutInfo.css';
 const CaseStudy = (props: any) => {
     return (
         <div className={`${props.className}`}>
-            <img src={props.image || placeholder} alt={props.alt} />
+            <img src={props.image} alt={props.alt} />
             <p>{props.description}</p>
         </div>
     );

@@ -3,7 +3,7 @@ import React from 'react';
 import NavLinks from '../Navigation/NavLinks';
 import Copyright from './Copyright';
 
-import hsLogo from '../../../assets/images/hslogo.png';
+import hsLogo from '../../../assets/images/hslogo.webp';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faEnvelope,
