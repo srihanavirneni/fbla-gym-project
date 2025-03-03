@@ -6,8 +6,7 @@ import ScrollToTop from './components/function/ScrollToTop';
 import MainNavigation from './components/layouts/Navigation/MainNavigation';
 import MainFooter from './components/layouts/Footer/MainFooter';
 
-// import Home from './pages/Home/Home';
-const Home = React.lazy(() => import('./pages/Home/Home'));
+import Home from './pages/Home/Home';
 const About = React.lazy(() => import('./pages/About/About'));
 const Status = React.lazy(() => import('./pages/Status/Status'));
 const Events = React.lazy(() => import('./pages/Events/Events'));
@@ -15,8 +14,8 @@ const Contact = React.lazy(() => import('./pages/Contact/Contact'));
 const Calendar = React.lazy(() => import('./pages/Calendar/Calendar'));
 const Transaction = React.lazy(() => import('./pages/Transaction/Transaction'));
 
-import CreateEvent from './pages/CreateEvent/CreateEvent';
-import Booking from './pages/Booking/Booking';
+const CreateEvent = React.lazy(() => import('./pages/CreateEvent/CreateEvent'));
+const Booking = React.lazy(() => import('./pages/Booking/Booking'));
 
 import './App.css';
 
