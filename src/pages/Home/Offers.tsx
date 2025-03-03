@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBurger, faGuitar } from '@fortawesome/free-solid-svg-icons';
 
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { motion } from 'framer-motion';
 
 import artExhibit from '../../assets/images/artexhibit.webp';
@@ -14,7 +15,11 @@ import './Offers.css';
 const CaseStudy = (props: any) => {
     return (
         <div className={`${props.className}`}>
-            <img src={props.image} alt={props.alt} />
+            <LazyLoadImage
+                src={props.image}
+                alt={props.alt}
+            />
+            {/* <img src={props.image} alt={props.alt} /> */}
             <p>{props.description}</p>
         </div>
     );
@@ -36,7 +41,11 @@ const Offers = () => {
                         transition={{ duration: 0.5 }}
                     >
                         <li>
-                            <img src={basketballCourt} alt="basketball" />
+                            <LazyLoadImage
+                                src={basketballCourt}
+                                alt="basketball"
+                            />
+                            {/* <img src={basketballCourt} alt="basketball" /> */}
                             <h2 className="black">It's huge!</h2>
                             <p>
                                 With the ability to <b>seat 3,900 people</b>,

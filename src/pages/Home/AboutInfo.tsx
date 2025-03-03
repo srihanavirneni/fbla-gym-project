@@ -1,6 +1,7 @@
 import garbaNight from '../../assets/images/garbanight.webp';
 import hsLogo from '../../assets/images/hslogo.webp';
 
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { motion } from 'framer-motion';
 
 import './AboutInfo.css';
@@ -37,7 +38,11 @@ const AboutInfo = (props: any) => {
                     transition={{ duration: 0.5 }}
                     className="about-info__content"
                 >
-                    <img src={hsLogo} alt="school image" />
+                    <LazyLoadImage
+                        src={hsLogo}
+                        alt="school image"
+                    />
+                    {/* <img src={hsLogo} alt="school image" /> */}
                     <h1 className="black">Who are we?</h1>
                     {props.showDeepInfo ? (
                         <div>
