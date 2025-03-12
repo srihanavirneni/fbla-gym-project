@@ -42,6 +42,12 @@ export const BREAKS = [
         type: 'Disaster',
     },
     {
+        startDate: new Date(2025, 0, 15),
+        endDate: new Date(2025, 0, 16),
+        name: 'Flash Flood Warning',
+        type: 'Disaster',
+    },
+    {
         startDate: new Date(2024, 10, 24),
         endDate: new Date(2024, 10, 30),
         name: 'Thanksgiving Break',
@@ -578,7 +584,7 @@ export const EVENT_DATA = [
     {
         id: 'e31',
         name: "April Fool's Comedy Night",
-        date: new Date(2025, 3, 1),
+        date: new Date(2025, 3, 8),
         startTime: new Date('1970-01-01T19:00:00'),
         endTime: new Date('1970-01-01T21:30:00'),
         type: 'Entertainment',
