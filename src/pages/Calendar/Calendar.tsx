@@ -1,4 +1,5 @@
 import EventCalendar from '@/components/layouts/EventCalendar/EventCalendar';
+import CalendarKey from './CalendarKey';
 
 import { EVENT_DATA } from '@/context/event-list';
 import './Calendar.css';
@@ -17,6 +18,8 @@ const Calendar = () => {
                     have already been scheduled!
                 </p>
             </div>
+
+            <CalendarKey />
             <div className="calendar-page__main-content pt-5 pb-5">
                 <EventCalendar events={EVENT_DATA} />
             </div>

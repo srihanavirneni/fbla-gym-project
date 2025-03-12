@@ -1,0 +1,36 @@
+.calendar-key {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+    gap: 1rem;
+}
+
+.calendar-key-closed {
+    background-color: rgba(255, 98, 98, 0.761);
+}
+
+.calendar-key-holiday {
+    background-color: rgba(255, 231, 98, 0.761);
+}
+
+.calendar-key-weather {
+    background-color: rgba(98, 174, 255, 0.761);
+}
+
+.calendar-key-available {
+    background-color: rgb(206, 206, 206);
+}
+
+.calendar-key__item-color {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.calendar-key > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-right: 1rem;
+}
